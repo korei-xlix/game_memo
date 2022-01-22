@@ -92,6 +92,8 @@
 
 
 ***
+[トップへ戻る](/readme.md)  
+  
 ::Project= Game Memo  
 ::Admin= Korei (@korei-xlix)  
 ::github= https://github.com/korei-xlix/  
