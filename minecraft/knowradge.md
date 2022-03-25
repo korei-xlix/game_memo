@@ -91,23 +91,22 @@
 最寄りのバイオームや建物の座標を出すチートコマンドです。  
 
 ```
-locate village				村
-locate mansion				森の洋館
-locate monument				神殿
-locate pillager_outpost     前線基地
-locate stronghold			要塞（エンドポータル）
-locatebiome badlands			荒野（メサ）
-locatebiome jungle				ジャングル
-locatebiome desert				砂漠
-locatebiome lukewarm_ocean		ぬるい海
-locatebiome warm_ocean			暖かい海
-locatebiome deep_ocean			深い海
-locatebiome deep_frozen_ocean	凍った深海
-locatebiome flower_forest		花の森
-locatebiome sunflower_plains	ヒマワリ平原
-locatebiome ice_spikes			樹氷
-locatebiome swamp				沼地
-locatebiome dripstone_caves		鍾乳洞
+locate #minecraft:village			村
+locate minecraft:mansion			森の洋館
+locate minecraft:monument			神殿
+locate minecraft:pillager_outpost	前線基地
+locate minecraft:stronghold			要塞（エンドポータル）
+locatebiome badlands						荒野（メサ）
+locatebiome jungle							ジャングル
+locatebiome minecraft:desert				砂漠
+locatebiome minecraft:warm_ocean			暖かい海
+locatebiome minecraft:deep_ocean			深い海
+locatebiome minecraft:deep_frozen_ocean		凍った深海
+locatebiome minecraft:flower_forest			花の森
+locatebiome minecraft:sunflower_plains		ヒマワリ平原
+locatebiome minecraft:ice_spikes			樹氷
+locatebiome minecraft:swamp					沼地
+locatebiome minecraft:dripstone_caves		鍾乳洞
 
 locate fortress				ネザー要塞
 locate bastion_remnant		砦の遺跡（ネザー)
@@ -167,7 +166,7 @@ weather clear
 
 現在地から周囲5000ブロックまでを境界にする
 worldborder center ~ ~
-worldborder set 10000 0
+worldborder set 12000 0
 
 初期スポーンを現在地に設定する
 setworldspawn
@@ -177,6 +176,10 @@ save-all
 
 ワールドのシード値を表示する
 seed
+
+スポナーを取得する
+give @s spawner
+　※取得できるのはスポナーの外装だけ。これにスポーンエッグを使うと機能する。
 
 ```
 
