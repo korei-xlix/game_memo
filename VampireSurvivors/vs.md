@@ -14,6 +14,6 @@ https://volx.jp/vampire-survivors-weapon-evolution
 ペンタグラム	王冠
 ビショーネ	漆黒の翼
 ニンニク	愛の加護
-
+羽x2　　　　ティラギス
 
 
