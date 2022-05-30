@@ -107,6 +107,7 @@ locatebiome minecraft:sunflower_plains		ヒマワリ平原
 locatebiome minecraft:ice_spikes			樹氷
 locatebiome minecraft:swamp					沼地
 locatebiome minecraft:dripstone_caves		鍾乳洞
+locate structure minecraft:ancient_city
 
 locate fortress				ネザー要塞
 locate bastion_remnant		砦の遺跡（ネザー)
