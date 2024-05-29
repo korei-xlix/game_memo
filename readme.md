@@ -67,7 +67,7 @@
 
   * 第三者を介したトラブル解決の際、当方の名称を出すのはご遠慮ください。  
   
-  　　[[連絡先ページ]](https://website.koreis-labo.com/rules/address.htm)  
+  　　[[連絡先]](https://website.koreis-labo.com/rules/contact.htm)  
   
 
 
