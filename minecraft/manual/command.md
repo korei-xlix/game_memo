@@ -29,7 +29,7 @@
   * [村判定仕様](#村判定仕様)
 
 * minecraftサーバメモ
-  * [Korei World（ローカルメイン鯖）](../../minecraft/my_server/koreis_world.md)
+  * [Korei's World（Realms鯖）](../my_server/koreis_world_realms.md)
   
 
 
