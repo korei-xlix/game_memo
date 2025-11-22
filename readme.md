@@ -13,11 +13,11 @@
 
 ## 目次 / Table of Contents
 
-* [readme.md](./readme.md)
-  * [利用にあたって (Important notices for use)](#利用にあたっての注意事項--important-notices-for-use)
+* [readme.md](/readme.md)
+  * [利用にあたって (Important notices for use)](/readme.md#利用にあたっての注意事項--important-notices-for-use)
 
 * ゲームメモ一覧
-  * [minecraft](./minecraft/readme.md)
+  * [minecraft](/minecraft/readme.md)
   
 
 
@@ -65,7 +65,7 @@
 
 ***
 ***
-[[トップへ戻る]](./readme.md)  
+[[トップへ戻る]](/readme.md)  
   
 ::Admin= Korei (@korei-xlix)  
 ::github= [https://github.com/korei-xlix/](https://github.com/korei-xlix/)  

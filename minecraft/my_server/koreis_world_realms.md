@@ -786,7 +786,7 @@ locate structure minecraft:end_city
 ***
 ***
 [[トップへ戻る]](../../readme.md)　/
-[[minecraft]](/readme.md)  
+[[minecraft]](../readme.md)  
   
 ::Admin= Korei (@korei-xlix)  
 ::github= [https://github.com/korei-xlix/](https://github.com/korei-xlix/)  
