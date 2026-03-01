@@ -40,7 +40,7 @@
 
 ### 大前提
 
-大前提として、minecraftをmodで遊ぶには、Java版のminecraftが必要です。  
+大前提として、mineceaftをマルチサーバかつ、Multiverse-Coreを使ったマルチワールドで遊ぶには、Java版のminecraftが必要です。  
 bedrock版や、realmsでは遊べません。  
   
 
@@ -48,16 +48,17 @@ bedrock版や、realmsでは遊べません。
 
 ### Forgeとは
 
-modを導入するにはまず「Minecraft Forge（以下、Forge）」を導入する必要があります。  
-Forgeは多くのmodを動かすためのベースとなるminecraftクライアント用のmodです。  
-クライアントの動作が軽くなるようなので、とくにmodを使わなくても導入しておいたほうがいいかもしれませんが、バージョンを上げる際の手間は増えます。  
+Forgeは多くのmodを動かすためのベースとなるminecraftクライアント用のmodです。
+また副効果として、クライアントの動作が軽くなるようです。なので、とくにmodを使わなくても導入しておいたほうがいいかもしれません。  
+このドキュメントでは、クライアントにForgeを入れた状態で説明していきます。  
+また、Forgeと合わせて、シェーダを使うmod「Optifine」も導入します。  
   
 
 
 
 ### 導入手順
 
-Forgeを導入する方法は以下の通りです。  
+ForgeとOptifineを導入する方法は以下の通りです。  
   
 
 1. JDK(Java SE Development Kit)を導入する  
@@ -102,8 +103,43 @@ Forgeを導入する方法は以下の通りです。
 
     1. 「保存」を押して、起動構成を保存します。  
 
+1. Optifineのバージョンを確認する  
+  Optifineのインストーラを入手します。  
+  動かすminecraftと同じバージョンのインストーラを入手します。  
+  minecraftのバージョンアップ直後は、最新のOptifineが出てくるのに時間がかかるので、
+  対応バージョンがなければ適用は待ちましょう。  
+  **Optifineインストーラは以下のサイトから入手できます。（URLは当方で確認済）**  
+  　　[[Optifine Installer](https://optifine.net/downloads)]  
+
+1. ダウンロードしたOptifineをそのままクライアントのmodsフォルダに入れます。  
+      　　C:\Users\[ユーザ名]\AppData\Roaming\.minecraft\forge_1.21.11\mods 以下  
+
 1. minecraftランチャーから、作成した起動構成を指定して、ゲームを始めます。  
-  タイトル左下のバージョン表示で、導入したForgeのバージョンが表示されていれば、導入完了です！  
+  タイトル左下のバージョン表示で、導入したForgeのバージョンが表示されていれば、Forgeの導入完了です。  
+  また、「設定」→「ビデオ設定」画面で、左下にOptifineのバージョンが表示されていれば、Optifineの導入も完了です！  
+
+
+
+### シェーダの適用
+
+任意のシェーダを適用するには、シェーダパックをシェーダーフォルダに入れます。  
+      　　C:\Users\[ユーザ名]\AppData\Roaming\.minecraft\forge_1.21.11\shaderpacks 以下  
+  
+シェーダパックを適用するには、「設定」→「ビデオ設定」→「シェーダの詳細」から、
+任意のシェーダパックを選択します。  
+クライアントは自動的に再起動されます。  
+  
+
+#### **おすすめシェーダパック**
+
+* **初心者・万能型：Complementary Reimagined**  
+  　　[File URL](https://www.curseforge.com/minecraft/shaders/complementary-reimagined)  
+
+* **幻想的：BSL Shaders**  
+  　　[File URL](https://www.curseforge.com/minecraft/shaders/bsl-shaders)  
+
+* **低スペック向け：MakeUp - Ultra Fast**  
+  　　[File URL](https://www.curseforge.com/minecraft/shaders/makeup-ultra-fast-shader)  
   
 
 
@@ -178,42 +214,191 @@ Multiverse-Coreを使うのに一番安定してそうな、PaperMCでサーバ�
 
 1. サーバを起動する  
    バッチファイルを実行し、minecraft serverのコンソールが起動すればOKです。  
-
-
-
-
-
-
-
-***
-***
-[[トップへ戻る]](../../readme.md)　/
-[[minecraft]](/readme.md)  
+   サーバを停止するには、コンソールで「stop」コマンドを入力すると安全に停止できます。  
   
-::Admin= Korei (@korei-xlix)  
-::github= [https://github.com/korei-xlix/](https://github.com/korei-xlix/)  
-::Web= [https://website.koreis-labo.com/](https://website.koreis-labo.com/)  
-::X= [https://x.com/korei_xlix](https://x.com/korei_xlix)  
-***
 
 
 
+### サーバの調整：server.property
+
+PaperMCのcommands.yml、server.propertiesを編集します。  
+  
+
+```text
+【commands.yml】
+＜コマンドブロック有効＞
+command-block-overrides: []
+　↓↓↓
+command-block-overrides:
+  - "*"
 
 
+【server.properties】
+＜最大接続数＞
+max-players=20
+　↓↓↓
+max-players=＜任意の人数＞
 
-# 目次 <a name="aMokuji"></a>
-* [起動オプション](#aStartOption)
-* [v1.18マイニング分布](#a118mining)
-* [最寄りの座標表示コマンド](#aLocate)
-* [エンドラRTA 公式ルール](#aEnDraRTTAOfficial)
+＜サーバー紹介文＞
+motd=A Minecraft Server
+　↓↓↓
+motd=A Minecraft Server \u00A79[version 1.21.10] By PaperMC
 
+＜ホワイトリスト制＞
+white-list=false
+　↓↓↓
+white-list=true
 
-
-
-# Multiverse-Core コマンド <a name="aMultiverse-Core"></a>
-Multiverse-Core：サーバ管理プラグインでよく使うコマンドです。  
+以後、ゲーム内で以下のコマンドでホワイトリストにユーザを追加できます。
+/whitelist add [username]
 
 ```
+  
+
+
+
+### プラグインの導入
+
+Multiverse-Coreを含めたプラグインを導入するには、  
+PaperMCを設置したフォルダ配下の「plugins」以下に、プラグインファイルを配置するだけです。  
+ベースとなるプラグインとして以下を導入します。  
+  
+
+
+#### **Multiverse-Core**
+
+ワールドを生成したり、調整したりするサーバプラグインです。  
+  
+　　[[ダウンロード](https://dev.bukkit.org/projects/multiverse-core/files)]  
+  
+　　[[コマンド](#コマンドmultiverse-core)]  
+  
+
+
+#### **Multiverse-Portalsm**
+
+ワールドのポータルを設置するサーバプラグインです。  
+  
+　　[[ダウンロード](https://dev.bukkit.org/projects/multiverse-portals/files)]  
+  
+　　[[コマンド](#コマンドmultiverse-portalsm)]  
+  
+
+
+#### **WorldEdit**
+
+マイクラの建築作業を補助するサーバプラグインです。  
+  
+　　[[参考記事](https://games.xserver.ne.jp/minecraft-media/worldedit/)]  
+  
+　　[[ダウンロード](https://dev.bukkit.org/projects/worldedit)]  
+  
+
+
+#### **WorldGuard**
+
+サーバー上のワールドを保護してくれるサーバプラグインです。  
+  
+　　[[参考記事](https://games.xserver.ne.jp/minecraft-media/worldguard/)]  
+  
+　　[[ダウンロード](https://dev.bukkit.org/projects/worldguard)]  
+  
+
+
+#### **LuckPerms**
+
+プレイヤーの権限（コマンド利用や機能制限）を管理するサーバプラグインです。  
+WEBブラウザを使って簡単に権限の管理や設定ができます。  
+  
+　　[[参考記事](https://yaaaa.net/luckperms/)]  
+  
+　　[[ダウンロード](https://www.spigotmc.org/resources/luckperms.28140/)]  
+  
+　　[[コマンド](#コマンドluckperms)]  
+  
+
+
+```text
+管理者権限設定
+lp user lucida3poi permission set luckperms.*
+lp creategroup admin
+lp user lucida3poi parent add admin
+
+lp creategroup member
+lp group default parent add member
+
+lp listgroups
+lp group admin listmembers
+
+
+初期プラグイン権限設定
+lp user lucida3poi permission set villagerbank.create false
+lp user lucida3poi permission set villagerbank.create true
+lp user lucida3poi permission unset villagerbank.create
+
+```
+  
+
+
+#### **GriefPrevention**
+
+TNTやクリーパーでの建物爆破制限を設定したり、保護された土地を破壊から守ったりするサーバプラグインです。  
+WorldGuardよりできることは限定されますが、一般ユーザが単独で自由に設定できます。  
+  
+　　[[参考記事](https://seesaawiki.jp/kotaserver/d/Grief%20Prevention)]  
+  
+　　[[ダウンロード](https://dev.bukkit.org/projects/grief-prevention)]  
+  
+
+```text
+config.ymlの確認
+
+SeaLevelOverrides
+  全て-1にする（※新ワールド生成時も確認しておくこと）
+
+BlockSurfaceCreeperExplosions: false
+BlockSurfaceOtherExplosions: false
+  TNTやクリーパーでの建物爆破制限を解除する
+  ただし、土地保護されたものは破壊できない
+
+PistonMovement: EVERYWHERE
+  ピストンの動作を許可する
+
+```
+  
+
+
+#### **LWC Extended**
+
+チェストやかまど、ドアなど自分のものを守るためのサーバプラグインです。  
+一般ユーザが単独で自由に設定できます。  
+  
+　　[[参考記事](https://yaaaa.net/lwc/)]  
+  
+　　[[ダウンロード](https://www.spigotmc.org/resources/lwc-extended.69551/)]  
+  
+
+```text
+core.ymlの確認
+
+autoRegister: false
+  blocksのautoRegisterをfalseに設定することで、保護しなくなる。
+  保護をしない：false
+  保護する：private
+  過度な保護をしないのであれば、全てfalseでいい。
+
+```
+  
+
+
+
+
+
+## サーバコマンド
+
+### コマンド：Multiverse-Core
+
+```text
 ワールド情報を参照する
 mv info world
 
@@ -222,17 +407,17 @@ mv tp [ワールド名]
 
 ワールドに入った時のゲームモードを設定する
 mvm set gamemode [0-3] [ワールド名]
-	0: サバイバルモード
-	1: クリエイティブモード
-	2: アドベンチャーモード
-	3: スペクテイターモード
+　0: サバイバルモード
+　1: クリエイティブモード
+　2: アドベンチャーモード
+　3: スペクテイターモード
 
 ワールドの難易度を設定する
 mvm set difficulty [0-3] [ワールド名]
-	0: ピースフル
-	1: イージー
-	2: ノーマル
-	3: ハード
+　0: ピースフル
+　1: イージー
+　2: ノーマル
+　3: ハード
 
 魔物の沸きの有無
 mvm set monsters true world
@@ -246,7 +431,6 @@ mvm set weather false world
 mvrule doDaylightCycle true world
 mvrule doDaylightCycle false world
 
-
 ワールドを生成する
 mv create [ワールド名] [NORMAL/NETHER/THE_END]
 
@@ -256,33 +440,29 @@ mv delete [ワールド名]
 初期スポーンを現在地に再設定する
 mv set spawn
 
-
 管理者権限を与える
 op [ユーザ名]
 　※spigotを使う際、真っ先に自分に使うコマンド
 　※荒らしに使われるので他のユーザには絶対使わないこと
 
 ```
+  
 
 
+### コマンド：Multiverse-Portalsm
 
+```text
+/mvp wand 斧を出す
 
+/mvp create [ポータル名] ポータル作成
 
+/mvp remove [ポータル名] ポータル削除
 
+/mvp select [ポータル名] ポータル選択
 
-Multiverse-Portals：ゲート開設プラグイン
+/mvp modify dest p:[ポータル名]  選択してるポータルと繋ぐ
 
-/mvp wand	斧を出す
-
-/mvp create [ポータル名]	ポータル作成
-
-/mvp remove [ポータル名]	ポータル削除
-
-/mvp select [ポータル名]	ポータル選択
-
-/mvp modify dest p:[ポータル名]		選択してるポータルと繋ぐ
-
-/mvp list					ポータル一覧
+/mvp list     ポータル一覧
 
 
 
@@ -302,24 +482,35 @@ Multiverse-Portals：ゲート開設プラグイン
 
 6. /mvp modify dest p:[ポータル名2]でポータル1からポータル2へ繋ぎポータルの完成
 
+```
+  
 
-------------------------------------------------------------
-コマンドブロック経済（JAVA 1.16.5）
+
+### コマンド：LuckPerms
+
+```text
+
+
+
+```
+  
+
+
+
+
+
+
+## コマンドブロック経済（過去の資料）
+
+```text
 https://tokoton0ch.com/2020/02/20/post-1268/
 
 コマンドブロックの入手
 /give @p command_block
 
-黄色のコマンドブロック：インパルス「動力が必要（レッドストーンが必要）」
-緑色のコマンドブロック：チェーン「常時実行（常にアクティブ）」
-青色のコマンドブロック：リピート（反復）「動力が必要（レッドストーンが必要）」
-
-
 /gamerule commandBlockOutput false
 
 /scoreboard objectives remove Coin
-
-
 
 ①スコアボードにの「Coin」を追加します。
 scoreboard objectives add Coin dummy
@@ -341,125 +532,125 @@ give @p iron_ingot 1
 
 
 
-ベイクドポテト			baked_potato
-パンプキンパイ			pumpkin_pie
-ステーキ				cooked_beef
+ベイクドポテト   baked_potato
+パンプキンパイ   pumpkin_pie
+ステーキ    cooked_beef
 
-ラピスラズリ			lapis_lazuli
-糸						string
-乾燥した昆布			dried_kelp
-火打石					flint
-粘土					clay_ball
-エンダーパール			ender_pearl
+ラピスラズリ   lapis_lazuli
+糸      string
+乾燥した昆布   dried_kelp
+火打石     flint
+粘土     clay_ball
+エンダーパール   ender_pearl
 
-鉄インゴット			iron_ingot
-金インゴット			gold_ingot
-ダイヤ					diamond
+鉄インゴット   iron_ingot
+金インゴット   gold_ingot
+ダイヤ     diamond
 
-名前タグ				name_tag
-白紙の地図				map
+名前タグ    name_tag
+白紙の地図    map
 
-フグ					pufferfish
-金のニンジン			golden_carrot
-マグマクリーム			magma_cream
+フグ     pufferfish
+金のニンジン   golden_carrot
+マグマクリーム   magma_cream
 
-矢						arrow
-弓						bow
-盾						shield
-剣						diamond_sword
-ピッケル				diamond_pickaxe
-斧						diamond_axe
-シャベル				diamond_shovel
-クワ					diamond_hoe
+矢      arrow
+弓      bow
+盾      shield
+剣      diamond_sword
+ピッケル    diamond_pickaxe
+斧      diamond_axe
+シャベル    diamond_shovel
+クワ     diamond_hoe
 
-白色の染料				white_dye
-橙色の染料				orange_dye
-赤紫色の染料			magenda_dye
-空色の染料				light_blue_dye
-黄色の染料				yellow_dye
-黄緑色の染料			lime_dye
-桃色の染料				pink_dye
-灰色の染料				gray_dye
-薄灰色の染料			light_gray_dye
-青緑色の染料			cyan_dye
-紫色の染料				purple_dye
-青色の染料				blue_dye
-茶色の染料				brown_dye
-緑色の染料				green_dye
-赤色の染料				red_dye
-黒色の染料				black_dye
+白色の染料    white_dye
+橙色の染料    orange_dye
+赤紫色の染料   magenda_dye
+空色の染料    light_blue_dye
+黄色の染料    yellow_dye
+黄緑色の染料   lime_dye
+桃色の染料    pink_dye
+灰色の染料    gray_dye
+薄灰色の染料   light_gray_dye
+青緑色の染料   cyan_dye
+紫色の染料    purple_dye
+青色の染料    blue_dye
+茶色の染料    brown_dye
+緑色の染料    green_dye
+赤色の染料    red_dye
+黒色の染料    black_dye
 
 
 
 エンチャント本
-ダメージ増加			/give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:sharpness,lvl:5}]}
-アンデッド特攻			/give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:smite,lvl:5}]}
-火属性					/give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:fire_aspect,lvl:2}]}
-ドロップ増加			/give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:looting,lvl:3}]}
-範囲ダメージ増加		/give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:sweeping,lvl:3}]}
+ダメージ増加   /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:sharpness,lvl:5}]}
+アンデッド特攻   /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:smite,lvl:5}]}
+火属性     /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:fire_aspect,lvl:2}]}
+ドロップ増加   /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:looting,lvl:3}]}
+範囲ダメージ増加  /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:sweeping,lvl:3}]}
 
-射撃ダメージ増加		/give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:power,lvl:5}]}
-フレイム				/give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:flame,lvl:1}]}
-無限					/give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:infinity,lvl:1}]}
+射撃ダメージ増加  /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:power,lvl:5}]}
+フレイム    /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:flame,lvl:1}]}
+無限     /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:infinity,lvl:1}]}
 
-シルクタッチ			/give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:silk_touch,lvl:1}]}
-幸運					/give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:fortune,lvl:3}]}
-効率強化				/give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:efficiency,lvl:5}]}
+シルクタッチ   /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:silk_touch,lvl:1}]}
+幸運     /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:fortune,lvl:3}]}
+効率強化    /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:efficiency,lvl:5}]}
 
-耐久力					/give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:unbreaking,lvl:3}]}
-修繕					/give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:mending,lvl:1}]}
+耐久力     /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:unbreaking,lvl:3}]}
+修繕     /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:mending,lvl:1}]}
 
-ダメージ軽減			/give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:protection,lvl:4}]}
-火炎耐性				/give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:fire_protection,lvl:4}]}
-爆発耐性				/give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:blast_protection,lvl:4}]}
+ダメージ軽減   /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:protection,lvl:4}]}
+火炎耐性    /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:fire_protection,lvl:4}]}
+爆発耐性    /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:blast_protection,lvl:4}]}
 
-落下耐性				/give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:feather_falling,lvl:4}]}
-水中採掘				/give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:aqua_affinity,lvl:1}]}
-水中歩行				/give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:depth_strider,lvl:3}]}
-氷渡り					/give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:frost_walker,lvl:2}]}
-ソウルスピード			/give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:soul_speed,lvl:3}]}
+落下耐性    /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:feather_falling,lvl:4}]}
+水中採掘    /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:aqua_affinity,lvl:1}]}
+水中歩行    /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:depth_strider,lvl:3}]}
+氷渡り     /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:frost_walker,lvl:2}]}
+ソウルスピード   /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:soul_speed,lvl:3}]}
 
-水中呼吸				/give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:respiration,lvl:3}]}
+水中呼吸    /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:respiration,lvl:3}]}
 
 釣竿（宝釣り・入れ食い・耐久力）
-						/give @p minecraft:fishing_rod{HideFlags:1,Enchantments:[{id:unbreaking,lvl:3},{id:luck_of_the_sea,lvl:3},{id:lure,lvl:3}]}
+      /give @p minecraft:fishing_rod{HideFlags:1,Enchantments:[{id:unbreaking,lvl:3},{id:luck_of_the_sea,lvl:3},{id:lure,lvl:3}]}
 
 クロスボウ（貫通4・高速装填3・耐久力）
-						/give @p minecraft:crossbow{HideFlags:1,Enchantments:[{id:unbreaking,lvl:3},{id:quick_charge,lvl:3},{id:piercing,lvl:4}]}
+      /give @p minecraft:crossbow{HideFlags:1,Enchantments:[{id:unbreaking,lvl:3},{id:quick_charge,lvl:3},{id:piercing,lvl:4}]}
 クロスボウ（拡散1・高速装填3・耐久力）
-						/give @p minecraft:crossbow{HideFlags:1,Enchantments:[{id:unbreaking,lvl:3},{id:quick_charge,lvl:3},{id:multishot,lvl:1}]}
+      /give @p minecraft:crossbow{HideFlags:1,Enchantments:[{id:unbreaking,lvl:3},{id:quick_charge,lvl:3},{id:multishot,lvl:1}]}
 
-水生特効5・忠誠3・召雷1	/give @p minecraft:crossbow{HideFlags:1,Enchantments:[{id:loyalty,lvl:3},{id:impaling,lvl:5},{id:channeling,lvl:1}]}
-水生特効5・激流3		/give @p minecraft:crossbow{HideFlags:1,Enchantments:[{id:impaling,lvl:5},{id:riptide,lvl:3}]}
+水生特効5・忠誠3・召雷1 /give @p minecraft:crossbow{HideFlags:1,Enchantments:[{id:loyalty,lvl:3},{id:impaling,lvl:5},{id:channeling,lvl:1}]}
+水生特効5・激流3  /give @p minecraft:crossbow{HideFlags:1,Enchantments:[{id:impaling,lvl:5},{id:riptide,lvl:3}]}
 
 
 
-stop		サーバ停止
-list		ログイン中のユーザ表示
-save-all	サーバ全体をセーブ
+stop  サーバ停止
+list  ログイン中のユーザ表示
+save-all サーバ全体をセーブ
 
 
 
 https://minecraft-ja.gamepedia.com/%E6%9F%93%E6%96%99
 
-0	白色のテラコッタ	*
-1	橙色のテラコッタ	*
-4	黄色のテラコッタ	*
-8	薄灰色のテラコッタ	*
-12	茶色のテラコッタ	*
-14	赤色のテラコッタ	*
+0 白色のテラコッタ *
+1 橙色のテラコッタ *
+4 黄色のテラコッタ *
+8 薄灰色のテラコッタ *
+12 茶色のテラコッタ *
+14 赤色のテラコッタ *
 
-2	赤紫色のテラコッタ	\
-3	空色のテラコッタ	\
-5	黄緑色のテラコッタ	\
-6	桃色のテラコッタ	\
-11	青色のテラコッタ	\
-13	緑色のテラコッタ	\
-15	黒色のテラコッタ	\
+2 赤紫色のテラコッタ \
+3 空色のテラコッタ \
+5 黄緑色のテラコッタ \
+6 桃色のテラコッタ \
+11 青色のテラコッタ \
+13 緑色のテラコッタ \
+15 黒色のテラコッタ \
 
-7	灰色のテラコッタ
-9	水色のテラコッタ
-10	紫色のテラコッタ
+7 灰色のテラコッタ
+9 水色のテラコッタ
+10 紫色のテラコッタ
 
 
 
@@ -474,135 +665,7 @@ execute if entity @e[scores={Coin=5..}] run give @p iron_ingot 1
 execute if entity @e[scores={Coin=5..}] run scoreboard players remove @p Coin 5
 
 
-------------------------------------------------------------
-サーバの建て方
-https://docs.google.com/document/d/1vJta5yIS07ofzGKkFwy6gkESrZzA0mXTJysZnW9Le_A/edit
 
-バニラサーバ
-https://www.minecraft.net/ja-jp/download/server
-
-spigot版マイクラ：改造マイクラ
-https://hub.spigotmc.org/jenkins/job/BuildTools/
-
-1.gitを導入する
-
-2.git bashを実行する
-
-3.spigotをgitで見えるフォルダに入れる
-
-4.コマンドを実行する
-java -Xmx1024M -jar BuildTools.jar --rev latest
-java -Xmx1024M -jar BuildTools.jar --rev 1.17
-java -Xmx1024M -jar BuildTools.jar --rev 1.17.1
-
-※1GB以上でないと起動時に警告がでる
-
-5.spigot-1.16.5.jarをコピーして、適当にサーバディレクトリを作成する
-
-6.一回サーバを起動する
-java -Xmx1024M -Xms1024M -jar spigot-1.17.0.jar nogui
-
-7. eula.txtのfalse → trueに書き換える
-
-8.サーバをもう一回起動して、stopで終了する
-
-9.plugins フォルダに、Multiverse-Core-*.jar、Multiverse-Portals-*.jar を入れる
-
-10.サーバをもう一回起動する
-
-11.mv list でワールドが表示されればOK
-
-12. マイクラクライアントでIPログインする（自分のPCのローカルIPアドレスだよ）
-
-
-＜server.propertyの調整＞
-
-コマンドブロック有効
-enable-command-block=true
-
-最大接続数
-max-players=32
-
-ホワイトリスト制
-white-list=true
-
-サーバー紹介文
-motd=A Minecraft Server \u00A79[version 1.14.x] By Spigot
-
-
-ホワイトリストにユーザを追加するコマンド
-whitelist add [username]
-
-
-
-＜LukePerem＞
-config設定  config.yml
-
-前提：postgresqlを使用する場合、db、ユーザは予めpostgresql側で作成しておく
-
-storage-method: postgresql
-address: localhost
-database: minecraft
-username: root
-password: ''
-
-管理者権限設定
-lp user lucida3poi permission set luckperms.*
-lp creategroup admin
-lp user lucida3poi parent add admin
-
-lp creategroup member
-lp group default parent add member
-
-lp listgroups
-lp group admin listmembers
-
-
-初期プラグイン権限設定
-lp user lucida3poi permission set villagerbank.create false
-lp user lucida3poi permission set villagerbank.create true
-lp user lucida3poi permission unset villagerbank.create
-
-
-
-https://seesaawiki.jp/perominecraft/d/LuckPerms%20-%20%BB%C8%CD%D1%CA%FD%CB%A1%28%BD%E9%BF%B4%BC%D4%B8%FE%A4%B1%29
-
-
-
-According to the command usage, you should be able to define per-world permissions like so: /lp user/group <user|group> permission set <perm> <value> world=<world [コマンドの使用法に従って、ワールドごとの権限を次のように定義できるはずです: /lp user/group <user|group> permission set <perm> <value> world=<world] >
-
-Examples:
-
-/lp group default permission set essentials.sethome false world=anarchy
-
-/lp user stonewickSMP permission set essentials.god true world=anarchy
-
-Apparently, there is an older way of doing it: /lp user/group <user|group> permission set <perm> <value> global <world>
-
-
-
-＜GriefPrevention＞
-SeaLevelOverrides
--1にする（※新ワールド生成時も確認しておくこと）
-
-TNTやクリーパーでの建物爆破制限を解除する
-ただし、土地保護されたものは破壊できない
-BlockSurfaceCreeperExplosions: false
-BlockSurfaceOtherExplosions: false
-
-ピストンの動作を許可する
-PistonMovement: EVERYWHERE
-
-
-
-＜LWC＞
-core.ymlのblocksのautoRegisterを全てfalseに設定する
-autoRegister: false
-
-
-
-
-------------------------------
 
 https://ch.nicovideo.jp/kirisamealice/blomaga/ar1744541
 
@@ -644,6 +707,20 @@ https://ch.nicovideo.jp/kirisamealice/blomaga/ar1744541
 /tell @p[scores={DiamondCount=10..}] ダイヤを10個消費しました
 ・消去したプレイヤーにテキストを表示する
 
+```
+  
 
 
 
+
+
+***
+***
+[[トップへ戻る]](../../readme.md)　/
+[[minecraft]](/readme.md)  
+  
+::Admin= Korei (@korei-xlix)  
+::github= [https://github.com/korei-xlix/](https://github.com/korei-xlix/)  
+::Web= [https://website.koreis-labo.com/](https://website.koreis-labo.com/)  
+::X= [https://x.com/korei_xlix](https://x.com/korei_xlix)  
+***
