@@ -15,15 +15,21 @@
 * [readme.md](../../readme.md)
   * [利用にあたって (Important notices for use)](../../readme.md#利用にあたっての注意事項--important-notices-for-use)
 
-* コマンドメモ
+* 操作系メモ
   * [起動オプション](#起動オプション)
   * [操作方法](#操作方法)
 
+* コマンドメモ
+  * [バニラのコマンド](#バニラのコマンド)
+  * [コマンド：Multiverse-Core](#コマンドmultiverse-core)
+  * [コマンド：Multiverse-Portalsm](#コマンドmultiverse-portalsm)
+  * [コマンド：LuckPerms](#コマンドluckperms)
+
+  * [最寄りの座標表示コマンド](#最寄りの座標表示コマンド)
+  * [コマンド研究](#コマンド研究)
+
 * 各仕様メモ
   * [マイニング分布](#マイニング分布)
-  * [最寄りの座標表示コマンド](#最寄りの座標表示コマンド)
-  * [管理者コマンド](#管理者コマンド)
-  * [コマンド研究](#コマンド研究)
   * [エンドラRTA 公式ルール](#エンドラrta-公式ルール)
   * [カエル仕様](#カエル仕様)
   * [村判定仕様](#村判定仕様)
@@ -71,6 +77,520 @@ P
 モードシフト　　I
 
 F3+F4       ゲームモード切替
+
+```
+  
+
+
+
+
+
+## コマンド
+
+### バニラのコマンド
+
+[目次へ戻る](#目次--table-of-contents)  
+  
+
+よく使う、管理者が扱えるMinecraftバニラのコマンドです。  
+
+```text
+ゲームモードを変更する
+gamemode survival
+    survival: サバイバルモード
+    creative: クリエイティブモード
+    spectator: スペクテイターモード
+    adventure: アドベンチャーモード
+
+ゲームの難易度を変更する
+difficulty normal
+    peaceful: ピースフル
+    easy: イージー
+    normal: ノーマル
+    hard: ハード
+
+時間を変更する
+time set day
+    sunrise‌: 日の出。数値は23000。
+    day: 日中午前。数値は1000。
+    noon: 日中午後。数値は6000。
+    sunset‌: 日の入り。数値は12000。
+    midnight: 深夜。数値は18000。
+    [数値]: 数値に応じた時間に変更する
+
+天気を変更する
+weather clear
+    clear: 晴れ
+    rain : 雨
+    thunder : 雷雨
+
+現在地から周囲5000ブロックまでを境界にする
+worldborder center ~ ~
+worldborder set 16000 0
+
+初期スポーンを現在地に設定する
+setworldspawn
+
+サーバ停止
+stop
+
+ログイン中のユーザ表示
+list
+
+強制セーブする
+save-all
+
+ワールドのシード値を表示する
+seed
+
+スポナーを取得する
+give @s spawner
+　※取得できるのはスポナーの外装だけ。これにスポーンエッグを使うと機能する。
+
+execute in minecraft:the_nether run tp @p 100 100 100
+
+コマンドブロックを取得する
+give @a minecraft:command_block
+
+黄色のコマンドブロック：インパルス「動力が必要（レッドストーンが必要）」
+緑色のコマンドブロック：チェーン「常時実行（常にアクティブ）」
+青色のコマンドブロック：リピート（反復）「動力が必要（レッドストーンが必要）」
+
+ホワイトリストにユーザを追加する
+whitelist add [username]
+
+管理者権限を与える
+op [ユーザ名]
+　※荒らしに使われるので他のユーザには絶対使わないこと
+
+管理者権限をはく奪する
+deop [ユーザ名]
+
+```
+  
+
+
+
+### コマンド：Multiverse-Core
+
+```text
+ワールド情報を参照する
+mv info world
+
+ワールドにテレポートする
+mv tp [ワールド名]
+
+ワールドに入った時のゲームモードを設定する
+mvm set gamemode [0-3] [ワールド名]
+　0: サバイバルモード
+　1: クリエイティブモード
+　2: アドベンチャーモード
+　3: スペクテイターモード
+
+ワールドの難易度を設定する
+mvm set difficulty [0-3] [ワールド名]
+　0: ピースフル
+　1: イージー
+　2: ノーマル
+　3: ハード
+
+魔物の沸きの有無
+mvm set monsters true world
+mvm set monsters false world
+
+天気の変化の有無
+mvm set weather true world
+mvm set weather false world
+
+時間の変化の有無
+mvrule doDaylightCycle true world
+mvrule doDaylightCycle false world
+
+ワールドを生成する
+mv create [ワールド名] [NORMAL/NETHER/THE_END]
+
+ワールドを削除する
+mv delete [ワールド名]
+
+初期スポーンを現在地に再設定する
+mv set spawn
+
+```
+  
+
+
+### コマンド：Multiverse-Portalsm
+
+```text
+/mvp wand 斧を出す
+
+/mvp create [ポータル名] ポータル作成
+
+/mvp remove [ポータル名] ポータル削除
+
+/mvp select [ポータル名] ポータル選択
+
+/mvp modify dest p:[ポータル名]  選択してるポータルと繋ぐ
+
+/mvp list     ポータル一覧
+
+
+
+1. /mvp wandで木の斧を出す。他の木の斧でもよい
+
+2. ポータルの枠を作成し、木の斧でポータルの枠の左上をクリック、右下を右クリック
+
+3. /mvp listでポータル名が被って無いことを確認し
+   /mvp create [ポータル名1]でポータル1を作成
+.
+
+4. 2つ目のポータルの枠を作成し、木の斧で枠を指定して
+   /mvp create [ポータル名2] p:[ポータル名1]でポータル1に繋がるポータルを作成。
+
+5. このままではポータル1からポータル2に行くことが出来ないので
+   /mvp select [ポータル名1]でポータル1を選択する。
+
+6. /mvp modify dest p:[ポータル名2]でポータル1からポータル2へ繋ぎポータルの完成
+
+```
+  
+
+
+### コマンド：LuckPerms
+
+```text
+
+
+
+```
+  
+
+
+
+
+
+
+
+### 最寄りの座標表示コマンド
+
+[目次へ戻る](#目次--table-of-contents)  
+  
+
+最寄りのバイオームや建物の座標を出すチートコマンドです。  
+
+```text
+locate structure #minecraft:village              村
+locate structure minecraft:mansion               森の洋館
+locate structure minecraft:monument              神殿
+locate structure minecraft:pillager_outpost      前線基地
+locate structure minecraft:ancient_city          古代都市
+locate structure minecraft:stronghold            要塞（エンドポータル）
+locate biome minecraft:dripstone_caves           鍾乳洞
+
+locate biome minecraft:badlands                  荒野（メサ）
+locate biome minecraft:jungle                    ジャングル
+locate biome minecraft:desert                    砂漠
+locate biome minecraft:flower_forest             花の森
+locate biome minecraft:sunflower_plains          ヒマワリ平原
+locate biome minecraft:swamp                     沼地
+locate biome minecraft:mangrove_swamp            マングローブの沼
+locate biome minecraft:ice_spikes                 樹氷
+locate biome minecraft:mushroom_fields            マッシュルームの島
+locate biome cherry_grove                         サクラ
+
+locate biome minecraft:warm_ocean                 暖かい海
+locate biome minecraft:deep_ocean                 深い海
+locate biome minecraft:deep_frozen_ocean          凍った深海
+
+locate structure fortress                         ネザー要塞
+locate structure bastion_remnant                  砦の遺跡（ネザー）
+
+locate biome minecraft:crimson_forest             真紅の森（赤い森）
+locate biome minecraft:warped_forest              歪んだ森（青森）
+locate biome minecraft:basalt_deltas              三角地帯
+locate biome minecraft:soul_sand_valley           ソウルサンドの谷
+
+locate structure endcity                          エンドシティ
+                                                  
+
+-X/-Z     -Z          +X/-Z
+          [NORTH]
+-X                      +X
+[WEST]       ●      [EAST]
+
+          [SOUTH]
+-X/+Z     +Z          +X/+Z
+```
+  
+
+
+
+### コマンド研究
+
+[目次へ戻る](#目次--table-of-contents)  
+  
+
+* [Minecraft公式wiki コマンド](https://minecraft.fandom.com/ja/wiki/%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89)
+
+* [ターゲットセレクター](https://minecraft.fandom.com/ja/wiki/%E3%82%BF%E3%83%BC%E3%82%B2%E3%83%83%E3%83%88%E3%82%BB%E3%83%AC%E3%82%AF%E3%82%BF%E3%83%BC)
+
+* [nbtデータ プレイヤー](https://minecraft.fandom.com/ja/wiki/Player.dat%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88)
+
+* 座標（pos）：F3の **Blick** の項目を見ること。
+  
+
+```text
+scoreboard: スコアボード操作
+
+スコアボードを消す（表示）
+scoreboard objectives setdisplay sidebar
+
+スコアボードを消す（points）
+scoreboard objectives remove points
+
+衝撃：無条件：動力必要
+clear @p[nbt={Inventory:[{Slot:8b,id:"minecraft:diamond_sword"}]}] minecraft:diamond_sword 0
+
+チェーン：条件あり：動力必要
+item replace entity @p hotbar.8 with minecraft:diamond 1
+
+give: アイテムを渡す
+
+clear: アイテム消去
+
+ダイヤヘルムを装備してたら、ダイヤを1個消す
+clear @p[nbt={Inventory:[{Slot:103b,id:"minecraft:diamond_helmet"}]}] minecraft:diamond 1
+
+スロット右にダイヤヘルムがあｔったら、ダイヤを1個消す
+clear @p[nbt={Inventory:[{Slot:8b,id:"minecraft:diamond_helmet"}]}] minecraft:diamond 1
+
+clear @p[nbt={Inventory:[{Slot:8b,id:"minecraft:enchanted_book"}]}] minecraft:enchanted_book 1
+
+clear @p[nbt={Inventory:[{Slot:8b,id:"minecraft:enchanted_book",tag:{StoredEnchantments:[{lvl:1}]}}]}] minecraft:enchanted_book 0
+
+item: ブロックのインベントリ操作
+
+チェストの左上にダイヤを1個セットする
+item replace block 0 -60 0 container.0 with minecraft:diamond 1
+
+execute : 他のコマンドを実行する汎用コマンド
+
+インベントリにあるアイテム数を計算
+/execute as @a store result score @s points run clear @s minecraft:iron_ingot 0
+
+1.18.20のアップデートでhasitemというのが追加されます。このhasitemが特定のアイテムを持つと検知するコマンドです。
+例えばダイヤモンドの剣を持つと攻撃力上昇レベル5が付与したい場合コマンドブロックでこのコマンドを入力します
+/execute @e[hasitem={item=diamond_sword, location=slot.weapon.mainhand}] ~~~ effect @s strength 1 4 true
+そして反復にすればできます。このhasitemは装備を検知したり、アイテムの数を指定したり、スロットの位置を指定することだってできます。
+
+/setblock ~ ~2 ~ minecraft:chest
+/data merge block ~ ~2 ~ {Items:[{id:"minecraft:arrow",Count:1,Slot:0},{id:"minecraft:arrow",Count:1,Slot:1},{id:"minecraft:arrow",Count:2,Slot:2},・・・{id:"minecraft:arrow",Count:4,Slot:26}]}
+
+```
+  
+
+
+
+### コマンドブロック経済
+
+```text
+https://tokoton0ch.com/2020/02/20/post-1268/
+
+コマンドブロックの入手
+/give @p command_block
+
+/gamerule commandBlockOutput false
+
+/scoreboard objectives remove Coin
+
+①スコアボードにの「Coin」を追加します。
+scoreboard objectives add Coin dummy
+
+②「Coin」を0にセットします。
+※「Coin」を持っている時も0になります。設置場所やCoin追加方法には工夫が必要です。
+scoreboard players set @p Coin 0
+
+③サイドバーに「Coin」を表示します。
+scoreboard objectives setdisplay sidebar Coin
+
+
+
+
+execute if entity @e[scores={Coin=5..}] run scoreboard players remove @p Coin 5
+
+give @p iron_ingot 1
+
+
+
+
+ベイクドポテト   baked_potato
+パンプキンパイ   pumpkin_pie
+ステーキ    cooked_beef
+
+ラピスラズリ   lapis_lazuli
+糸      string
+乾燥した昆布   dried_kelp
+火打石     flint
+粘土     clay_ball
+エンダーパール   ender_pearl
+
+鉄インゴット   iron_ingot
+金インゴット   gold_ingot
+ダイヤ     diamond
+
+名前タグ    name_tag
+白紙の地図    map
+
+フグ     pufferfish
+金のニンジン   golden_carrot
+マグマクリーム   magma_cream
+
+矢      arrow
+弓      bow
+盾      shield
+剣      diamond_sword
+ピッケル    diamond_pickaxe
+斧      diamond_axe
+シャベル    diamond_shovel
+クワ     diamond_hoe
+
+白色の染料    white_dye
+橙色の染料    orange_dye
+赤紫色の染料   magenda_dye
+空色の染料    light_blue_dye
+黄色の染料    yellow_dye
+黄緑色の染料   lime_dye
+桃色の染料    pink_dye
+灰色の染料    gray_dye
+薄灰色の染料   light_gray_dye
+青緑色の染料   cyan_dye
+紫色の染料    purple_dye
+青色の染料    blue_dye
+茶色の染料    brown_dye
+緑色の染料    green_dye
+赤色の染料    red_dye
+黒色の染料    black_dye
+
+
+
+エンチャント本
+ダメージ増加   /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:sharpness,lvl:5}]}
+アンデッド特攻   /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:smite,lvl:5}]}
+火属性     /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:fire_aspect,lvl:2}]}
+ドロップ増加   /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:looting,lvl:3}]}
+範囲ダメージ増加  /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:sweeping,lvl:3}]}
+
+射撃ダメージ増加  /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:power,lvl:5}]}
+フレイム    /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:flame,lvl:1}]}
+無限     /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:infinity,lvl:1}]}
+
+シルクタッチ   /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:silk_touch,lvl:1}]}
+幸運     /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:fortune,lvl:3}]}
+効率強化    /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:efficiency,lvl:5}]}
+
+耐久力     /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:unbreaking,lvl:3}]}
+修繕     /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:mending,lvl:1}]}
+
+ダメージ軽減   /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:protection,lvl:4}]}
+火炎耐性    /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:fire_protection,lvl:4}]}
+爆発耐性    /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:blast_protection,lvl:4}]}
+
+落下耐性    /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:feather_falling,lvl:4}]}
+水中採掘    /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:aqua_affinity,lvl:1}]}
+水中歩行    /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:depth_strider,lvl:3}]}
+氷渡り     /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:frost_walker,lvl:2}]}
+ソウルスピード   /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:soul_speed,lvl:3}]}
+
+水中呼吸    /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:respiration,lvl:3}]}
+
+釣竿（宝釣り・入れ食い・耐久力）
+      /give @p minecraft:fishing_rod{HideFlags:1,Enchantments:[{id:unbreaking,lvl:3},{id:luck_of_the_sea,lvl:3},{id:lure,lvl:3}]}
+
+クロスボウ（貫通4・高速装填3・耐久力）
+      /give @p minecraft:crossbow{HideFlags:1,Enchantments:[{id:unbreaking,lvl:3},{id:quick_charge,lvl:3},{id:piercing,lvl:4}]}
+クロスボウ（拡散1・高速装填3・耐久力）
+      /give @p minecraft:crossbow{HideFlags:1,Enchantments:[{id:unbreaking,lvl:3},{id:quick_charge,lvl:3},{id:multishot,lvl:1}]}
+
+水生特効5・忠誠3・召雷1 /give @p minecraft:crossbow{HideFlags:1,Enchantments:[{id:loyalty,lvl:3},{id:impaling,lvl:5},{id:channeling,lvl:1}]}
+水生特効5・激流3  /give @p minecraft:crossbow{HideFlags:1,Enchantments:[{id:impaling,lvl:5},{id:riptide,lvl:3}]}
+
+
+
+https://minecraft-ja.gamepedia.com/%E6%9F%93%E6%96%99
+
+0 白色のテラコッタ *
+1 橙色のテラコッタ *
+4 黄色のテラコッタ *
+8 薄灰色のテラコッタ *
+12 茶色のテラコッタ *
+14 赤色のテラコッタ *
+
+2 赤紫色のテラコッタ \
+3 空色のテラコッタ \
+5 黄緑色のテラコッタ \
+6 桃色のテラコッタ \
+11 青色のテラコッタ \
+13 緑色のテラコッタ \
+15 黒色のテラコッタ \
+
+7 灰色のテラコッタ
+9 水色のテラコッタ
+10 紫色のテラコッタ
+
+
+
+https://minecraft-blog.net/?p=9605
+
+/mv rule doDaylightCycle false world
+
+execute unless score @p Coin matches 1.. run scoreboard players set @p Coin 0
+
+execute if entity @e[scores={Coin=5..}] run give @p iron_ingot 1
+
+execute if entity @e[scores={Coin=5..}] run scoreboard players remove @p Coin 5
+
+
+
+
+https://ch.nicovideo.jp/kirisamealice/blomaga/ar1744541
+
+1.アイテム数検知用スコアの作成
+[チャット/コマンドブロック]
+/scoreboard objectives add [スコアの名前(英文字のみ)] dummy ["表示名(日本語可)"]
+
+2.アイテム数を検知し、スコアに代入
+『コマンドブロック[インパルス/無条件/動力が必要]』
+/execute positioned [コマンド発動座標] as @p[distance=..1] store result score @s [スコアの名前(英文字のみ)] run clear @s [検知するアイテム] 0
+
+3.指定したアイテムを指定数以上所持している場合、アイテム消去
+『コマンドブロック[チェーン/条件(どちらでも可)/常時実行]』
+/execute if score @p [スコアの名前(英文字のみ)] matches [検知するアイテム数の必要数] run clear @p [消去するアイテム] [個数]
+
+4(任意).テキスト表示
+『コマンドブロック[チェーン/条件(どちらでも可)/常時実行]』
+/tell @p[scores={[スコアの名前(英文字のみ)]=[検知するアイテム数の必要数]}] [表示テキスト]
+
+
+
+
+
+動画内で使用したコマンド:
+1.アイテム数検知スコアの作成
+/scoreboard objectives add DiamondCount dummy "ダイヤ所持数"
+・『DiamondCount』でアイテム数を検知するスコアを作成
+
+2.アイテム数を検知し、スコアに代入
+/execute positioned ~1 ~ ~ as @p[distance=..1] store result score @s DiamondCount run clear @s minecraft:diamond 0
+・指定座標にいたプレイヤーのダイヤモンドの所持数を『DiamondCount』に代入
+
+3.指定したアイテムを指定数以上所持している場合、アイテム消去
+/execute if score @p DiamondCount matches 10.. run clear @p minecraft:diamond 10
+・『DiamondCount』が10以上の時、ダイヤモンドを10個消去する
+　∟座標を指定すると誤作動を防止できる
+
+4(任意).テキスト表示
+/tell @p[scores={DiamondCount=10..}] ダイヤを10個消費しました
+・消去したプレイヤーにテキストを表示する
 
 ```
   
@@ -140,200 +660,6 @@ F3+F4       ゲームモード切替
     -16～320
     高くなるほど生成率があがる
     ※山岳バイオームのみ
-```
-  
-
-
-
-
-
-## 最寄りの座標表示コマンド
-
-[目次へ戻る](#目次--table-of-contents)  
-  
-
-最寄りのバイオームや建物の座標を出すチートコマンドです。  
-
-```text
-locate structure #minecraft:village              村
-locate structure minecraft:mansion               森の洋館
-locate structure minecraft:monument              神殿
-locate structure minecraft:pillager_outpost      前線基地
-locate structure minecraft:ancient_city          古代都市
-locate structure minecraft:stronghold            要塞（エンドポータル）
-locate biome minecraft:dripstone_caves           鍾乳洞
-
-locate biome minecraft:badlands                  荒野（メサ）
-locate biome minecraft:jungle                    ジャングル
-locate biome minecraft:desert                    砂漠
-locate biome minecraft:flower_forest             花の森
-locate biome minecraft:sunflower_plains          ヒマワリ平原
-locate biome minecraft:swamp                     沼地
-locate biome minecraft:mangrove_swamp            マングローブの沼
-locate biome minecraft:ice_spikes                 樹氷
-locate biome minecraft:mushroom_fields            マッシュルームの島
-locate biome cherry_grove                         サクラ
-
-locate biome minecraft:warm_ocean                 暖かい海
-locate biome minecraft:deep_ocean                 深い海
-locate biome minecraft:deep_frozen_ocean          凍った深海
-
-locate structure fortress                         ネザー要塞
-locate structure bastion_remnant                  砦の遺跡（ネザー）
-
-locate biome minecraft:crimson_forest             真紅の森（赤い森）
-locate biome minecraft:warped_forest              歪んだ森（青森）
-locate biome minecraft:basalt_deltas              三角地帯
-locate biome minecraft:soul_sand_valley           ソウルサンドの谷
-
-locate structure endcity                          エンドシティ
-                                                  
-
--X/-Z     -Z          +X/-Z
-          [NORTH]
--X                      +X
-[WEST]       ●      [EAST]
-
-          [SOUTH]
--X/+Z     +Z          +X/+Z
-```
-  
-
-
-
-
-
-## 管理者コマンド
-
-[目次へ戻る](#目次--table-of-contents)  
-  
-
-よく使う、管理者が扱えるMinecraftバニラのコマンドです。  
-
-```text
-ゲームモードを変更する
-gamemode survival
-    survival: サバイバルモード
-    creative: クリエイティブモード
-    spectator: スペクテイターモード
-    adventure: アドベンチャーモード
-
-ゲームの難易度を変更する
-difficulty normal
-    peaceful: ピースフル
-    easy: イージー
-    normal: ノーマル
-    hard: ハード
-
-時間を変更する
-time set day
-    sunrise‌: 日の出。数値は23000。
-    day: 日中午前。数値は1000。
-    noon: 日中午後。数値は6000。
-    sunset‌: 日の入り。数値は12000。
-    midnight: 深夜。数値は18000。
-    [数値]: 数値に応じた時間に変更する
-
-天気を変更する
-weather clear
-    clear: 晴れ
-    rain : 雨
-    thunder : 雷雨
-
-現在地から周囲5000ブロックまでを境界にする
-worldborder center ~ ~
-worldborder set 16000 0
-
-初期スポーンを現在地に設定する
-setworldspawn
-
-強制セーブする
-save-all
-
-ワールドのシード値を表示する
-seed
-
-スポナーを取得する
-give @s spawner
-　※取得できるのはスポナーの外装だけ。これにスポーンエッグを使うと機能する。
-
-execute in minecraft:the_nether run tp @p 100 100 100
-
-コマンドブロックを取得する
-give @a minecraft:command_block
-
-黄色のコマンドブロック：インパルス「動力が必要（レッドストーンが必要）」
-緑色のコマンドブロック：チェーン「常時実行（常にアクティブ）」
-青色のコマンドブロック：リピート（反復）「動力が必要（レッドストーンが必要）」
-
-```
-  
-
-
-
-
-
-## コマンド研究
-
-[目次へ戻る](#目次--table-of-contents)  
-  
-
-* [Minecraft公式wiki コマンド](https://minecraft.fandom.com/ja/wiki/%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89)
-
-* [ターゲットセレクター](https://minecraft.fandom.com/ja/wiki/%E3%82%BF%E3%83%BC%E3%82%B2%E3%83%83%E3%83%88%E3%82%BB%E3%83%AC%E3%82%AF%E3%82%BF%E3%83%BC)
-
-* [nbtデータ プレイヤー](https://minecraft.fandom.com/ja/wiki/Player.dat%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88)
-
-* 座標（pos）：F3の **Blick** の項目を見ること。
-  
-
-```text
-scoreboard: スコアボード操作
-
-スコアボードを消す（表示）
-scoreboard objectives setdisplay sidebar
-
-スコアボードを消す（points）
-scoreboard objectives remove points
-
-衝撃：無条件：動力必要
-clear @p[nbt={Inventory:[{Slot:8b,id:"minecraft:diamond_sword"}]}] minecraft:diamond_sword 0
-
-チェーン：条件あり：動力必要
-item replace entity @p hotbar.8 with minecraft:diamond 1
-
-give: アイテムを渡す
-
-clear: アイテム消去
-
-ダイヤヘルムを装備してたら、ダイヤを1個消す
-clear @p[nbt={Inventory:[{Slot:103b,id:"minecraft:diamond_helmet"}]}] minecraft:diamond 1
-
-スロット右にダイヤヘルムがあｔったら、ダイヤを1個消す
-clear @p[nbt={Inventory:[{Slot:8b,id:"minecraft:diamond_helmet"}]}] minecraft:diamond 1
-
-clear @p[nbt={Inventory:[{Slot:8b,id:"minecraft:enchanted_book"}]}] minecraft:enchanted_book 1
-
-clear @p[nbt={Inventory:[{Slot:8b,id:"minecraft:enchanted_book",tag:{StoredEnchantments:[{lvl:1}]}}]}] minecraft:enchanted_book 0
-
-item: ブロックのインベントリ操作
-
-チェストの左上にダイヤを1個セットする
-item replace block 0 -60 0 container.0 with minecraft:diamond 1
-
-execute : 他のコマンドを実行する汎用コマンド
-
-インベントリにあるアイテム数を計算
-/execute as @a store result score @s points run clear @s minecraft:iron_ingot 0
-
-1.18.20のアップデートでhasitemというのが追加されます。このhasitemが特定のアイテムを持つと検知するコマンドです。
-例えばダイヤモンドの剣を持つと攻撃力上昇レベル5が付与したい場合コマンドブロックでこのコマンドを入力します
-/execute @e[hasitem={item=diamond_sword, location=slot.weapon.mainhand}] ~~~ effect @s strength 1 4 true
-そして反復にすればできます。このhasitemは装備を検知したり、アイテムの数を指定したり、スロットの位置を指定することだってできます。
-
-/setblock ~ ~2 ~ minecraft:chest
-/data merge block ~ ~2 ~ {Items:[{id:"minecraft:arrow",Count:1,Slot:0},{id:"minecraft:arrow",Count:1,Slot:1},{id:"minecraft:arrow",Count:2,Slot:2},・・・{id:"minecraft:arrow",Count:4,Slot:26}]}
-
 ```
   
 

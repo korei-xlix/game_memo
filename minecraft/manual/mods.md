@@ -21,16 +21,27 @@
 * [readme.md](../../readme.md)
   * [利用にあたって (Important notices for use)](../../readme.md#利用にあたっての注意事項--important-notices-for-use)
 
-* [ワールド情報](#ワールド情報)
-  * [ゲーム初期情報](#ゲーム初期情報)
-  * [旗の色](#旗の色)
+* [Minecraft Fablic+VulkanModの導入](#minecraft-fablicvulkanmodの導入)
+  * [大前提](#大前提)
+  * [Fablic+VulkanModの導入手順](#fablicvulkanmodの導入手順)
+
+* [サーバの建て方(PaperMC)](#サーバの建て方minecraft-papermcの導入)
+  * [PaperMC・Multiverse-Coreとは](#papermcmultiverse-coreとは)
+  * [サーバを建てる](#サーバを建てる)
+  * [サーバの調整](#サーバの調整serverproperty)
+  * [プラグインの導入](#プラグインの導入)
+
+* [サーバコマンド](../manual/command.md#コマンド)
+
+* [過去の資料](#過去の資料)
+  * [Minecraft Forge+Optifineの導入](#minecraft-forgeoptifineの導入非推奨)
   
 
 
 
 
 
-## Minecraft Forgeの導入
+## Minecraft Fablic+VulkanModの導入
 
 [目次へ戻る](#目次--table-of-contents)  
   
@@ -46,19 +57,18 @@ bedrock版や、realmsでは遊べません。
 
 
 
-### Forgeとは
+### Fablicとは
 
-Forgeは多くのmodを動かすためのベースとなるminecraftクライアント用のmodです。
-また副効果として、クライアントの動作が軽くなるようです。なので、とくにmodを使わなくても導入しておいたほうがいいかもしれません。  
-このドキュメントでは、クライアントにForgeを入れた状態で説明していきます。  
-また、Forgeと合わせて、シェーダを使うmod「Optifine」も導入します。  
+Fablicは多くのmodを動かすためのベースとなるminecraftクライアント用のmodです。  
+また、今回はグラフィックAPIをOpenGLからVulkanに入れ替える、VulkanModも導入します。これにより、Minecraftの描画処理が向上するようですが、Optifineが使えなくなるため（OptifineはOpenGLを使用しているため）シェーダーが使えません。というより、記事を書いている時はVulkanModで動くシェーダーはなかったです。  
+しかし、Minecraft自体がOpenGLをやめる動きがあるので、早めにVulkanに乗り換えしておいたほうがいいと考えます。  
   
 
 
 
-### 導入手順
+### Fablic+VulkanModの導入手順
 
-ForgeとOptifineを導入する方法は以下の通りです。  
+FablicとVulkanModを導入する方法は以下の通りです。  
   
 
 1. JDK(Java SE Development Kit)を導入する  
@@ -71,75 +81,44 @@ ForgeとOptifineを導入する方法は以下の通りです。
   インストールの完了後、閉じるをクリックすればOKです。  
 
 1. minecraftのバージョンを確認する  
-  Forgeを動かすminecraftのバージョンを確認します。  
-  minecraftと導入するForgeのバージョンはそろえる必要があります。  
+  Fablicを動かすminecraftのバージョンを確認します。  
+  minecraftと導入するFablicのバージョンはそろえる必要があります。  
   **一度minecraftを起動し、バージョンを確認します。**  
 
-1. Forgeのバージョンを確認する  
-  Forgeのインストーラを入手します。  
-  動かすminecraftと同じバージョンのインストーラを入手します。  
-  Latest（最新版）」と「Recommended（安定版）」がありますが、
-  最新版は不具合のリスクがあるので、  
-  「安定版」を選んだほうがよいです。  
-  **Forgeインストーラは以下のサイトから入手できます。（URLは当方で確認済）**  
-  　　[[Forge Installer](https://files.minecraftforge.net/net/minecraftforge/forge/)]  
+1. Fablicを入手する  
+  Fablicのインストーラを入手します。  
+  **Fablicインストーラは以下のサイトから入手できます。（URLは当方で確認済）**  
+  　　[[Fablic Installer](https://fabricmc.net/use/installer/)]  
 
-1. Forgeをインストールする  
-  **Forgeインストーラを実行し、インストールを実行します。**  
-  クライアント（ローカルで遊ぶ場合）は、「Client」を選択します。  
-  インストールが完了したら、OKをクリックしてください。  
+1. Fablicをインストールする  
+  インストーラから、動かすMinecraftのバージョンを指定します。  
+  **Fablicインストーラを実行し、インストールを実行します。**  
 
-1. minecraftでForge用の起動構成を作成する  
+1. minecraftでFablic用の起動構成を作成する  
 
     1. minecraftランチャーを起動し、「起動構成」-「新規作成」を選びます。  
 
     1. 起動構成を設定します。  
       名前：起動構成の名称を付けます。  
-      バージョン：導入したForgeと同じバージョンを選択します。  
-        1.21.11の場合　release 1.21.11-forge61.0.6  
-      ゲームディレクトリ：Forgeを動かすminecraftのゲームデータの保存先を指定します。  
+      バージョン：導入したFablicと同じバージョンを選択します。  
+      ゲームディレクトリ：Fablicを動かすminecraftのゲームデータの保存先を指定します。  
       分かりやすく、最新Release配下に適当なフォルダを作成して、そこを指定します。  
-      　　C:\Users\[ユーザ名]\AppData\Roaming\.minecraft\forge_1.21.11　とか  
+      　　C:\Users\[ユーザ名]\AppData\Roaming\.minecraft\Fablic_1.21.11　とか  
 
     1. 「保存」を押して、起動構成を保存します。  
 
-1. Optifineのバージョンを確認する  
-  Optifineのインストーラを入手します。  
+1. VulkanModのバージョンを確認する  
+  VulkanModのインストーラを入手します。  
   動かすminecraftと同じバージョンのインストーラを入手します。  
-  minecraftのバージョンアップ直後は、最新のOptifineが出てくるのに時間がかかるので、
-  対応バージョンがなければ適用は待ちましょう。  
-  **Optifineインストーラは以下のサイトから入手できます。（URLは当方で確認済）**  
-  　　[[Optifine Installer](https://optifine.net/downloads)]  
+  **VulkanModインストーラは以下のサイトから入手できます。（URLは当方で確認済）**  
+  　　[[VulkanMod Installer](https://modrinth.com/mod/vulkanmod)]  
 
-1. ダウンロードしたOptifineをそのままクライアントのmodsフォルダに入れます。  
-      　　C:\Users\[ユーザ名]\AppData\Roaming\.minecraft\forge_1.21.11\mods 以下  
+1. ダウンロードしたVulkanModをそのままクライアントのmodsフォルダに入れます。  
+      　　C:\Users\[ユーザ名]\AppData\Roaming\.minecraft\fablic_1.21.11\mods 以下  
 
 1. minecraftランチャーから、作成した起動構成を指定して、ゲームを始めます。  
-  タイトル左下のバージョン表示で、導入したForgeのバージョンが表示されていれば、Forgeの導入完了です。  
-  また、「設定」→「ビデオ設定」画面で、左下にOptifineのバージョンが表示されていれば、Optifineの導入も完了です！  
-
-
-
-### シェーダの適用
-
-任意のシェーダを適用するには、シェーダパックをシェーダーフォルダに入れます。  
-      　　C:\Users\[ユーザ名]\AppData\Roaming\.minecraft\forge_1.21.11\shaderpacks 以下  
-  
-シェーダパックを適用するには、「設定」→「ビデオ設定」→「シェーダの詳細」から、
-任意のシェーダパックを選択します。  
-クライアントは自動的に再起動されます。  
-  
-
-#### **おすすめシェーダパック**
-
-* **初心者・万能型：Complementary Reimagined**  
-  　　[File URL](https://www.curseforge.com/minecraft/shaders/complementary-reimagined)  
-
-* **幻想的：BSL Shaders**  
-  　　[File URL](https://www.curseforge.com/minecraft/shaders/bsl-shaders)  
-
-* **低スペック向け：MakeUp - Ultra Fast**  
-  　　[File URL](https://www.curseforge.com/minecraft/shaders/makeup-ultra-fast-shader)  
+  タイトル左下のバージョン表示で、導入したFablicのバージョンが表示されていれば、Fablicの導入完了です。  
+  また、「設定」→「ビデオ設定」画面で、VulkanModの設定画面が表示されていれば、VulkanModの導入も完了です！  
   
 
 
@@ -394,320 +373,110 @@ autoRegister: false
 
 
 
-## サーバコマンド
+## 過去の資料
 
-### コマンド：Multiverse-Core
+### Minecraft Forge+Optifineの導入（非推奨）
 
-```text
-ワールド情報を参照する
-mv info world
-
-ワールドにテレポートする
-mv tp [ワールド名]
-
-ワールドに入った時のゲームモードを設定する
-mvm set gamemode [0-3] [ワールド名]
-　0: サバイバルモード
-　1: クリエイティブモード
-　2: アドベンチャーモード
-　3: スペクテイターモード
-
-ワールドの難易度を設定する
-mvm set difficulty [0-3] [ワールド名]
-　0: ピースフル
-　1: イージー
-　2: ノーマル
-　3: ハード
-
-魔物の沸きの有無
-mvm set monsters true world
-mvm set monsters false world
-
-天気の変化の有無
-mvm set weather true world
-mvm set weather false world
-
-時間の変化の有無
-mvrule doDaylightCycle true world
-mvrule doDaylightCycle false world
-
-ワールドを生成する
-mv create [ワールド名] [NORMAL/NETHER/THE_END]
-
-ワールドを削除する
-mv delete [ワールド名]
-
-初期スポーンを現在地に再設定する
-mv set spawn
-
-管理者権限を与える
-op [ユーザ名]
-　※spigotを使う際、真っ先に自分に使うコマンド
-　※荒らしに使われるので他のユーザには絶対使わないこと
-
-```
+[目次へ戻る](#目次--table-of-contents)  
   
 
-
-### コマンド：Multiverse-Portalsm
-
-```text
-/mvp wand 斧を出す
-
-/mvp create [ポータル名] ポータル作成
-
-/mvp remove [ポータル名] ポータル削除
-
-/mvp select [ポータル名] ポータル選択
-
-/mvp modify dest p:[ポータル名]  選択してるポータルと繋ぐ
-
-/mvp list     ポータル一覧
-
-
-
-1. /mvp wandで木の斧を出す。他の木の斧でもよい
-
-2. ポータルの枠を作成し、木の斧でポータルの枠の左上をクリック、右下を右クリック
-
-3. /mvp listでポータル名が被って無いことを確認し
-   /mvp create [ポータル名1]でポータル1を作成
-.
-
-4. 2つ目のポータルの枠を作成し、木の斧で枠を指定して
-   /mvp create [ポータル名2] p:[ポータル名1]でポータル1に繋がるポータルを作成。
-
-5. このままではポータル1からポータル2に行くことが出来ないので
-   /mvp select [ポータル名1]でポータル1を選択する。
-
-6. /mvp modify dest p:[ポータル名2]でポータル1からポータル2へ繋ぎポータルの完成
-
-```
+参考：[サーバの立て方(X Server Game's)](https://games.xserver.ne.jp/minecraft-media/minecraft-forge/)  
   
 
+### Forgeとは
 
-### コマンド：LuckPerms
-
-```text
-
-
-
-```
+ForgeはFablic同様、多くのmodを動かすためのベースとなるminecraftクライアント用のmodです。  
+また副効果として、クライアントの動作が軽くなるようです。なので、とくにmodを使わなくても導入しておいたほうがいいかもしれません。  
+このドキュメントでは、クライアントにForgeを入れた状態で説明していきます。  
+また、Forgeと合わせて、シェーダを使うmod「Optifine」も導入します。  
   
 
 
 
+### Forge+Optifinrの導入手順
 
+ForgeとOptifineを導入する方法は以下の通りです。  
+  
 
+1. JDK(Java SE Development Kit)を導入する  
+  Forge Installerを実行するために、JDKを導入します。  
+  **JDKのインストーラはOracleからダウンロードできます。**  
+  　　[[Java SE Development Kit Installer(Oracle)](https://www.oracle.com/jp/java/technologies/downloads/)]  
 
-## コマンドブロック経済（過去の資料）
+1. JDKをインストールする  
+  **JSKインストーラを実行し、インストールを実行します。**  
+  インストールの完了後、閉じるをクリックすればOKです。  
 
-```text
-https://tokoton0ch.com/2020/02/20/post-1268/
+1. minecraftのバージョンを確認する  
+  Forgeを動かすminecraftのバージョンを確認します。  
+  minecraftと導入するForgeのバージョンはそろえる必要があります。  
+  **一度minecraftを起動し、バージョンを確認します。**  
 
-コマンドブロックの入手
-/give @p command_block
+1. Forgeのバージョンを確認する  
+  Forgeのインストーラを入手します。  
+  動かすminecraftと同じバージョンのインストーラを入手します。  
+  Latest（最新版）」と「Recommended（安定版）」がありますが、
+  最新版は不具合のリスクがあるので、  
+  「安定版」を選んだほうがよいです。  
+  **Forgeインストーラは以下のサイトから入手できます。（URLは当方で確認済）**  
+  　　[[Forge Installer](https://files.minecraftforge.net/net/minecraftforge/forge/)]  
 
-/gamerule commandBlockOutput false
+1. Forgeをインストールする  
+  **Forgeインストーラを実行し、インストールを実行します。**  
+  クライアント（ローカルで遊ぶ場合）は、「Client」を選択します。  
+  インストールが完了したら、OKをクリックしてください。  
 
-/scoreboard objectives remove Coin
+1. minecraftでForge用の起動構成を作成する  
 
-①スコアボードにの「Coin」を追加します。
-scoreboard objectives add Coin dummy
+    1. minecraftランチャーを起動し、「起動構成」-「新規作成」を選びます。  
 
-②「Coin」を0にセットします。
-※「Coin」を持っている時も0になります。設置場所やCoin追加方法には工夫が必要です。
-scoreboard players set @p Coin 0
+    1. 起動構成を設定します。  
+      名前：起動構成の名称を付けます。  
+      バージョン：導入したForgeと同じバージョンを選択します。  
+        1.21.11の場合　release 1.21.11-forge61.0.6  
+      ゲームディレクトリ：Forgeを動かすminecraftのゲームデータの保存先を指定します。  
+      分かりやすく、最新Release配下に適当なフォルダを作成して、そこを指定します。  
+      　　C:\Users\[ユーザ名]\AppData\Roaming\.minecraft\forge_1.21.11　とか  
 
-③サイドバーに「Coin」を表示します。
-scoreboard objectives setdisplay sidebar Coin
+    1. 「保存」を押して、起動構成を保存します。  
 
+1. Optifineのバージョンを確認する  
+  Optifineのインストーラを入手します。  
+  動かすminecraftと同じバージョンのインストーラを入手します。  
+  minecraftのバージョンアップ直後は、最新のOptifineが出てくるのに時間がかかるので、
+  対応バージョンがなければ適用は待ちましょう。  
+  **Optifineインストーラは以下のサイトから入手できます。（URLは当方で確認済）**  
+  　　[[Optifine Installer](https://optifine.net/downloads)]  
 
+1. ダウンロードしたOptifineをそのままクライアントのmodsフォルダに入れます。  
+      　　C:\Users\[ユーザ名]\AppData\Roaming\.minecraft\forge_1.21.11\mods 以下  
 
+1. minecraftランチャーから、作成した起動構成を指定して、ゲームを始めます。  
+  タイトル左下のバージョン表示で、導入したForgeのバージョンが表示されていれば、Forgeの導入完了です。  
+  また、「設定」→「ビデオ設定」画面で、左下にOptifineのバージョンが表示されていれば、Optifineの導入も完了です！  
 
-execute if entity @e[scores={Coin=5..}] run scoreboard players remove @p Coin 5
 
-give @p iron_ingot 1
 
+### Optifineシェーダの適用
 
+任意のシェーダを適用するには、シェーダパックをシェーダーフォルダに入れます。  
+      　　C:\Users\[ユーザ名]\AppData\Roaming\.minecraft\forge_1.21.11\shaderpacks 以下  
+  
+シェーダパックを適用するには、「設定」→「ビデオ設定」→「シェーダの詳細」から、
+任意のシェーダパックを選択します。  
+クライアントは自動的に再起動されます。  
+  
 
+#### **おすすめシェーダパック**
 
-ベイクドポテト   baked_potato
-パンプキンパイ   pumpkin_pie
-ステーキ    cooked_beef
+* **初心者・万能型：Complementary Reimagined**  
+  　　[File URL](https://www.curseforge.com/minecraft/shaders/complementary-reimagined)  
 
-ラピスラズリ   lapis_lazuli
-糸      string
-乾燥した昆布   dried_kelp
-火打石     flint
-粘土     clay_ball
-エンダーパール   ender_pearl
+* **幻想的：BSL Shaders**  
+  　　[File URL](https://www.curseforge.com/minecraft/shaders/bsl-shaders)  
 
-鉄インゴット   iron_ingot
-金インゴット   gold_ingot
-ダイヤ     diamond
-
-名前タグ    name_tag
-白紙の地図    map
-
-フグ     pufferfish
-金のニンジン   golden_carrot
-マグマクリーム   magma_cream
-
-矢      arrow
-弓      bow
-盾      shield
-剣      diamond_sword
-ピッケル    diamond_pickaxe
-斧      diamond_axe
-シャベル    diamond_shovel
-クワ     diamond_hoe
-
-白色の染料    white_dye
-橙色の染料    orange_dye
-赤紫色の染料   magenda_dye
-空色の染料    light_blue_dye
-黄色の染料    yellow_dye
-黄緑色の染料   lime_dye
-桃色の染料    pink_dye
-灰色の染料    gray_dye
-薄灰色の染料   light_gray_dye
-青緑色の染料   cyan_dye
-紫色の染料    purple_dye
-青色の染料    blue_dye
-茶色の染料    brown_dye
-緑色の染料    green_dye
-赤色の染料    red_dye
-黒色の染料    black_dye
-
-
-
-エンチャント本
-ダメージ増加   /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:sharpness,lvl:5}]}
-アンデッド特攻   /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:smite,lvl:5}]}
-火属性     /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:fire_aspect,lvl:2}]}
-ドロップ増加   /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:looting,lvl:3}]}
-範囲ダメージ増加  /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:sweeping,lvl:3}]}
-
-射撃ダメージ増加  /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:power,lvl:5}]}
-フレイム    /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:flame,lvl:1}]}
-無限     /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:infinity,lvl:1}]}
-
-シルクタッチ   /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:silk_touch,lvl:1}]}
-幸運     /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:fortune,lvl:3}]}
-効率強化    /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:efficiency,lvl:5}]}
-
-耐久力     /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:unbreaking,lvl:3}]}
-修繕     /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:mending,lvl:1}]}
-
-ダメージ軽減   /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:protection,lvl:4}]}
-火炎耐性    /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:fire_protection,lvl:4}]}
-爆発耐性    /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:blast_protection,lvl:4}]}
-
-落下耐性    /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:feather_falling,lvl:4}]}
-水中採掘    /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:aqua_affinity,lvl:1}]}
-水中歩行    /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:depth_strider,lvl:3}]}
-氷渡り     /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:frost_walker,lvl:2}]}
-ソウルスピード   /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:soul_speed,lvl:3}]}
-
-水中呼吸    /give @p minecraft:enchanted_book{HideFlags:1,StoredEnchantments:[{id:respiration,lvl:3}]}
-
-釣竿（宝釣り・入れ食い・耐久力）
-      /give @p minecraft:fishing_rod{HideFlags:1,Enchantments:[{id:unbreaking,lvl:3},{id:luck_of_the_sea,lvl:3},{id:lure,lvl:3}]}
-
-クロスボウ（貫通4・高速装填3・耐久力）
-      /give @p minecraft:crossbow{HideFlags:1,Enchantments:[{id:unbreaking,lvl:3},{id:quick_charge,lvl:3},{id:piercing,lvl:4}]}
-クロスボウ（拡散1・高速装填3・耐久力）
-      /give @p minecraft:crossbow{HideFlags:1,Enchantments:[{id:unbreaking,lvl:3},{id:quick_charge,lvl:3},{id:multishot,lvl:1}]}
-
-水生特効5・忠誠3・召雷1 /give @p minecraft:crossbow{HideFlags:1,Enchantments:[{id:loyalty,lvl:3},{id:impaling,lvl:5},{id:channeling,lvl:1}]}
-水生特効5・激流3  /give @p minecraft:crossbow{HideFlags:1,Enchantments:[{id:impaling,lvl:5},{id:riptide,lvl:3}]}
-
-
-
-stop  サーバ停止
-list  ログイン中のユーザ表示
-save-all サーバ全体をセーブ
-
-
-
-https://minecraft-ja.gamepedia.com/%E6%9F%93%E6%96%99
-
-0 白色のテラコッタ *
-1 橙色のテラコッタ *
-4 黄色のテラコッタ *
-8 薄灰色のテラコッタ *
-12 茶色のテラコッタ *
-14 赤色のテラコッタ *
-
-2 赤紫色のテラコッタ \
-3 空色のテラコッタ \
-5 黄緑色のテラコッタ \
-6 桃色のテラコッタ \
-11 青色のテラコッタ \
-13 緑色のテラコッタ \
-15 黒色のテラコッタ \
-
-7 灰色のテラコッタ
-9 水色のテラコッタ
-10 紫色のテラコッタ
-
-
-
-https://minecraft-blog.net/?p=9605
-
-/mv rule doDaylightCycle false world
-
-execute unless score @p Coin matches 1.. run scoreboard players set @p Coin 0
-
-execute if entity @e[scores={Coin=5..}] run give @p iron_ingot 1
-
-execute if entity @e[scores={Coin=5..}] run scoreboard players remove @p Coin 5
-
-
-
-
-https://ch.nicovideo.jp/kirisamealice/blomaga/ar1744541
-
-1.アイテム数検知用スコアの作成
-[チャット/コマンドブロック]
-/scoreboard objectives add [スコアの名前(英文字のみ)] dummy ["表示名(日本語可)"]
-
-2.アイテム数を検知し、スコアに代入
-『コマンドブロック[インパルス/無条件/動力が必要]』
-/execute positioned [コマンド発動座標] as @p[distance=..1] store result score @s [スコアの名前(英文字のみ)] run clear @s [検知するアイテム] 0
-
-3.指定したアイテムを指定数以上所持している場合、アイテム消去
-『コマンドブロック[チェーン/条件(どちらでも可)/常時実行]』
-/execute if score @p [スコアの名前(英文字のみ)] matches [検知するアイテム数の必要数] run clear @p [消去するアイテム] [個数]
-
-4(任意).テキスト表示
-『コマンドブロック[チェーン/条件(どちらでも可)/常時実行]』
-/tell @p[scores={[スコアの名前(英文字のみ)]=[検知するアイテム数の必要数]}] [表示テキスト]
-
-
-
-
-
-動画内で使用したコマンド:
-1.アイテム数検知スコアの作成
-/scoreboard objectives add DiamondCount dummy "ダイヤ所持数"
-・『DiamondCount』でアイテム数を検知するスコアを作成
-
-2.アイテム数を検知し、スコアに代入
-/execute positioned ~1 ~ ~ as @p[distance=..1] store result score @s DiamondCount run clear @s minecraft:diamond 0
-・指定座標にいたプレイヤーのダイヤモンドの所持数を『DiamondCount』に代入
-
-3.指定したアイテムを指定数以上所持している場合、アイテム消去
-/execute if score @p DiamondCount matches 10.. run clear @p minecraft:diamond 10
-・『DiamondCount』が10以上の時、ダイヤモンドを10個消去する
-　∟座標を指定すると誤作動を防止できる
-
-4(任意).テキスト表示
-/tell @p[scores={DiamondCount=10..}] ダイヤを10個消費しました
-・消去したプレイヤーにテキストを表示する
-
-```
+* **低スペック向け：MakeUp - Ultra Fast**  
+  　　[File URL](https://www.curseforge.com/minecraft/shaders/makeup-ultra-fast-shader)  
   
 
 
