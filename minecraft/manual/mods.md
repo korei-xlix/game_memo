@@ -250,7 +250,7 @@ PaperMCを設置したフォルダ配下の「plugins」以下に、プラグイ
   
 　　[[ダウンロード](https://dev.bukkit.org/projects/multiverse-core/files)]  
   
-　　[[コマンド](#コマンドmultiverse-core)]  
+　　[[コマンド](../manual/command.md#コマンドmultiverse-core)]  
   
 
 
@@ -260,7 +260,7 @@ PaperMCを設置したフォルダ配下の「plugins」以下に、プラグイ
   
 　　[[ダウンロード](https://dev.bukkit.org/projects/multiverse-portals/files)]  
   
-　　[[コマンド](#コマンドmultiverse-portalsm)]  
+　　[[コマンド](../manual/command.md#コマンドmultiverse-portalsm)]  
   
 
 
@@ -293,7 +293,7 @@ WEBブラウザを使って簡単に権限の管理や設定ができます。
   
 　　[[ダウンロード](https://www.spigotmc.org/resources/luckperms.28140/)]  
   
-　　[[コマンド](#コマンドluckperms)]  
+　　[[コマンド](../manual/command.md#コマンドluckperms)]  
   
 
 
@@ -335,11 +335,14 @@ config.ymlの確認
 SeaLevelOverrides
   全て-1にする（※新ワールド生成時も確認しておくこと）
 
+# BlockSurfaceCreeperExplosions: true
+# BlockSurfaceOtherExplosions: true
 BlockSurfaceCreeperExplosions: false
 BlockSurfaceOtherExplosions: false
   TNTやクリーパーでの建物爆破制限を解除する
   ただし、土地保護されたものは破壊できない
 
+# PistonMovement: CLAIMS_ONLY
 PistonMovement: EVERYWHERE
   ピストンの動作を許可する
 
