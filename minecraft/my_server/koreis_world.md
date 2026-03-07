@@ -50,6 +50,7 @@
 ### プレイスタイル
 
 ```text
+<<<<<<< HEAD
 バージョン  1.21.10
 【Local Server：PaperMC】
 
@@ -71,11 +72,87 @@ SEED値
 execute in minecraft:overworld run tp @p - - -
 execute in overworld run tp @s - - -
 @   * ~ *
+=======
+バージョン  1.21.11
+【Local Server：PaperMC】
+
+チートあり（管理用）
+素材は自力で集める
+　　※サーバワールドごとに異なる
+>>>>>>> origin/minecraft_edit
 
 ```
   
 
 
+<<<<<<< HEAD
+=======
+
+### 各ワールド情報
+
+* [world：normal](#ワールド情報world)
+* [world_nther：nether](#ワールド情報world_nether)
+* [world_end：end](#ワールド情報world_end)
+  
+
+#### ワールド情報：world
+
+```text
+首都ワールド
+
+モード：creative
+難易度：easy
+SEED値：-3618384834958624377
+
+初期地点座標
+mv tp e:world:16,64,-47
+
+その他設定
+　現在をスポーン位置に設定する
+　　mv setspawn
+　X=0,Z=0を中心にして、16000 0 の範囲に移動制限をかける
+　　mv worldborder center 0 0
+　　mv worldborder set 16000 0
+　コマンドブロック取得
+　　give @a minecraft:command_block
+
+time set day
+mv gamerule set minecraft:advance_time false world
+mv gamerule set minecraft:advance_weather false world
+mv gamerule list world --filter advance
+
+```
+
+#### ワールド情報：world_nether
+
+```text
+
+モード：creative
+難易度：easy
+SEED値：-3618384834958624377
+
+初期地点座標
+mv tp e:world:16,64,-47
+
+```
+
+#### ワールド情報：world_end
+
+```text
+
+モード：creative
+難易度：easy
+SEED値：-3618384834958624377
+
+初期地点座標
+mv tp e:world:16,64,-47
+
+```
+  
+
+
+
+>>>>>>> origin/minecraft_edit
 ### 旗の色
 
 ```text
@@ -136,6 +213,7 @@ execute in overworld run tp @s - - -
 
 ### 座標情報：村
 
+<<<<<<< HEAD
 ```text
 初期地点座標
 execute in overworld run tp @s - - -
@@ -158,6 +236,23 @@ worldborder set 20000 0
 give @a minecraft:command_block
 
 ```
+=======
+　[初期位置](#ワールド情報world)  
+  
+
+```text
+初期村
+minecraft:locate structure #minecraft:village
+　　@   -544,~,-752
+mv tp e:world:-544,~,-752
+
+ゲーム起点：村の入り口（赤ブロック位置）
+mv tp e:world:  ,  ,  
+
+```
+  
+
+>>>>>>> origin/minecraft_edit
 
 
 ### 建築物の位置
@@ -644,9 +739,15 @@ locate structure minecraft:end_city
 
 ## 金型
 
+<<<<<<< HEAD
 |場所                  |テンプレート          |素材  |
 |:--|:--|:--|
 |[-] ピグリン要塞      |ネザライト強化        |  |
+=======
+|場所 |テンプレート |素材 |
+|:--|:--|:--|
+|[-] ピグリン要塞      |ネザライト強化        |                  |
+>>>>>>> origin/minecraft_edit
 |[-]                   |ブタの鼻風の装飾      |ブラックストーン  |
 |[-] ネザー要塞        |あばら模様の装飾      |ネザーラック      |
 |[-] エンド要塞        |要塞風の装飾          |エンドストーン    |
@@ -673,7 +774,11 @@ locate structure minecraft:end_city
 
 ## 友好動物
 
+<<<<<<< HEAD
 |動物              |居場所          |繁殖  |特技  |
+=======
+|動物|居場所|繁殖|特技|
+>>>>>>> origin/minecraft_edit
 |:--|:--|:--|:--|
 |[-] ニワトリ   |明るさ9以上、上に空き2以上ある草ブロック   |種系の作物   |      |
 |  [-] 通常種   |草原など          |  |  |
