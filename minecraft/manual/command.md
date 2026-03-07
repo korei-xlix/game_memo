@@ -21,10 +21,7 @@
 
 * コマンドメモ
   * [バニラのコマンド](#バニラのコマンド)
-<<<<<<< HEAD
-=======
   * [サーバコマンド](#サーバコマンドバニラmultiverse-core共通)
->>>>>>> origin/minecraft_edit
   * [コマンド：Multiverse-Core](#コマンドmultiverse-core)
   * [コマンド：Multiverse-Portalsm](#コマンドmultiverse-portalsm)
   * [コマンド：LuckPerms](#コマンドluckperms)
@@ -97,40 +94,6 @@ F3+F4       ゲームモード切替
   
 
 よく使う、管理者が扱えるMinecraftバニラのコマンドです。  
-<<<<<<< HEAD
-
-```text
-ゲームモードを変更する
-gamemode survival
-    survival: サバイバルモード
-    creative: クリエイティブモード
-    spectator: スペクテイターモード
-    adventure: アドベンチャーモード
-
-ゲームの難易度を変更する
-difficulty normal
-    peaceful: ピースフル
-    easy: イージー
-    normal: ノーマル
-    hard: ハード
-
-時間を変更する
-time set day
-    sunrise‌: 日の出。数値は23000。
-    day: 日中午前。数値は1000。
-    noon: 日中午後。数値は6000。
-    sunset‌: 日の入り。数値は12000。
-    midnight: 深夜。数値は18000。
-    [数値]: 数値に応じた時間に変更する
-
-天気を変更する
-weather clear
-    clear: 晴れ
-    rain : 雨
-    thunder : 雷雨
-
-現在地から周囲5000ブロックまでを境界にする
-=======
 マルチの場合はMultiverse-Coreのほうを参照ください。  
   
 
@@ -165,15 +128,12 @@ weather [天気]
 　thunder：雷雨
 
 現在地から周囲16000ブロックまでを境界にする
->>>>>>> origin/minecraft_edit
 worldborder center ~ ~
 worldborder set 16000 0
 
 初期スポーンを現在地に設定する
 setworldspawn
 
-<<<<<<< HEAD
-=======
 テレポートする
 　ワールド内テレポート
 　　tp @p [X] [Y] [Z]
@@ -209,7 +169,6 @@ give @a minecraft:command_block
   
 
 ```text
->>>>>>> origin/minecraft_edit
 サーバ停止
 stop
 
@@ -222,22 +181,6 @@ save-all
 ワールドのシード値を表示する
 seed
 
-<<<<<<< HEAD
-スポナーを取得する
-give @s spawner
-　※取得できるのはスポナーの外装だけ。これにスポーンエッグを使うと機能する。
-
-execute in minecraft:the_nether run tp @p 100 100 100
-
-コマンドブロックを取得する
-give @a minecraft:command_block
-
-黄色のコマンドブロック：インパルス「動力が必要（レッドストーンが必要）」
-緑色のコマンドブロック：チェーン「常時実行（常にアクティブ）」
-青色のコマンドブロック：リピート（反復）「動力が必要（レッドストーンが必要）」
-=======
-
->>>>>>> origin/minecraft_edit
 
 ホワイトリストにユーザを追加する
 whitelist add [username]
@@ -258,41 +201,6 @@ deop [ユーザ名]
 
 ```text
 ワールド情報を参照する
-<<<<<<< HEAD
-mv info world
-
-ワールドにテレポートする
-mv tp [ワールド名]
-
-ワールドに入った時のゲームモードを設定する
-mvm set gamemode [0-3] [ワールド名]
-　0: サバイバルモード
-　1: クリエイティブモード
-　2: アドベンチャーモード
-　3: スペクテイターモード
-
-ワールドの難易度を設定する
-mvm set difficulty [0-3] [ワールド名]
-　0: ピースフル
-　1: イージー
-　2: ノーマル
-　3: ハード
-
-魔物の沸きの有無
-mvm set monsters true world
-mvm set monsters false world
-
-天気の変化の有無
-mvm set weather true world
-mvm set weather false world
-
-時間の変化の有無
-mvrule doDaylightCycle true world
-mvrule doDaylightCycle false world
-
-ワールドを生成する
-mv create [ワールド名] [NORMAL/NETHER/THE_END]
-=======
 mv info [ワールド名]
 
 ワールドに入った時のゲームモードを設定する
@@ -349,17 +257,10 @@ mv create [ワールド名] [ワールドの種類]
 　normal ：オーバーワールド
 　nether ：ネザーワールド
 　the_end：エンドワールド
->>>>>>> origin/minecraft_edit
 
 ワールドを削除する
 mv delete [ワールド名]
 
-<<<<<<< HEAD
-初期スポーンを現在地に再設定する
-mv set spawn
-
-=======
->>>>>>> origin/minecraft_edit
 ```
   
 
@@ -367,21 +268,6 @@ mv set spawn
 ### コマンド：Multiverse-Portalsm
 
 ```text
-<<<<<<< HEAD
-/mvp wand 斧を出す
-
-/mvp create [ポータル名] ポータル作成
-
-/mvp remove [ポータル名] ポータル削除
-
-/mvp select [ポータル名] ポータル選択
-
-/mvp modify dest p:[ポータル名]  選択してるポータルと繋ぐ
-
-/mvp list     ポータル一覧
-
-
-=======
 ポータル一覧
 mvp list
 
@@ -402,7 +288,6 @@ mvp modify dest p:[ポータル名]
 
 
 ポータルの作成と接続方法
->>>>>>> origin/minecraft_edit
 
 1. /mvp wandで木の斧を出す。他の木の斧でもよい
 
@@ -410,10 +295,6 @@ mvp modify dest p:[ポータル名]
 
 3. /mvp listでポータル名が被って無いことを確認し
    /mvp create [ポータル名1]でポータル1を作成
-<<<<<<< HEAD
-.
-=======
->>>>>>> origin/minecraft_edit
 
 4. 2つ目のポータルの枠を作成し、木の斧で枠を指定して
    /mvp create [ポータル名2] p:[ポータル名1]でポータル1に繋がるポータルを作成。
@@ -429,11 +310,6 @@ mvp modify dest p:[ポータル名]
 
 ### コマンド：LuckPerms
 
-<<<<<<< HEAD
-```text
-
-
-=======
 基本的にWebエディタから操作をするほうが、間違いはないと思われます。  
   
 
@@ -464,7 +340,6 @@ lp group default parent add member
 lp user lucida3poi permission set villagerbank.create false
 lp user lucida3poi permission set villagerbank.create true
 lp user lucida3poi permission unset villagerbank.create
->>>>>>> origin/minecraft_edit
 
 ```
   
@@ -473,11 +348,6 @@ lp user lucida3poi permission unset villagerbank.create
 
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/minecraft_edit
 ### 最寄りの座標表示コマンド
 
 [目次へ戻る](#目次--table-of-contents)  
@@ -486,45 +356,9 @@ lp user lucida3poi permission unset villagerbank.create
 最寄りのバイオームや建物の座標を出すチートコマンドです。  
 
 ```text
-<<<<<<< HEAD
-locate structure #minecraft:village              村
-locate structure minecraft:mansion               森の洋館
-locate structure minecraft:monument              神殿
-locate structure minecraft:pillager_outpost      前線基地
-locate structure minecraft:ancient_city          古代都市
-locate structure minecraft:stronghold            要塞（エンドポータル）
-locate biome minecraft:dripstone_caves           鍾乳洞
-
-locate biome minecraft:badlands                  荒野（メサ）
-locate biome minecraft:jungle                    ジャングル
-locate biome minecraft:desert                    砂漠
-locate biome minecraft:flower_forest             花の森
-locate biome minecraft:sunflower_plains          ヒマワリ平原
-locate biome minecraft:swamp                     沼地
-locate biome minecraft:mangrove_swamp            マングローブの沼
-locate biome minecraft:ice_spikes                 樹氷
-locate biome minecraft:mushroom_fields            マッシュルームの島
-locate biome cherry_grove                         サクラ
-
-locate biome minecraft:warm_ocean                 暖かい海
-locate biome minecraft:deep_ocean                 深い海
-locate biome minecraft:deep_frozen_ocean          凍った深海
-
-locate structure fortress                         ネザー要塞
-locate structure bastion_remnant                  砦の遺跡（ネザー）
-
-locate biome minecraft:crimson_forest             真紅の森（赤い森）
-locate biome minecraft:warped_forest              歪んだ森（青森）
-locate biome minecraft:basalt_deltas              三角地帯
-locate biome minecraft:soul_sand_valley           ソウルサンドの谷
-
-locate structure endcity                          エンドシティ
-                                                  
-=======
 locate structure [オブジェクト名]
 locate biome [バイオーム名]
 　　詳細は、korei_world.mdとかに書いてある
->>>>>>> origin/minecraft_edit
 
 -X/-Z     -Z          +X/-Z
           [NORTH]
