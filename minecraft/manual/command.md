@@ -21,6 +21,10 @@
 
 * コマンドメモ
   * [バニラのコマンド](#バニラのコマンド)
+<<<<<<< HEAD
+=======
+  * [サーバコマンド](#サーバコマンドバニラmultiverse-core共通)
+>>>>>>> origin/minecraft_edit
   * [コマンド：Multiverse-Core](#コマンドmultiverse-core)
   * [コマンド：Multiverse-Portalsm](#コマンドmultiverse-portalsm)
   * [コマンド：LuckPerms](#コマンドluckperms)
@@ -93,6 +97,7 @@ F3+F4       ゲームモード切替
   
 
 よく使う、管理者が扱えるMinecraftバニラのコマンドです。  
+<<<<<<< HEAD
 
 ```text
 ゲームモードを変更する
@@ -125,12 +130,86 @@ weather clear
     thunder : 雷雨
 
 現在地から周囲5000ブロックまでを境界にする
+=======
+マルチの場合はMultiverse-Coreのほうを参照ください。  
+  
+
+```text
+ゲームモードを変更する
+gamemode [モード]
+　survival ：サバイバルモード
+　creative ：クリエイティブモード
+　spectator：スペクターモード
+　adventure：サバイバルモード
+
+ゲームの難易度を変更する
+difficulty [難易度]
+　easy    ：イージー
+　normal  ：ノーマル
+　hard    ：ハード
+　peaceful：ピースフル
+
+時間を変更する
+time set [時間]
+　sunrise‌ ：日の出。数値は23000。
+　day     ：日中午前。数値は1000。
+　noon    ：日中午後。数値は6000。
+　sunset‌  ：日の入り。数値は12000。
+　midnight：深夜。数値は18000。
+　[数値]  ：数値に応じた時間に変更する
+
+天気を変更する
+weather [天気]
+　clear  ：晴れ
+　rain   ：雨
+　thunder：雷雨
+
+現在地から周囲16000ブロックまでを境界にする
+>>>>>>> origin/minecraft_edit
 worldborder center ~ ~
 worldborder set 16000 0
 
 初期スポーンを現在地に設定する
 setworldspawn
 
+<<<<<<< HEAD
+=======
+テレポートする
+　ワールド内テレポート
+　　tp @p [X] [Y] [Z]
+
+　ワールド間テレポート
+　　execute in minecraft:[ワールドの種類] run tp @p [X] [Y] [Z]
+　　　normal ：オーバーワールド
+　　　nether ：ネザーワールド
+　　　the_end：エンドワールド
+
+
+スポナーを取得する
+give @s spawner
+　※取得できるのはスポナーの外装だけ。これにスポーンエッグを使うと機能する。
+
+コマンドブロックを取得する
+give @a minecraft:command_block
+　黄色のコマンドブロック：インパルス「動力が必要（レッドストーンが必要）」
+　緑色のコマンドブロック：チェーン「常時実行（常にアクティブ）」
+　青色のコマンドブロック：リピート（反復）「動力が必要（レッドストーンが必要）」
+
+```
+  
+
+
+
+### サーバコマンド（バニラ・Multiverse-Core共通）
+
+[目次へ戻る](#目次--table-of-contents)  
+  
+
+サーバ制御用のコマンドです。  
+  
+
+```text
+>>>>>>> origin/minecraft_edit
 サーバ停止
 stop
 
@@ -143,6 +222,7 @@ save-all
 ワールドのシード値を表示する
 seed
 
+<<<<<<< HEAD
 スポナーを取得する
 give @s spawner
 　※取得できるのはスポナーの外装だけ。これにスポーンエッグを使うと機能する。
@@ -155,6 +235,9 @@ give @a minecraft:command_block
 黄色のコマンドブロック：インパルス「動力が必要（レッドストーンが必要）」
 緑色のコマンドブロック：チェーン「常時実行（常にアクティブ）」
 青色のコマンドブロック：リピート（反復）「動力が必要（レッドストーンが必要）」
+=======
+
+>>>>>>> origin/minecraft_edit
 
 ホワイトリストにユーザを追加する
 whitelist add [username]
@@ -175,6 +258,7 @@ deop [ユーザ名]
 
 ```text
 ワールド情報を参照する
+<<<<<<< HEAD
 mv info world
 
 ワールドにテレポートする
@@ -208,13 +292,74 @@ mvrule doDaylightCycle false world
 
 ワールドを生成する
 mv create [ワールド名] [NORMAL/NETHER/THE_END]
+=======
+mv info [ワールド名]
+
+ワールドに入った時のゲームモードを設定する
+mv modify set gamemode [モード] [ワールド名]
+　survival ：サバイバルモード
+　creative ：クリエイティブモード
+　spectator：スペクターモード
+　adventure：サバイバルモード
+
+ワールドに入った時のゲーム難易度を設定する
+mv modify set difficulty [難易度] [ワールド名]
+　easy    ：イージー
+　normal  ：ノーマル
+　hard    ：ハード
+　peaceful：ピースフル
+
+ゲームルール情報を参照する
+mv gamerule list [ワールド名]
+mv gamerule list [ワールド名] --filter advance
+
+時間の変化有無設定
+mv gamerule set minecraft:advance_time [true/false] [ワールド名]
+
+天気の変化有無設定
+mv gamerule set minecraft:advance_weather [true/false] [ワールド名]
+
+エンティティスポーン情報を参照する
+mv entity-spawn-config info [ワールド名]
+
+魔物の沸き有無設定
+mv entity-spawn-config modify [ワールド名] monster set spawn [true/false]
+
+X:0,Z:0から周囲16000ブロックまでを境界にする
+mv worldborder center 0 0
+mv worldborder set 16000 0
+
+初期スポーンを現在地に設定する
+mv setspawn
+
+テレポートする
+　ワールドの初期スポーン地にテレポート
+　　mv tp [ワールド名]
+
+　ワールドの指定位置にテレポート
+　　mv tp e:[ワールド名]:[X],[Y],[Z]
+
+
+
+ワールドの一覧を表示する
+mv list
+
+ワールドを生成する
+mv create [ワールド名] [ワールドの種類]
+　normal ：オーバーワールド
+　nether ：ネザーワールド
+　the_end：エンドワールド
+>>>>>>> origin/minecraft_edit
 
 ワールドを削除する
 mv delete [ワールド名]
 
+<<<<<<< HEAD
 初期スポーンを現在地に再設定する
 mv set spawn
 
+=======
+>>>>>>> origin/minecraft_edit
 ```
   
 
@@ -222,6 +367,7 @@ mv set spawn
 ### コマンド：Multiverse-Portalsm
 
 ```text
+<<<<<<< HEAD
 /mvp wand 斧を出す
 
 /mvp create [ポータル名] ポータル作成
@@ -235,6 +381,28 @@ mv set spawn
 /mvp list     ポータル一覧
 
 
+=======
+ポータル一覧
+mvp list
+
+斧を出す
+mvp wand
+
+ポータルを作成
+mvp create [ポータル名]
+
+ポータル削除
+mvp remove [ポータル名]
+
+ポータル選択
+mvp select [ポータル名]
+
+選択してるポータルと繋ぐ
+mvp modify dest p:[ポータル名]
+
+
+ポータルの作成と接続方法
+>>>>>>> origin/minecraft_edit
 
 1. /mvp wandで木の斧を出す。他の木の斧でもよい
 
@@ -242,7 +410,10 @@ mv set spawn
 
 3. /mvp listでポータル名が被って無いことを確認し
    /mvp create [ポータル名1]でポータル1を作成
+<<<<<<< HEAD
 .
+=======
+>>>>>>> origin/minecraft_edit
 
 4. 2つ目のポータルの枠を作成し、木の斧で枠を指定して
    /mvp create [ポータル名2] p:[ポータル名1]でポータル1に繋がるポータルを作成。
@@ -258,9 +429,42 @@ mv set spawn
 
 ### コマンド：LuckPerms
 
+<<<<<<< HEAD
 ```text
 
 
+=======
+基本的にWebエディタから操作をするほうが、間違いはないと思われます。  
+  
+
+```text
+WEBエディタを開く
+lp editor
+
+LP情報を表示する
+lp info
+
+グループを表示する
+lp listgroups
+
+グループのメンバー一覧を表示する
+lp group [グループ名] listmembers
+
+
+管理者権限設定
+lp user lucida3poi permission set luckperms.*
+lp creategroup admin
+lp user lucida3poi parent add admin
+
+lp creategroup member
+lp group default parent add member
+
+
+初期プラグイン権限設定
+lp user lucida3poi permission set villagerbank.create false
+lp user lucida3poi permission set villagerbank.create true
+lp user lucida3poi permission unset villagerbank.create
+>>>>>>> origin/minecraft_edit
 
 ```
   
@@ -269,8 +473,11 @@ mv set spawn
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/minecraft_edit
 ### 最寄りの座標表示コマンド
 
 [目次へ戻る](#目次--table-of-contents)  
@@ -279,6 +486,7 @@ mv set spawn
 最寄りのバイオームや建物の座標を出すチートコマンドです。  
 
 ```text
+<<<<<<< HEAD
 locate structure #minecraft:village              村
 locate structure minecraft:mansion               森の洋館
 locate structure minecraft:monument              神殿
@@ -312,6 +520,11 @@ locate biome minecraft:soul_sand_valley           ソウルサンドの谷
 
 locate structure endcity                          エンドシティ
                                                   
+=======
+locate structure [オブジェクト名]
+locate biome [バイオーム名]
+　　詳細は、korei_world.mdとかに書いてある
+>>>>>>> origin/minecraft_edit
 
 -X/-Z     -Z          +X/-Z
           [NORTH]

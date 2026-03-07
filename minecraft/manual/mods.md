@@ -196,6 +196,15 @@ Multiverse-Coreを使うのに一番安定してそうな、PaperMCでサーバ�
    サーバを停止するには、コンソールで「stop」コマンドを入力すると安全に停止できます。  
   
 
+<<<<<<< HEAD
+=======
+1. 自分をオペレータに追加、ホワイトリストに追加しておく  
+   コンソールから、以下を実行します。これをやっておかないと、サーバへの接続や編集ができません。  
+   　　op [自分のマイクラname]
+   　　whitelist add [自分のマイクラname]
+  
+
+>>>>>>> origin/minecraft_edit
 
 
 ### サーバの調整：server.property
@@ -231,6 +240,13 @@ white-list=true
 以後、ゲーム内で以下のコマンドでホワイトリストにユーザを追加できます。
 /whitelist add [username]
 
+<<<<<<< HEAD
+=======
+サーバへの接続
+　　IPアドレス：[サーバのIPアドレス]:25565
+　　　　※ローカルサーバの場合、パソコンのIPアドレス（localhostはダメっぽい？）
+
+>>>>>>> origin/minecraft_edit
 ```
   
 
@@ -244,7 +260,11 @@ PaperMCを設置したフォルダ配下の「plugins」以下に、プラグイ
   
 
 
+<<<<<<< HEAD
 #### **Multiverse-Core**
+=======
+#### **Multiverse-Core（※必須）**
+>>>>>>> origin/minecraft_edit
 
 ワールドを生成したり、調整したりするサーバプラグインです。  
   
@@ -254,7 +274,11 @@ PaperMCを設置したフォルダ配下の「plugins」以下に、プラグイ
   
 
 
+<<<<<<< HEAD
 #### **Multiverse-Portalsm**
+=======
+#### **Multiverse-Portalsm（※必須）**
+>>>>>>> origin/minecraft_edit
 
 ワールドのポータルを設置するサーバプラグインです。  
   
@@ -264,7 +288,11 @@ PaperMCを設置したフォルダ配下の「plugins」以下に、プラグイ
   
 
 
+<<<<<<< HEAD
 #### **WorldEdit**
+=======
+#### **WorldEdit（※必須）**
+>>>>>>> origin/minecraft_edit
 
 マイクラの建築作業を補助するサーバプラグインです。  
   
@@ -274,7 +302,11 @@ PaperMCを設置したフォルダ配下の「plugins」以下に、プラグイ
   
 
 
+<<<<<<< HEAD
 #### **WorldGuard**
+=======
+#### **WorldGuard（※必須）**
+>>>>>>> origin/minecraft_edit
 
 サーバー上のワールドを保護してくれるサーバプラグインです。  
   
@@ -284,6 +316,7 @@ PaperMCを設置したフォルダ配下の「plugins」以下に、プラグイ
   
 
 
+<<<<<<< HEAD
 #### **LuckPerms**
 
 プレイヤーの権限（コマンド利用や機能制限）を管理するサーバプラグインです。  
@@ -320,6 +353,9 @@ lp user lucida3poi permission unset villagerbank.create
 
 
 #### **GriefPrevention**
+=======
+#### **GriefPrevention（※必須）**
+>>>>>>> origin/minecraft_edit
 
 TNTやクリーパーでの建物爆破制限を設定したり、保護された土地を破壊から守ったりするサーバプラグインです。  
 WorldGuardよりできることは限定されますが、一般ユーザが単独で自由に設定できます。  
@@ -350,7 +386,12 @@ PistonMovement: EVERYWHERE
   
 
 
+<<<<<<< HEAD
 #### **LWC Extended**
+=======
+
+#### **LWC Extended（※必須）**
+>>>>>>> origin/minecraft_edit
 
 チェストやかまど、ドアなど自分のものを守るためのサーバプラグインです。  
 一般ユーザが単独で自由に設定できます。  
@@ -374,6 +415,24 @@ autoRegister: false
 
 
 
+<<<<<<< HEAD
+=======
+#### **LuckPerms**
+
+プレイヤーの権限（コマンド利用や機能制限）を管理する便利なサーバプラグインです。  
+WEBブラウザを使って簡単に権限の管理や設定ができます。  
+条件が進むと権限を自動的に昇格するなどもできるようです。  
+  
+　　[[参考記事](https://yaaaa.net/luckperms/)]  
+  
+　　[[ダウンロード](https://www.spigotmc.org/resources/luckperms.28140/)]  
+  
+　　[[コマンド](../manual/command.md#コマンドluckperms)]  
+  
+
+
+
+>>>>>>> origin/minecraft_edit
 
 
 ## 過去の資料

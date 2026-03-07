@@ -1,0 +1,44 @@
+@echo off
+
+rem 7zパスの設定
+set backup_7z="c:\Program Files\7-Zip\7z.exe"
+
+rem アーカイブ元パスの設定
+set backup_src="papermc\"
+
+rem アーカイブ先パスの設定
+set backup_dt=%date:~0,4%%date:~5,2%%date:~8,2%
+set backup_tm2=%time: =0%
+rem set backup_tm=%backup_tm2:~0,2%%backup_tm2:~3,2%%backup_tm2:~6,2%
+set backup_tm=%backup_tm2:~0,2%%backup_tm2:~3,2%
+
+set backup_dst=papermc_backup\papermc
+set backup_dst="%backup_dst%.%backup_dt%_%backup_tm%.7z"
+
+rem 実行コマンドの設定
+set backup_run=-t7z -mx9
+set backup_run=%backup_7z% a %backup_run% %backup_dst% %backup_src%
+
+rem 各設定の確認
+echo -----------
+echo arg1 = %1
+echo 7z   = %backup_7z%
+echo src  = %backup_src%
+echo dst  = %backup_dst%
+echo run  = %backup_run%
+echo -----------
+
+rem 実行
+%backup_run%
+
+rem 変数の削除
+set backup_7z=
+set backup_src=
+set backup_dst=
+set backup_dt=
+set backup_tm2=
+set backup_tm=
+set backup_run=
+rem echo %backup_7z%
+
+pause
