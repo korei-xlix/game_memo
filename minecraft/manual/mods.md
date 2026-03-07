@@ -196,6 +196,12 @@ Multiverse-Coreを使うのに一番安定してそうな、PaperMCでサーバ�
    サーバを停止するには、コンソールで「stop」コマンドを入力すると安全に停止できます。  
   
 
+1. 自分をオペレータに追加、ホワイトリストに追加しておく  
+   コンソールから、以下を実行します。これをやっておかないと、サーバへの接続や編集ができません。  
+   　　op [自分のマイクラname]
+   　　whitelist add [自分のマイクラname]
+  
+
 
 
 ### サーバの調整：server.property
@@ -231,6 +237,10 @@ white-list=true
 以後、ゲーム内で以下のコマンドでホワイトリストにユーザを追加できます。
 /whitelist add [username]
 
+サーバへの接続
+　　IPアドレス：[サーバのIPアドレス]:25565
+　　　　※ローカルサーバの場合、パソコンのIPアドレス（localhostはダメっぽい？）
+
 ```
   
 
@@ -244,7 +254,7 @@ PaperMCを設置したフォルダ配下の「plugins」以下に、プラグイ
   
 
 
-#### **Multiverse-Core**
+#### **Multiverse-Core（※必須）**
 
 ワールドを生成したり、調整したりするサーバプラグインです。  
   
@@ -254,7 +264,7 @@ PaperMCを設置したフォルダ配下の「plugins」以下に、プラグイ
   
 
 
-#### **Multiverse-Portalsm**
+#### **Multiverse-Portalsm（※必須）**
 
 ワールドのポータルを設置するサーバプラグインです。  
   
@@ -264,7 +274,7 @@ PaperMCを設置したフォルダ配下の「plugins」以下に、プラグイ
   
 
 
-#### **WorldEdit**
+#### **WorldEdit（※必須）**
 
 マイクラの建築作業を補助するサーバプラグインです。  
   
@@ -274,7 +284,7 @@ PaperMCを設置したフォルダ配下の「plugins」以下に、プラグイ
   
 
 
-#### **WorldGuard**
+#### **WorldGuard（※必須）**
 
 サーバー上のワールドを保護してくれるサーバプラグインです。  
   
@@ -284,42 +294,7 @@ PaperMCを設置したフォルダ配下の「plugins」以下に、プラグイ
   
 
 
-#### **LuckPerms**
-
-プレイヤーの権限（コマンド利用や機能制限）を管理するサーバプラグインです。  
-WEBブラウザを使って簡単に権限の管理や設定ができます。  
-  
-　　[[参考記事](https://yaaaa.net/luckperms/)]  
-  
-　　[[ダウンロード](https://www.spigotmc.org/resources/luckperms.28140/)]  
-  
-　　[[コマンド](../manual/command.md#コマンドluckperms)]  
-  
-
-
-```text
-管理者権限設定
-lp user lucida3poi permission set luckperms.*
-lp creategroup admin
-lp user lucida3poi parent add admin
-
-lp creategroup member
-lp group default parent add member
-
-lp listgroups
-lp group admin listmembers
-
-
-初期プラグイン権限設定
-lp user lucida3poi permission set villagerbank.create false
-lp user lucida3poi permission set villagerbank.create true
-lp user lucida3poi permission unset villagerbank.create
-
-```
-  
-
-
-#### **GriefPrevention**
+#### **GriefPrevention（※必須）**
 
 TNTやクリーパーでの建物爆破制限を設定したり、保護された土地を破壊から守ったりするサーバプラグインです。  
 WorldGuardよりできることは限定されますが、一般ユーザが単独で自由に設定できます。  
@@ -350,7 +325,8 @@ PistonMovement: EVERYWHERE
   
 
 
-#### **LWC Extended**
+
+#### **LWC Extended（※必須）**
 
 チェストやかまど、ドアなど自分のものを守るためのサーバプラグインです。  
 一般ユーザが単独で自由に設定できます。  
@@ -370,6 +346,21 @@ autoRegister: false
   過度な保護をしないのであれば、全てfalseでいい。
 
 ```
+  
+
+
+
+#### **LuckPerms**
+
+プレイヤーの権限（コマンド利用や機能制限）を管理する便利なサーバプラグインです。  
+WEBブラウザを使って簡単に権限の管理や設定ができます。  
+条件が進むと権限を自動的に昇格するなどもできるようです。  
+  
+　　[[参考記事](https://yaaaa.net/luckperms/)]  
+  
+　　[[ダウンロード](https://www.spigotmc.org/resources/luckperms.28140/)]  
+  
+　　[[コマンド](../manual/command.md#コマンドluckperms)]  
   
 
 

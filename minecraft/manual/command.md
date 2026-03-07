@@ -21,6 +21,7 @@
 
 * コマンドメモ
   * [バニラのコマンド](#バニラのコマンド)
+  * [サーバコマンド](#サーバコマンドバニラmultiverse-core共通)
   * [コマンド：Multiverse-Core](#コマンドmultiverse-core)
   * [コマンド：Multiverse-Portalsm](#コマンドmultiverse-portalsm)
   * [コマンド：LuckPerms](#コマンドluckperms)
@@ -93,44 +94,81 @@ F3+F4       ゲームモード切替
   
 
 よく使う、管理者が扱えるMinecraftバニラのコマンドです。  
+マルチの場合はMultiverse-Coreのほうを参照ください。  
+  
 
 ```text
 ゲームモードを変更する
-gamemode survival
-    survival: サバイバルモード
-    creative: クリエイティブモード
-    spectator: スペクテイターモード
-    adventure: アドベンチャーモード
+gamemode [モード]
+　survival ：サバイバルモード
+　creative ：クリエイティブモード
+　spectator：スペクターモード
+　adventure：サバイバルモード
 
 ゲームの難易度を変更する
-difficulty normal
-    peaceful: ピースフル
-    easy: イージー
-    normal: ノーマル
-    hard: ハード
+difficulty [難易度]
+　easy    ：イージー
+　normal  ：ノーマル
+　hard    ：ハード
+　peaceful：ピースフル
 
 時間を変更する
-time set day
-    sunrise‌: 日の出。数値は23000。
-    day: 日中午前。数値は1000。
-    noon: 日中午後。数値は6000。
-    sunset‌: 日の入り。数値は12000。
-    midnight: 深夜。数値は18000。
-    [数値]: 数値に応じた時間に変更する
+time set [時間]
+　sunrise‌ ：日の出。数値は23000。
+　day     ：日中午前。数値は1000。
+　noon    ：日中午後。数値は6000。
+　sunset‌  ：日の入り。数値は12000。
+　midnight：深夜。数値は18000。
+　[数値]  ：数値に応じた時間に変更する
 
 天気を変更する
-weather clear
-    clear: 晴れ
-    rain : 雨
-    thunder : 雷雨
+weather [天気]
+　clear  ：晴れ
+　rain   ：雨
+　thunder：雷雨
 
-現在地から周囲5000ブロックまでを境界にする
+現在地から周囲16000ブロックまでを境界にする
 worldborder center ~ ~
 worldborder set 16000 0
 
 初期スポーンを現在地に設定する
 setworldspawn
 
+テレポートする
+　ワールド内テレポート
+　　tp @p [X] [Y] [Z]
+
+　ワールド間テレポート
+　　execute in minecraft:[ワールドの種類] run tp @p [X] [Y] [Z]
+　　　normal ：オーバーワールド
+　　　nether ：ネザーワールド
+　　　the_end：エンドワールド
+
+
+スポナーを取得する
+give @s spawner
+　※取得できるのはスポナーの外装だけ。これにスポーンエッグを使うと機能する。
+
+コマンドブロックを取得する
+give @a minecraft:command_block
+　黄色のコマンドブロック：インパルス「動力が必要（レッドストーンが必要）」
+　緑色のコマンドブロック：チェーン「常時実行（常にアクティブ）」
+　青色のコマンドブロック：リピート（反復）「動力が必要（レッドストーンが必要）」
+
+```
+  
+
+
+
+### サーバコマンド（バニラ・Multiverse-Core共通）
+
+[目次へ戻る](#目次--table-of-contents)  
+  
+
+サーバ制御用のコマンドです。  
+  
+
+```text
 サーバ停止
 stop
 
@@ -143,18 +181,7 @@ save-all
 ワールドのシード値を表示する
 seed
 
-スポナーを取得する
-give @s spawner
-　※取得できるのはスポナーの外装だけ。これにスポーンエッグを使うと機能する。
 
-execute in minecraft:the_nether run tp @p 100 100 100
-
-コマンドブロックを取得する
-give @a minecraft:command_block
-
-黄色のコマンドブロック：インパルス「動力が必要（レッドストーンが必要）」
-緑色のコマンドブロック：チェーン「常時実行（常にアクティブ）」
-青色のコマンドブロック：リピート（反復）「動力が必要（レッドストーンが必要）」
 
 ホワイトリストにユーザを追加する
 whitelist add [username]
@@ -175,45 +202,65 @@ deop [ユーザ名]
 
 ```text
 ワールド情報を参照する
-mv info world
-
-ワールドにテレポートする
-mv tp [ワールド名]
+mv info [ワールド名]
 
 ワールドに入った時のゲームモードを設定する
-mvm set gamemode [0-3] [ワールド名]
-　0: サバイバルモード
-　1: クリエイティブモード
-　2: アドベンチャーモード
-　3: スペクテイターモード
+mv modify set gamemode [モード] [ワールド名]
+　survival ：サバイバルモード
+　creative ：クリエイティブモード
+　spectator：スペクターモード
+　adventure：サバイバルモード
 
-ワールドの難易度を設定する
-mvm set difficulty [0-3] [ワールド名]
-　0: ピースフル
-　1: イージー
-　2: ノーマル
-　3: ハード
+ワールドに入った時のゲーム難易度を設定する
+mv modify set difficulty [難易度] [ワールド名]
+　easy    ：イージー
+　normal  ：ノーマル
+　hard    ：ハード
+　peaceful：ピースフル
 
-魔物の沸きの有無
-mvm set monsters true world
-mvm set monsters false world
+ゲームルール情報を参照する
+mv gamerule list [ワールド名]
+mv gamerule list [ワールド名] --filter advance
 
-天気の変化の有無
-mvm set weather true world
-mvm set weather false world
+時間の変化有無設定
+mv gamerule set minecraft:advance_time [true/false] [ワールド名]
 
-時間の変化の有無
-mvrule doDaylightCycle true world
-mvrule doDaylightCycle false world
+天気の変化有無設定
+mv gamerule set minecraft:advance_weather [true/false] [ワールド名]
+
+エンティティスポーン情報を参照する
+mv entity-spawn-config info [ワールド名]
+
+魔物の沸き有無設定
+mv entity-spawn-config modify [ワールド名] monster set spawn [true/false]
+
+X:0,Z:0から周囲16000ブロックまでを境界にする
+mv worldborder center 0 0
+mv worldborder set 16000 0
+
+初期スポーンを現在地に設定する
+mv setspawn
+
+テレポートする
+　ワールドの初期スポーン地にテレポート
+　　mv tp [ワールド名]
+
+　ワールドの指定位置にテレポート
+　　mv tp e:[ワールド名]:[X],[Y],[Z]
+
+
+
+ワールドの一覧を表示する
+mv list
 
 ワールドを生成する
-mv create [ワールド名] [NORMAL/NETHER/THE_END]
+mv create [ワールド名] [ワールドの種類]
+　normal ：オーバーワールド
+　nether ：ネザーワールド
+　the_end：エンドワールド
 
 ワールドを削除する
 mv delete [ワールド名]
-
-初期スポーンを現在地に再設定する
-mv set spawn
 
 ```
   
@@ -222,19 +269,26 @@ mv set spawn
 ### コマンド：Multiverse-Portalsm
 
 ```text
-/mvp wand 斧を出す
+ポータル一覧
+mvp list
 
-/mvp create [ポータル名] ポータル作成
+斧を出す
+mvp wand
 
-/mvp remove [ポータル名] ポータル削除
+ポータルを作成
+mvp create [ポータル名]
 
-/mvp select [ポータル名] ポータル選択
+ポータル削除
+mvp remove [ポータル名]
 
-/mvp modify dest p:[ポータル名]  選択してるポータルと繋ぐ
+ポータル選択
+mvp select [ポータル名]
 
-/mvp list     ポータル一覧
+選択してるポータルと繋ぐ
+mvp modify dest p:[ポータル名]
 
 
+ポータルの作成と接続方法
 
 1. /mvp wandで木の斧を出す。他の木の斧でもよい
 
@@ -242,7 +296,6 @@ mv set spawn
 
 3. /mvp listでポータル名が被って無いことを確認し
    /mvp create [ポータル名1]でポータル1を作成
-.
 
 4. 2つ目のポータルの枠を作成し、木の斧で枠を指定して
    /mvp create [ポータル名2] p:[ポータル名1]でポータル1に繋がるポータルを作成。
@@ -258,14 +311,39 @@ mv set spawn
 
 ### コマンド：LuckPerms
 
+基本的にWebエディタから操作をするほうが、間違いはないと思われます。  
+  
+
 ```text
+WEBエディタを開く
+lp editor
+
+LP情報を表示する
+lp info
+
+グループを表示する
+lp listgroups
+
+グループのメンバー一覧を表示する
+lp group [グループ名] listmembers
 
 
+管理者権限設定
+lp user lucida3poi permission set luckperms.*
+lp creategroup admin
+lp user lucida3poi parent add admin
+
+lp creategroup member
+lp group default parent add member
+
+
+初期プラグイン権限設定
+lp user lucida3poi permission set villagerbank.create false
+lp user lucida3poi permission set villagerbank.create true
+lp user lucida3poi permission unset villagerbank.create
 
 ```
   
-
-
 
 
 
@@ -279,39 +357,9 @@ mv set spawn
 最寄りのバイオームや建物の座標を出すチートコマンドです。  
 
 ```text
-locate structure #minecraft:village              村
-locate structure minecraft:mansion               森の洋館
-locate structure minecraft:monument              神殿
-locate structure minecraft:pillager_outpost      前線基地
-locate structure minecraft:ancient_city          古代都市
-locate structure minecraft:stronghold            要塞（エンドポータル）
-locate biome minecraft:dripstone_caves           鍾乳洞
-
-locate biome minecraft:badlands                  荒野（メサ）
-locate biome minecraft:jungle                    ジャングル
-locate biome minecraft:desert                    砂漠
-locate biome minecraft:flower_forest             花の森
-locate biome minecraft:sunflower_plains          ヒマワリ平原
-locate biome minecraft:swamp                     沼地
-locate biome minecraft:mangrove_swamp            マングローブの沼
-locate biome minecraft:ice_spikes                 樹氷
-locate biome minecraft:mushroom_fields            マッシュルームの島
-locate biome cherry_grove                         サクラ
-
-locate biome minecraft:warm_ocean                 暖かい海
-locate biome minecraft:deep_ocean                 深い海
-locate biome minecraft:deep_frozen_ocean          凍った深海
-
-locate structure fortress                         ネザー要塞
-locate structure bastion_remnant                  砦の遺跡（ネザー）
-
-locate biome minecraft:crimson_forest             真紅の森（赤い森）
-locate biome minecraft:warped_forest              歪んだ森（青森）
-locate biome minecraft:basalt_deltas              三角地帯
-locate biome minecraft:soul_sand_valley           ソウルサンドの谷
-
-locate structure endcity                          エンドシティ
-                                                  
+locate structure [オブジェクト名]
+locate biome [バイオーム名]
+　　詳細は、korei_world.mdとかに書いてある
 
 -X/-Z     -Z          +X/-Z
           [NORTH]
