@@ -15,133 +15,31 @@
 * [readme.md](../../readme.md)
   * [利用にあたって (Important notices for use)](../../readme.md#利用にあたっての注意事項--important-notices-for-use)
 
+* [ゲーム進捗](#ゲーム進捗)
+  * [持ち物](#ゲーム進捗持ち物)
+  * [作るトラップ](#ゲーム進捗作るトラップ)
+  * [交易所の設置](#ゲーム進捗交易所の設置)
+  * [ヤギの角収集](#ゲーム進捗ヤギの角収集)
+  * [金型収集](#ゲーム進捗金型収集)
+  * [友好動物](#ゲーム進捗友好動物)
+
+* [環境情報](#環境情報)
+
 * [ワールド情報](#ワールド情報)
-  * [各ワールド情報](#各ワールド情報)
-  * [旗の色](#旗の色)
-
-* [座標情報](#座標情報)
-  * [座標：村](#座標情報村)
-    * [建築物の位置](#建築物の位置)
-
-  * オーバーワールド
-    * [座標：オーバワールド 建造](#座標情報オーバワールド-建造物)
-    * [座標：オーバワールド 土地](#座標情報オーバワールド-土地)
-    * [座標：オーバワールド 海](#座標情報オーバワールド-海)
-  * [座標：ネザー](#座標情報ネザー)
-  * [座標：エンド](#座標情報エンド)
-
-* ゲーム記録
-  * [作るトラップ](#作るトラップ)
-  * [交易](#交易)
-  * [ヤギの角](#ヤギの角)
-  * [金型](#金型)
-  * [友好動物](#友好動物)
   
 
 
 
 
 
-## ワールド情報
+## ゲーム進捗
 
 [目次へ戻る](#目次--table-of-contents)  
   
 
-### プレイスタイル
-
-```text
-バージョン  1.21.11
-【Local Server：PaperMC】
-
-チートあり（管理用）
-素材は自力で集める
-　　※サーバワールドごとに異なる
-
-```
-  
 
 
-
-### 各ワールド情報
-
-* [world：normal](#ワールド情報world)
-* [world_nther：nether](#ワールド情報world_nether)
-* [world_end：end](#ワールド情報world_end)
-  
-
-#### ワールド情報：world
-
-```text
-首都ワールド
-
-モード：creative
-難易度：easy
-SEED値：-3618384834958624377
-
-初期地点座標
-mv tp e:world:16,64,-47
-
-その他設定
-　現在をスポーン位置に設定する
-　　mv setspawn
-　X=0,Z=0を中心にして、16000 0 の範囲に移動制限をかける
-　　mv worldborder center 0 0
-　　mv worldborder set 16000 0
-　コマンドブロック取得
-　　give @a minecraft:command_block
-
-time set day
-mv gamerule set minecraft:advance_time false world
-mv gamerule set minecraft:advance_weather false world
-mv gamerule list world --filter advance
-
-```
-
-#### ワールド情報：world_nether
-
-```text
-
-モード：creative
-難易度：easy
-SEED値：-3618384834958624377
-
-初期地点座標
-mv tp e:world:16,64,-47
-
-```
-
-#### ワールド情報：world_end
-
-```text
-
-モード：creative
-難易度：easy
-SEED値：-3618384834958624377
-
-初期地点座標
-mv tp e:world:16,64,-47
-
-```
-  
-
-
-
-### 旗の色
-
-```text
-赤..村・エンドシティ
-青..建築施設
-緑..ダンジョン
-黄..地点、ゲート等
-
-```
-  
-
-
-
-
-
-## 持ち物
+### ゲーム進捗：持ち物
 
 [目次へ戻る](#目次--table-of-contents)  
   
@@ -176,282 +74,7 @@ mv tp e:world:16,64,-47
 
 
 
-
-
-## 座標情報
-
-[目次へ戻る](#目次--table-of-contents)  
-  
-
-
-### 座標情報：村
-
-　[初期位置](#ワールド情報world)  
-  
-
-```text
-初期村
-minecraft:locate structure #minecraft:village
-　　@   -544,~,-752
-mv tp e:world:-544,~,-752
-
-ゲーム起点：村の入り口（赤ブロック位置）
-mv tp e:world:  ,  ,  
-
-```
-  
-
-
-
-### 建築物の位置
-
-```text
-初期村ゲート
-execute in minecraft:overworld run tp @p - - -
-execute in overworld run tp @s - - -
-
-TTT
-execute in minecraft:overworld run tp @p - - -
-execute in overworld run tp @s - - -
-
-ガーディアントラップ
-execute in minecraft:overworld run tp @p - - -
-execute in overworld run tp @s - - -
-
-カエルトラップ
-execute in minecraft:overworld run tp @p - - -
-execute in overworld run tp @s - - -
-
-```
-
-
-### 座標情報：オーバワールド 建造物
-
-```text
-村
-locate structure minecraft:village
-　　@   * ~ *
-
-森の洋館
-locate structure minecraft:mansion
-　　@   * ~ *
-
-前線基地
-locate structure minecraft:pillager_outpost
-　　@   * ~ *
-
-古代都市
-locate structure minecraft:ancient_city
-　　@   * ~ *
-
-要塞（エンドポータル）
-locate structure minecraft:stronghold
-　　@   * ~ *
-
-鍾乳洞
-locate biome minecraft:dripstone_caves
-　　@   * ~ *
-
-トライアルチャンバー
-locate structure trial_chambers
-　　@   * ~ *
-
-砂漠のピラミッド（砂漠）
-locate structure minecraft:desert_pyramid
-locate structure minecraft:temple
-　　@   * ~ *
-
-ジャングルの寺院（ジャングル）
-locate structure minecraft:jungle_pyramid
-locate structure minecraft:temple
-　　@   * ~ *
-
-イグルー（雪原）
-locate structure minecraft:igloo
-locate structure minecraft:temple
-　　@   * ~ *
-
-魔女の家（湿地）
-locate structure minecraft:swamp_hut
-locate structure minecraft:temple
-　　@   * ~ *
-
-廃坑
-locate structure minecraft:mineshaft
-　　@   * ~ *
-
-旅路の遺跡
-locate structure minecraft:trail_ruins
-　　@   * ~ *
-
-```
-
-
-### 座標情報：オーバワールド 土地
-
-```text
-石の山岳
-locate biome minecraft:stony_peaks
-　　@   * ~ *
-
-タイガ
-locate biome minecraft:taiga
-　　@   * ~ *
-
-サバンナ
-locate biome minecraft:savanna
-　　@   * ~ *
-
-荒野（メサ）
-locate biome minecraft:mesa
-　　@   * ~ *
-
-ジャングル
-locate biome minecraft:jungle
-　　@   * ~ *
-
-竹林
-locate biome minecraft:bamboo_jungle
-　　@   * ~ *
-
-砂漠
-locate biome minecraft:desert
-　　@   * ~ *
-
-花の森
-locate biome minecraft:flower_forest
-　　@   * ~ *
-
-ヒマワリ平原
-locate biome minecraft:sunflower_plains
-　　@   * ~ *
-
-沼地
-locate biome minecraft:swampland
-　　@   * ~ *
-
-マングローブの沼
-locate biome minecraft:mangrove_swamp
-　　@   * ~ *
-
-雪原
-locate biome minecraft:ice_plains
-　　@   * ~ *
-
-樹氷
-locate biome minecraft:ice_plains_spikes
-　　@   * ~ *
-
-マッシュルームの島
-locate biome minecraft:mushroom_island
-　　@   * ~ *
-
-サクラ
-locate biome minecraft:cherry_grove
-　　@   * ~ *
-
-ペールガーデン
-locate biome minecraft:pale_garden
-　　@   * ~ *
-
-```
-
-
-### 座標情報：オーバワールド 海
-
-```text
-神殿
-locate structure minecraft:monument
-　　@   * ~ *
-
-暖かい海
-locate biome minecraft:warm_ocean
-　　@   * ~ *
-
-海底遺跡（暖かい海）
-locate structure minecraft:ocean_ruin_warm
-locate structure minecraft:ruins
-　　@   * ~ *
-
-深い海
-locate biome minecraft:deep_ocean
-　　@   * ~ *
-
-凍った深海
-locate biome minecraft:deep_frozen_ocean
-　　@   * ~ *
-
-冷たい海
-locate biome minecraft:cold_ocean
-　　@   * ~ *
-
-海底遺跡（冷たい海）
-locate structure minecraft:ocean_ruin_cold
-locate structure minecraft:ruins
-　　@   * ~ *
-
-```
-
-
-### 座標情報：ネザー
-
-```text
-拠点村ゲート
-execute in minecraft:the_nether run tp @p - - -
-execute in nether run tp @s - - -
-@   * ~ *
-
-
-ネザー要塞
-locate structure minecraft:fortress
-　　@   * ~ *
-
-砦の遺跡（ネザー）
-locate structure minecraft:bastion_remnant
-　　@   * ~ *
-
-真紅の森（赤い森）
-locate biome minecraft:crimson_forest
-　　@   * ~ *
-
-歪んだ森（青森）
-locate biome minecraft:warped_forest
-　　@   * ~ *
-
-三角地帯
-locate biome minecraft:basalt_deltas
-　　@   * ~ *
-
-ソウルサンドの谷
-locate biome minecraft:soulsand_valley
-　　@   * ~ *
-
-```
-
-
-### 座標情報：エンド
-
-```text
-観測位置（エンド側ゲート）
-execute in minecraft:the_end run tp @p 0 100 0
-execute in the_end run tp @s 0 100 0
-
-エンドシティ（＊船あり）
-locate structure minecraft:end_city
-　　@   * ~ *
-
-エンドシティ（＊船なし）
-locate structure minecraft:end_city
-　　@   * ~ *
-
-```
-  
-
-
-
-
-
-## 作るトラップ
+### ゲーム進捗：作るトラップ
 
 [目次へ戻る](#目次--table-of-contents)  
   
@@ -502,9 +125,7 @@ locate structure minecraft:end_city
 
 
 
-
-
-## 交易
+### ゲーム進捗：交易所の設置
 
 [目次へ戻る](#目次--table-of-contents)  
   
@@ -661,9 +282,7 @@ locate structure minecraft:end_city
 
 
 
-
-
-## ヤギの角
+### ゲーム進捗：ヤギの角収集
 
 [目次へ戻る](#目次--table-of-contents)  
   
@@ -683,9 +302,10 @@ locate structure minecraft:end_city
 
 
 
+### ゲーム進捗：金型収集
 
-
-## 金型
+[目次へ戻る](#目次--table-of-contents)  
+  
 
 |場所 |テンプレート |素材 |
 |:--|:--|:--|
@@ -712,9 +332,10 @@ locate structure minecraft:end_city
 
 
 
+### ゲーム進捗：友好動物
 
-
-## 友好動物
+[目次へ戻る](#目次--table-of-contents)  
+  
 
 |動物|居場所|繁殖|特技|
 |:--|:--|:--|:--|
@@ -754,7 +375,629 @@ locate structure minecraft:end_city
 |[-] ストライダー       |ネザー                               |なし        |鞍で騎乗 要:青キノコ+釣り竿）  |
   
 
-### 特技詳細
+
+
+
+
+## 環境情報
+
+```text
+Minecraftバージョン　1.21.11
+
+サーバ
+　Local
+　メインアプリ：PaperMC　1.21.11-126
+
+サーバ使用プラグイン
+　Multiverse-Core　5.5.2
+　Multiverse-Portalsm　5.2.0
+　WorldEdit　7.4.0
+　WorldGuard　7.0.15
+　GriefPrevention　16.18.7
+　LWC Extended　2.4.2
+　LuckPerms　5.5.0
+
+クライアント使用mod
+　Fablic　1.1.1
+　VunKan　1.21.11-0.6.1
+
+```
+  
+
+
+
+
+
+## ワールド情報
+
+[目次へ戻る](#目次--table-of-contents)  
+  
+
+
+
+### ワールド情報：インデックス
+
+* [メインワールド](#ワールド情報メインワールドworld)
+* [ネザーワールド](#ワールド情報ネザーワールドworld_nether)
+* [エンドワールド](#ワールド情報エンドワールドworld_end)
+
+* [セントラル](#ワールド情報セントラルワールドcentral)
+
+* [マテリアル](#ワールド情報セントラルワールドcentral)
+  
+
+
+
+
+### ワールド情報：旗の色
+
+[インデックスへ戻る](#ワールド情報インデックス)  
+  
+
+```text
+赤..村・エンドシティ
+青..建築施設
+緑..ダンジョン
+黄..地点、ゲート等
+
+```
+  
+
+
+
+### ワールド情報：メインワールド：world
+
+[インデックスへ戻る](#ワールド情報インデックス)  
+[座標：建物](#ワールド情報メインワールド建物)  
+[座標：土地](#ワールド情報メインワールド建物)  
+[座標：海](#ワールド情報メインワールド海)  
+  
+
+```text
+モード：creative
+難易度：easy
+SEED値：-3618384834958624377
+
+初期地点座標
+　　mv tp e:world:16,64,-47
+
+その他設定
+　現在をスポーン位置に設定する
+　　mv setspawn
+　X=0,Z=0を中心にして、16000 0 の範囲に移動制限をかける
+　　mv worldborder center 0 0
+　　mv worldborder set 16000 0
+
+ゲーム起点：村の入り口（赤ブロック位置）
+　　mv tp e:world:-534.3,63,-722.3
+
+```
+  
+
+#### ワールド情報：メインワールド：建物
+
+[ワールド情報へ戻る](#ワールド情報メインワールドworld)  
+  
+
+```text
+初期村
+minecraft:locate structure #minecraft:village
+　　mv tp e:world:-544,~,-752
+
+村
+locate structure minecraft:village
+　　@   * ~ *
+
+森の洋館
+locate structure minecraft:mansion
+　　@   * ~ *
+
+前線基地
+locate structure minecraft:pillager_outpost
+　　@   * ~ *
+
+古代都市
+locate structure minecraft:ancient_city
+　　@   * ~ *
+
+要塞（エンドポータル）
+locate structure minecraft:stronghold
+　　@   * ~ *
+
+鍾乳洞
+locate biome minecraft:dripstone_caves
+　　@   * ~ *
+
+トライアルチャンバー
+locate structure trial_chambers
+　　@   * ~ *
+
+砂漠のピラミッド（砂漠）
+locate structure minecraft:desert_pyramid
+locate structure minecraft:temple
+　　@   * ~ *
+
+ジャングルの寺院（ジャングル）
+locate structure minecraft:jungle_pyramid
+locate structure minecraft:temple
+　　@   * ~ *
+
+イグルー（雪原）
+locate structure minecraft:igloo
+locate structure minecraft:temple
+　　@   * ~ *
+
+魔女の家（湿地）
+locate structure minecraft:swamp_hut
+locate structure minecraft:temple
+　　@   * ~ *
+
+廃坑
+locate structure minecraft:mineshaft
+　　@   * ~ *
+
+旅路の遺跡
+locate structure minecraft:trail_ruins
+　　@   * ~ *
+
+```
+  
+
+#### ワールド情報：メインワールド：土地
+
+[ワールド情報へ戻る](#ワールド情報メインワールドworld)  
+  
+
+```text
+石の山岳
+locate biome minecraft:stony_peaks
+　　@   * ~ *
+
+タイガ
+locate biome minecraft:taiga
+　　@   * ~ *
+
+サバンナ
+locate biome minecraft:savanna
+　　@   * ~ *
+
+荒野（メサ）
+locate biome minecraft:mesa
+　　@   * ~ *
+
+ジャングル
+locate biome minecraft:jungle
+　　@   * ~ *
+
+竹林
+locate biome minecraft:bamboo_jungle
+　　@   * ~ *
+
+砂漠
+locate biome minecraft:desert
+　　@   * ~ *
+
+花の森
+locate biome minecraft:flower_forest
+　　@   * ~ *
+
+ヒマワリ平原
+locate biome minecraft:sunflower_plains
+　　@   * ~ *
+
+沼地
+locate biome minecraft:swampland
+　　@   * ~ *
+
+マングローブの沼
+locate biome minecraft:mangrove_swamp
+　　@   * ~ *
+
+雪原
+locate biome minecraft:ice_plains
+　　@   * ~ *
+
+樹氷
+locate biome minecraft:ice_plains_spikes
+　　@   * ~ *
+
+マッシュルームの島
+locate biome minecraft:mushroom_island
+　　@   * ~ *
+
+サクラ
+locate biome minecraft:cherry_grove
+　　@   * ~ *
+
+ペールガーデン
+locate biome minecraft:pale_garden
+　　@   * ~ *
+
+```
+  
+
+#### ワールド情報：メインワールド：海
+
+[ワールド情報へ戻る](#ワールド情報メインワールドworld)  
+  
+
+```text
+神殿
+locate structure minecraft:monument
+　　@   * ~ *
+
+暖かい海
+locate biome minecraft:warm_ocean
+　　@   * ~ *
+
+海底遺跡（暖かい海）
+locate structure minecraft:ocean_ruin_warm
+locate structure minecraft:ruins
+　　@   * ~ *
+
+深い海
+locate biome minecraft:deep_ocean
+　　@   * ~ *
+
+凍った深海
+locate biome minecraft:deep_frozen_ocean
+　　@   * ~ *
+
+冷たい海
+locate biome minecraft:cold_ocean
+　　@   * ~ *
+
+海底遺跡（冷たい海）
+locate structure minecraft:ocean_ruin_cold
+locate structure minecraft:ruins
+　　@   * ~ *
+
+```
+  
+
+
+
+### ワールド情報：ネザーワールド：world_nether
+
+[インデックスへ戻る](#ワールド情報インデックス)  
+  
+
+```text
+モード：survival
+難易度：easy
+SEED値：xxxxxx
+
+初期地点座標
+　　mv tp e:world_nether:  ,  ,  
+
+```
+  
+
+#### ワールド情報：ネザーワールド：座標
+
+```text
+拠点村ゲート
+execute in minecraft:the_nether run tp @p - - -
+execute in nether run tp @s - - -
+@   * ~ *
+
+
+ネザー要塞
+locate structure minecraft:fortress
+　　@   * ~ *
+
+砦の遺跡（ネザー）
+locate structure minecraft:bastion_remnant
+　　@   * ~ *
+
+真紅の森（赤い森）
+locate biome minecraft:crimson_forest
+　　@   * ~ *
+
+歪んだ森（青森）
+locate biome minecraft:warped_forest
+　　@   * ~ *
+
+三角地帯
+locate biome minecraft:basalt_deltas
+　　@   * ~ *
+
+ソウルサンドの谷
+locate biome minecraft:soulsand_valley
+　　@   * ~ *
+
+```
+  
+
+
+
+### ワールド情報：エンドワールド：world_end
+
+[インデックスへ戻る](#ワールド情報インデックス)  
+  
+
+```text
+モード：survival
+難易度：easy
+SEED値：xxxxxx
+
+初期地点座標
+　　mv tp e:world_end:0,~,0
+
+```
+  
+
+#### ワールド情報：エンドワールド：座標
+
+```text
+観測位置（エンド側ゲート）
+execute in minecraft:the_end run tp @p 0 100 0
+execute in the_end run tp @s 0 100 0
+
+エンドシティ（＊船あり）
+locate structure minecraft:end_city
+　　@   * ~ *
+
+エンドシティ（＊船なし）
+locate structure minecraft:end_city
+　　@   * ~ *
+
+```
+  
+
+
+
+### ワールド情報：セントラル：central
+
+[インデックスへ戻る](#ワールド情報インデックス)  
+[座標：建物](#ワールド情報セントラル建物)  
+[座標：土地](#ワールド情報セントラル土地)  
+[座標：海](#ワールド情報セントラル海)  
+  
+
+```text
+モード：creative
+難易度：easy
+SEED値：xxx
+
+初期地点座標
+　　mv tp e:central:  ,  ,  
+
+その他設定
+　現在をスポーン位置に設定する
+　　mv setspawn
+　X=0,Z=0を中心にして、16000 0 の範囲に移動制限をかける
+　　mv worldborder center 0 0
+　　mv worldborder set 16000 0
+　コマンドブロック取得
+　　give @a minecraft:command_block
+
+　時間経過停止
+　　mv gamerule set minecraft:advance_time false world
+　天気変化停止
+　　mv gamerule set minecraft:advance_weather false world
+　時間経過・天気変化 確認
+　　mv gamerule list world --filter advance
+
+ゲーム起点：村の入り口（赤ブロック位置）
+　　mv tp e:world:-534.3,63,-722.3
+
+```
+  
+
+#### ワールド情報：セントラル：建物
+
+[ワールド情報へ戻る](#ワールド情報セントラルcentral)  
+  
+
+```text
+初期村
+minecraft:locate structure #minecraft:village
+　　mv tp e:world:-544,~,-752
+
+村
+locate structure minecraft:village
+　　@   * ~ *
+
+森の洋館
+locate structure minecraft:mansion
+　　@   * ~ *
+
+前線基地
+locate structure minecraft:pillager_outpost
+　　@   * ~ *
+
+古代都市
+locate structure minecraft:ancient_city
+　　@   * ~ *
+
+要塞（エンドポータル）
+locate structure minecraft:stronghold
+　　@   * ~ *
+
+鍾乳洞
+locate biome minecraft:dripstone_caves
+　　@   * ~ *
+
+トライアルチャンバー
+locate structure trial_chambers
+　　@   * ~ *
+
+砂漠のピラミッド（砂漠）
+locate structure minecraft:desert_pyramid
+locate structure minecraft:temple
+　　@   * ~ *
+
+ジャングルの寺院（ジャングル）
+locate structure minecraft:jungle_pyramid
+locate structure minecraft:temple
+　　@   * ~ *
+
+イグルー（雪原）
+locate structure minecraft:igloo
+locate structure minecraft:temple
+　　@   * ~ *
+
+魔女の家（湿地）
+locate structure minecraft:swamp_hut
+locate structure minecraft:temple
+　　@   * ~ *
+
+廃坑
+locate structure minecraft:mineshaft
+　　@   * ~ *
+
+旅路の遺跡
+locate structure minecraft:trail_ruins
+　　@   * ~ *
+
+```
+  
+
+#### ワールド情報：セントラル：土地
+
+[ワールド情報へ戻る](#ワールド情報セントラルcentral)  
+  
+
+```text
+石の山岳
+locate biome minecraft:stony_peaks
+　　@   * ~ *
+
+タイガ
+locate biome minecraft:taiga
+　　@   * ~ *
+
+サバンナ
+locate biome minecraft:savanna
+　　@   * ~ *
+
+荒野（メサ）
+locate biome minecraft:mesa
+　　@   * ~ *
+
+ジャングル
+locate biome minecraft:jungle
+　　@   * ~ *
+
+竹林
+locate biome minecraft:bamboo_jungle
+　　@   * ~ *
+
+砂漠
+locate biome minecraft:desert
+　　@   * ~ *
+
+花の森
+locate biome minecraft:flower_forest
+　　@   * ~ *
+
+ヒマワリ平原
+locate biome minecraft:sunflower_plains
+　　@   * ~ *
+
+沼地
+locate biome minecraft:swampland
+　　@   * ~ *
+
+マングローブの沼
+locate biome minecraft:mangrove_swamp
+　　@   * ~ *
+
+雪原
+locate biome minecraft:ice_plains
+　　@   * ~ *
+
+樹氷
+locate biome minecraft:ice_plains_spikes
+　　@   * ~ *
+
+マッシュルームの島
+locate biome minecraft:mushroom_island
+　　@   * ~ *
+
+サクラ
+locate biome minecraft:cherry_grove
+　　@   * ~ *
+
+ペールガーデン
+locate biome minecraft:pale_garden
+　　@   * ~ *
+
+```
+  
+
+#### ワールド情報：セントラル：海
+
+[ワールド情報へ戻る](#ワールド情報セントラルcentral)  
+  
+
+```text
+神殿
+locate structure minecraft:monument
+　　@   * ~ *
+
+暖かい海
+locate biome minecraft:warm_ocean
+　　@   * ~ *
+
+海底遺跡（暖かい海）
+locate structure minecraft:ocean_ruin_warm
+locate structure minecraft:ruins
+　　@   * ~ *
+
+深い海
+locate biome minecraft:deep_ocean
+　　@   * ~ *
+
+凍った深海
+locate biome minecraft:deep_frozen_ocean
+　　@   * ~ *
+
+冷たい海
+locate biome minecraft:cold_ocean
+　　@   * ~ *
+
+海底遺跡（冷たい海）
+locate structure minecraft:ocean_ruin_cold
+locate structure minecraft:ruins
+　　@   * ~ *
+
+```
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

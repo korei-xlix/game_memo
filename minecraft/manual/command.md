@@ -205,14 +205,14 @@ deop [ユーザ名]
 mv info [ワールド名]
 
 ワールドに入った時のゲームモードを設定する
-mv modify set gamemode [モード] [ワールド名]
+mv modify [ワールド名] set gamemode [モード]
 　survival ：サバイバルモード
 　creative ：クリエイティブモード
 　spectator：スペクターモード
 　adventure：サバイバルモード
 
 ワールドに入った時のゲーム難易度を設定する
-mv modify set difficulty [難易度] [ワールド名]
+mv modify [ワールド名] set difficulty [難易度]
 　easy    ：イージー
 　normal  ：ノーマル
 　hard    ：ハード
