@@ -203,15 +203,22 @@ deop [ユーザ名]
 ワールド情報を参照する
 mv info [ワールド名]
 
+ゲームモードを変更する（ログオフすると元に戻る）
+gamemode [モード]
+　survival ：サバイバルモード
+　creative ：クリエイティブモード
+　spectator：スペクターモード
+　adventure：サバイバルモード
+
 ワールドに入った時のゲームモードを設定する
-mv modify set gamemode [モード] [ワールド名]
+mv modify [ワールド名] set gamemode [モード]
 　survival ：サバイバルモード
 　creative ：クリエイティブモード
 　spectator：スペクターモード
 　adventure：サバイバルモード
 
 ワールドに入った時のゲーム難易度を設定する
-mv modify set difficulty [難易度] [ワールド名]
+mv modify [ワールド名] set difficulty [難易度]
 　easy    ：イージー
 　normal  ：ノーマル
 　hard    ：ハード
@@ -233,9 +240,9 @@ mv entity-spawn-config info [ワールド名]
 魔物の沸き有無設定
 mv entity-spawn-config modify [ワールド名] monster set spawn [true/false]
 
-X:0,Z:0から周囲16000ブロックまでを境界にする
+X:0,Z:0から周囲16000ブロック（直径）までを境界にする
 mv worldborder center 0 0
-mv worldborder set 16000 0
+mv worldborder set 16000
 
 初期スポーンを現在地に設定する
 mv setspawn
@@ -345,6 +352,30 @@ lp user lucida3poi permission unset villagerbank.create
   
 
 
+
+### コマンド：WorldEdit
+
+[参考資料](https://games.xserver.ne.jp/minecraft-media/worldedit/)  
+  
+
+```text
+領域指定用の斧を召喚
+左クリック=開始位置、右クリック=終了位置
+　　//wand
+
+指定領域をブロックに入れ替える
+　　//set [id]
+
+指定領域を空気ブロックに入れ替える
+　　//set air
+
+指定領域を土ブロックに入れ替える
+　　//set minecraft:grass_block
+
+
+
+```
+  
 
 
 
