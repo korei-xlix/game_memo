@@ -759,7 +759,7 @@ SEED値：xxx
 　　mv setspawn
 　X=0,Z=0を中心にして、1500 0 の範囲に移動制限をかける
 　　mv worldborder center 342 74
-　　mv worldborder set 1500 0
+　　mv worldborder set 1000 0
 　コマンドブロック取得
 　　give @a minecraft:command_block
 
