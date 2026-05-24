@@ -80,9 +80,9 @@
   
 
 * [-] ゴミ箱（サボテン式）
-* [-] 鉄トラップ（最優先）
+* [x] 鉄トラップ（最優先）
 * [-] スライムトラップ
-* [-] 天空トラップ
+* [x] 天空トラップ
 * [-] 無限溶岩工場
 * [-] 羊毛工場
 * [-] ポーション販売機
@@ -92,7 +92,7 @@
 * [-] ダイヤ交換所
 * [-] カエルトラップ
 
-* [-] 植林場
+* 植林場
   * [-] オークの木
   * [-] シラカバの木
   * [-] アカシアの木（砂漠）
@@ -100,17 +100,19 @@
   * [-] ジャングルの木（ジャングル）
   * [-] ダークオークの木
   * [-] マングローブの木（マングローブ）
+  * [-] ペールオークの木（ペールガーデン）
   * [-] 赤い森の木（ネザー）
   * [-] 青い森の木（ネザー）
 
-* [-] 自動畑（全種）
-  * [-] にんじん
-  * [-] じゃがいも
-  * [-] ビートルート
-  * [-] 小麦
-  * [-] かぼちゃ
-  * [-] すいか
-  * [-] さとうきび
+* 自動畑（全種）
+  * [x] にんじん
+  * [x] じゃがいも
+  * [x] ビートルート
+  * [x] 小麦
+  * [x] かぼちゃ
+  * [x] すいか
+  * [x] さとうきび
+  * [x] 昆布
   * [-] カカオ
   * [-] 竹
   * [-] ネザーキノコ
@@ -130,135 +132,139 @@
 [目次へ戻る](#目次--table-of-contents)  
   
 
-* [-] 農民【コンポスター】
-  * にんじん
-  * じゃがいも
-  * 小麦
-  * ビートルート
-  * かぼちゃ
-  * スイカ
+* 農民【コンポスター】
+  * [x] にんじん
+  * [x] じゃがいも
+  * [x] 小麦
+  * [x] ビートルート
+  * [x] かぼちゃ
+  * [x] スイカ
+  * [x] パン
 
-* [-] 漁師【たる】
-  * バケツ一杯のタラ
-  * 焼いたタラ
-  * 調理したシャケ
-  * 釣り竿
+* 漁師【たる】
+  * [-] バケツ一杯のタラ
+  * [-] 焼いたタラ
+  * [-] 調理したシャケ
+  * [-] 釣り竿
 
-* [-] 羊飼い【機織り機】
-  * ハサミ
-  * 羊毛（各色）
-  * ベッド（各色）
-  * 絵画
+* 羊飼い【機織り機】
+  * [-] ハサミ
+  * [-] 羊毛（各色）
+  * [-] ベッド（各色）
+  * [-] 絵画
 
-* [-] 矢師【矢台】
-  * 木の棒→エメラルド
-  * 矢
-  * 弓
-  * クロスボウ
+* 矢師【矢台】
+  * [x] 木の棒→エメラルド
+  * [x] 矢
+  * [x] 弓
+  * [x] クロスボウ
 
-* [-] 司祭【醸造台】
-  * 腐肉→エメラルド
-  * レッドストーンの粉
-  * ラピスラズリ
-  * グロウストーン
-  * エンダーパール
+* 司祭【醸造台】
+  * [x] 腐肉→エメラルド
+  * [x] レッドストーンの粉
+  * [x] ラピスラズリ
+  * [x] グロウストーン
+  * [x] エンダーパール
 
-* [-] 製図家【製図台】
-  * エメラルド→空の地図
-  * エメラルド→海洋探検家の地図
-  * エメラルド→森林探検家の地図
-  * 額縁
+* 製図家【製図台】
+  * [-] エメラルド→空の地図
+  * [-] エメラルド→海洋探検家の地図
+  * [-] エメラルド→森林探検家の地図
+  * [-] 額縁
 
-* [-] 防具鍛冶(1)【溶鉱炉】
-  * 盾
-  * ダイヤ靴
-  * ダイヤアーマー
-  * ダイヤヘルメット
-  * ダイヤレギンス
+* 防具鍛冶(1)【溶鉱炉】
+  * [-] 盾
+  * [-] ダイヤ靴
+  * [-] ダイヤアーマー
+  * [-] ダイヤヘルメット
+  * [-] ダイヤレギンス
 
-* [-] 防具鍛冶(2)【溶鉱炉】
-  * チェーン靴
-  * チェーンアーマー
-  * チェーンヘルメット
-  * チェーンレギンス
+* 防具鍛冶(2)【溶鉱炉】
+  * [-] チェーン靴
+  * [-] チェーンアーマー
+  * [-] チェーンヘルメット
+  * [-] チェーンレギンス
 
-* [-] 革職人【みずがめ】
-  * 革の馬鎧
-  * サドル
-  * 皮靴
-  * 皮アーマー
-  * 皮ヘルメット
-  * 皮レギンス
+* 革職人【みずがめ】
+  * [-] 革の馬鎧
+  * [-] サドル
+  * [-] 皮靴
+  * [-] 皮アーマー
+  * [-] 皮ヘルメット
+  * [-] 皮レギンス
 
-* [-] 武器鍛冶【エンチャ剥がし】
-  * ダイヤ斧（道具でも可）
-  * ダイヤ剣
+* 武器鍛冶【エンチャ剥がし】
+  * [-] ダイヤ斧（道具でも可）
+  * [-] ダイヤ剣
 
-* [-] 道具鍛冶【道具台】
-  * ダイヤくわ
-  * ダイヤ斧（武器でも可）
-  * ダイヤシャベル
-  * ダイヤつるはし
+* 道具鍛冶【道具台】
+  * [-] ダイヤくわ
+  * [-] ダイヤ斧（武器でも可）
+  * [-] ダイヤシャベル
+  * [-] ダイヤつるはし
 
-* [-] 石工【石切台】
-  * レンガ
-  * 磨かれたシリーズ
-  * テラコッタ（各色）
+* 石工【石切台】
+  * [-] レンガ
+  * [-] 磨かれたシリーズ
+  * [-] テラコッタ（各色）
 
-* [-] 肉屋【燻製器】
-  * とりの生肉→エメラルド
-  * うさぎの生肉→エメラルド
-  * 豚の生肉→エメラルド
-  * 調理した豚肉
-  * うしの生肉→エメラルド
-  * 羊の生肉→エメラルド
+* 肉屋【燻製器】
+  * [-] とりの生肉→エメラルド
+  * [-] うさぎの生肉→エメラルド
+  * [-] 豚の生肉→エメラルド
+  * [-] 調理した豚肉
+  * [-] うしの生肉→エメラルド
+  * [-] 羊の生肉→エメラルド
 
-* [-] 司書【書見台】 エンチャント本  
+* 司書【書見台】 エンチャント本  
   * **打撃系**  
     * [-] ダメージ増加５（剣・斧・特攻と競合）
     * [-] 火属性２（剣専用）
     * [-] ドロップ増加３（剣専用）
     * [-] (X)ノックバック２（剣専用）
-    * [-] 範囲ダメージ３（剣専用）
+    * [x] 範囲ダメージ３（剣専用）
     * [-] アンデッド特攻５（剣、斧、ダメージ増加・特攻と競合）
     * [-] (X)虫特攻５（剣、斧、ダメージ増加・特攻と競合）
 
   * **ツール用**  
     * [-] 効率強化５
-    * [-] シルクタッチ（幸運と競合）
-    * [-] 幸運３（シルクタッチと競合）
+    * [x] シルクタッチ（幸運と競合）
+    * [-] 幸運３（シルクタッチと競合）　（幸運２）
 
   * **弓用**  
-    * [-] 射撃ダメージ増加５
-    * [-] 無限（修繕と競合）
+    * [x] 射撃ダメージ増加５
+    * [x] 無限（修繕と競合）
     * [-] フレイム
     * [-] (X)パンチ２
 
   * **クロスボウ用**  
-    * [-] 高速装填３
+    * [x] 高速装填３
     * [-] 貫通４（拡散と競合）
     * [-] 拡散（貫通と競合）
 
   * **トライデント用**  
-    * [-] 忠誠３
+    * [x] 忠誠３
     * [-] 水生特攻５
     * [-] 召雷（激流と競合）
     * [-] (X)激流３（召雷と競合）
 
   * **メイス用**  
-    * [-] 重撃５
+    * [x] 重撃５
     * [-] 防具貫通４
 
+  * **槍用**  
+    * [x] 突進３
+
   * **防具用**  
-    * [-] ダメージ軽減４（～耐性と競合）
-    * [-] 火炎耐性４（～耐性と競合）
+    * [x] ダメージ軽減４（～耐性と競合）
+    * [x] 火炎耐性４（～耐性と競合）
     * [-] 爆発耐性４（～耐性と競合）
     * [-] (X)飛び道具耐性４（～耐性と競合）
     * [-] (X)棘の鎧３
     * [-] 落下耐性４（靴専用）
     * [-] 水中歩行３（靴専用・氷渡りと競合）
-    * [-] (X)氷渡り２（靴専用・水中歩行と競合）
-    * [-] 水中採掘（メット用）
+    * [x] (X)氷渡り２（靴専用・水中歩行と競合）
+    * [x] 水中採掘（メット用）
     * [-] 水中呼吸３（メット用）
 
   * **釣り竿用**  
@@ -269,7 +275,7 @@
     * [-] 耐久３
     * [-] 修繕
     * [-] 消滅の呪い
-    * [-] 束縛の呪い
+    * [x] 束縛の呪い
 
 * 司書にはないエンチャント本  
   * [-] スニーク速度上昇３（レギンス用）  
@@ -382,24 +388,24 @@
 ## 環境情報
 
 ```text
-Minecraftバージョン　1.21.11
+Minecraftバージョン　26.1.1
 
 サーバ
 　Local
-　メインアプリ：PaperMC　1.21.11-126
+　メインアプリ：PaperMC　26.1.1-29
 
 サーバ使用プラグイン
-　Multiverse-Core　5.5.2
-　Multiverse-Portalsm　5.2.0
-　WorldEdit　7.4.0
-　WorldGuard　7.0.15
+　Multiverse-Core　5.6.2
+　Multiverse-Portalsm　5.2.2
+　WorldEdit　7.4.3
+　WorldGuard　7.0.16
 　GriefPrevention　16.18.7
 　LWC Extended　2.4.2
-　LuckPerms　5.5.0
+　LuckPerms　5.5.50
 
 クライアント使用mod
 　Fablic　1.1.1
-　VunKan　1.21.11-0.6.1
+　VunKan　26.1.2-0.6.6
 
 ```
   
@@ -453,10 +459,10 @@ Minecraftバージョン　1.21.11
 
 ```text
 モード：survibal / creative
-難易度：easy
-SEED値：4912151735116715736
+難易度：hard
+SEED値：2185779383181725342
 初期地点座標
-　　mv tp e:world:-355.5,69,801.5
+　　mv tp e:world:-791.5,63,290.5　　（ワールドリセット）
 
 
 
@@ -464,11 +470,11 @@ SEED値：4912151735116715736
 　現在をスポーン位置に設定する
 　　mv setspawn
 　X=*,Z=*を中心にして、9500 0 の範囲に移動制限をかける
-　　mv worldborder center -791 290
-　　mv worldborder set 9500
+　　mv worldborder center -984 818
+　　mv worldborder set 20000
 
 ゲーム起点：村の入り口（赤ブロック位置）
-　　mv tp e:world:-791.5,63,290.5
+　mv tp e:world:-984.5,63,818.5
 
 ```
   
@@ -479,73 +485,76 @@ SEED値：4912151735116715736
   
 
 ```text
+@ 　mv tp e:world:  ,  ,  
+
 村：初期村（赤ブロック位置）
 minecraft:locate structure #minecraft:village
-　mv tp e:world:-791.5,63,290.5　　初期村 赤ブロック
+　mv tp e:world:-984.5,63,818.5  
+
+村
+minecraft:locate structure #minecraft:village
+　mv tp e:world:  ,  ,  
 
 森の洋館
 minecraft:locate structure minecraft:mansion
-　@　mv tp e:world:-1015.5,113,-678.5　　ペールガーデン
+　mv tp e:world:-976,~,3008  
 
-前線基地
+前線基地：アレイの有無
 minecraft:locate structure minecraft:pillager_outpost
-　@　mv tp e:world:-784.5,~,-384.5　　タイガ
+　mv tp e:world:-3584,~,1792  アレイなし
 
 古代都市
 minecraft:locate structure minecraft:ancient_city
-　@　mv tp e:world:-1487.5,-49,-129.5　　ペールガーデン
+@ 　mv tp e:world:1334,~,-160  
 
 海底神殿
 minecraft:locate structure minecraft:monument
-　@　mv tp e:world:752.5,~,-224.5
+@ 　mv tp e:world:-1408,~,1072  
 
-要塞（エンドポータル）
+要塞：エンドポータル
 minecraft:locate structure minecraft:stronghold
-　@　mv tp e:world:2319.5,42,815.5
+@ 　mv tp e:world:-1472,~,48  
 
-鍾乳洞
+鍾乳洞：鍾乳石の有無（川の近くの洞窟）
+minecraft:locate biome minecraft:river
 minecraft:locate biome minecraft:dripstone_caves
-　@　mv tp e:world:-934.5,-10,439.5
+　mv tp e:world:-859,-33,74  あり（少数）
 
 トライアルチャンバー
 minecraft:locate structure trial_chambers
-　@　mv tp e:world:-992.5,~,224.5
+@ 　mv tp e:world:-832,~,736  
 
-砂漠のピラミッド（砂漠）
+砂漠のピラミッド
 minecraft:locate structure minecraft:desert_pyramid
-　@　mv tp e:world:-1493.5,64,-2870.5
+@ 　mv tp e:world:768,~,1328  
 
-ジャングルの寺院（ジャングル）
+ジャングルの寺院
 minecraft:locate structure minecraft:jungle_pyramid
-　@　mv tp e:world:-2186.5,71,-1954.5
+@ 　mv tp e:world:576,~,-432  
 
-イグルー（雪原）
+イグルー：地下室の有無
 minecraft:locate structure minecraft:igloo
-　@　mv tp e:world:7398.5,75,-1156.5　　地下あり
-　@　mv tp e:world:-8914.5,63,-1451.5　　地下あり
-　@　mv tp e:world:-416.5,~,-1216.5　　地下なし
-　@　mv tp e:world:4816.5,~,3744.5　　地下なし
-　@　mv tp e:world:-2272.5,63,5152.5　　地下なし
+　mv tp e:world:-1936,~,-512  なし
 
 魔女の家（湿地）
 minecraft:locate structure minecraft:swamp_hut
-　@　mv tp e:world:-2938.5,65,-1702.5
+@ 　mv tp e:world:1760,~,-2192  
 
 海底遺跡（暖かい海）
 minecraft:locate structure minecraft:ocean_ruin_warm
-　@　mv tp e:world:-3046.5,60,-2512.5
+@ 　mv tp e:world:-1248,~,1024  
 
 海底遺跡（冷たい海）
 minecraft:locate structure minecraft:ocean_ruin_cold
-　@　mv tp e:world:51.5,54,385.5
+@ 　mv tp e:world:-1232,~,640  
 
 廃坑
 minecraft:locate structure minecraft:mineshaft
-　@　mv tp e:world:-832.5,~,416.5
+@ 　mv tp e:world:-1152,~,656  
 
 旅路の遺跡
 minecraft:locate structure minecraft:trail_ruins
-　@　mv tp e:world:-2506.5,64,-686.5
+@ 　mv tp e:world:-1440,~,-432  
 
 ```
   
@@ -558,70 +567,67 @@ minecraft:locate structure minecraft:trail_ruins
 ```text
 マッシュルームの島
 minecraft:locate biome minecraft:mushroom_fields
-　@　mv tp e:world:2686.5,73,-1683.5
+　mv tp e:world:-5081,~,-3886  
 
-荒野（メサ）
+荒野（メサ）：アルマジロの有無
 minecraft:locate biome minecraft:badlands
-　@　mv tp e:world:-4408.5,127,2882.5
+　mv tp e:world:999,~,786  少しあり
 
 沼地
 minecraft:locate biome minecraft:swamp
-　@　mv tp e:world:-417.5,64,1136.5
+　mv tp e:world:1799,~,-1934  
 
 マングローブの沼
 minecraft:locate biome minecraft:mangrove_swamp
-　@　mv tp e:world:-2737.5,64,-2182.5
+　mv tp e:world:103,~,1906  近くの竹林にパンダあり
 
 サクラ
 minecraft:locate biome minecraft:cherry_grove
-　@　mv tp e:world:-145.5,112,-241.5
+@ 　mv tp e:world:1127,~,-1710  
 
 ペールガーデン
 minecraft:locate biome minecraft:pale_garden
-　@　mv tp e:world:-1015.5,113,-678.5
+@ 　mv tp e:world:-2681,~,690  
 
 樹氷
 minecraft:locate biome minecraft:ice_spikes
-　@　mv tp e:world:5887.5,68,3922.5
+@ 　mv tp e:world:807,~,4114  
 
-竹林
+竹林：パンダの有無
 minecraft:locate biome minecraft:bamboo_jungle
-　@　mv tp e:world:-2197.5,70,-2550.5　　パンダあり
-　@　mv tp e:world:-5728.5,127,6129.5　　パンダあり
-　@　mv tp e:world:2721.5,127,4488.5　　パンダなし
+　mv tp e:world:103,~,1906  パンダあり
 
 花の森
 minecraft:locate biome minecraft:flower_forest
-　@　mv tp e:world:-1441.5,71,496.5
+@ 　mv tp e:world:-1529,~,594  
 
 ヒマワリ平原
 minecraft:locate biome minecraft:sunflower_plains
-　@　mv tp e:world:-1112.5,66,610.5
+@ 　mv tp e:world:-601,~,786  
 
 石の山岳
 minecraft:locate biome minecraft:stony_peaks
-　@　mv tp e:world:-1275.5,94,-1751.5
+@ 　mv tp e:world:-2937,~,2418  
 
 砂漠
 minecraft:locate biome minecraft:desert
-　@　mv tp e:world:-1560.5,69,-2877.5
+@ 　mv tp e:world:-2329,~,2258  
 
 タイガ
 minecraft:locate biome minecraft:taiga
-　@　mv tp e:world:-786.5,68,-284.5
+@ 　mv tp e:world:-1497,~,306  
 
 サバンナ
 minecraft:locate biome minecraft:savanna
-　@　mv tp e:world:1.5,72,1992.5　　アルマジロあり
-　@　mv tp e:world:-4646.5,86,4321.5　　アルマジロあり
+@ 　mv tp e:world:-569,~,1234  
 
 ジャングル
 minecraft:locate biome minecraft:jungle
-　@　mv tp e:world:-325.5,69,1925.5
+@ 　mv tp e:world:-57,~,242  
 
 雪原
 minecraft:locate biome minecraft:snowy_plains
-　@　mv tp e:world:-1776.5,63,3424.5
+@ 　mv tp e:world:-1881,~,-206  
 
 ```
   
@@ -632,22 +638,21 @@ minecraft:locate biome minecraft:snowy_plains
   
 
 ```text
-暖かい海
+暖かい海：サンゴの有無
 minecraft:locate biome minecraft:warm_ocean
-　@　mv tp e:world:-16.5,38,-6270.5　　サンゴあり
-　@　mv tp e:world:-2520.5,~,-3070.5　　サンゴなし
+@ 　mv tp e:world:-2297,~,2258  
 
 深い海
 minecraft:locate biome minecraft:deep_ocean
-　@　mv tp e:world:454.5,39,-62.5
+@ 　mv tp e:world:-1209,~,786  
 
 凍った深海
 minecraft:locate biome minecraft:deep_frozen_ocean
-　@　mv tp e:world:-2141.5,63,4188.5
+@ 　mv tp e:world:-2745,~,-1198  
 
 冷たい海
 minecraft:locate biome minecraft:cold_ocean
-　@　mv tp e:world:296.5,46,482.5
+@ 　mv tp e:world:-2265,~,530  
 
 ```
   
@@ -748,7 +753,7 @@ minecraft:locate structure minecraft:end_city
 
 ```text
 モード：creative
-難易度：easy
+難易度：hard
 SEED値：xxx
 
 初期地点座標
@@ -763,11 +768,11 @@ SEED値：xxx
 　コマンドブロック取得
 　　give @a minecraft:command_block
 
-　時間経過停止
+　時間経過停止　※時間停止すると、商人が補充できなくなるのでナシで
 　　mv gamerule set minecraft:advance_time false world_trade
 　天気変化停止
 　　mv gamerule set minecraft:advance_weather false world_trade
-　魔物の沸き有無設定
+　魔物の沸き有無設定　※TTTを使うので、ナシで
 　　mv entity-spawn-config modify world_trade monster set spawn false
 
 　時間経過・天気変化 確認
