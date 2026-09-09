@@ -33,7 +33,7 @@
   * [マイニング分布](#マイニング分布)
   * [エンドラRTA 公式ルール](#エンドラrta-公式ルール)
   * [カエル仕様](#カエル仕様)
-  * [村判定仕様](#村判定仕様)
+  * [村判定仕様](#村判定仕様java版)
 
 * minecraftサーバメモ
   * [Korei's World（Realms鯖）](../my_server/koreis_world_realms.md)
@@ -269,6 +269,28 @@ mv create [ワールド名] [ワールドの種類]
 ワールドを削除する
 mv delete [ワールド名]
 
+ワールドを再生成する
+mv regen [ワールド名]
+
+
+デフォルトを再生成する場合
+1. 別worldをcreateする
+    mv create world2 normal
+
+2. 別worldを初期スポーンに設定する
+    mv tp world2
+    mv setspawn
+
+3. サーバを落とし、
+   2のワールドフォルダを、overworldにコピーする
+
+4. サーバにインし、2のワールドを削除する
+   （サーバ起動時、2のワールドはエラーで読み込まれない）
+    mv setspawn  スポーンを再設定する
+    mv list
+    mv delete world2
+    mv remove world2
+
 ```
   
 
@@ -371,6 +393,7 @@ lp user lucida3poi permission unset villagerbank.create
 
 指定領域をブロックに入れ替える
 　　//set [id]
+　※ブロックIDは、F3+Hで見られるようになる
 
 指定領域を空気ブロックに入れ替える
 　　//set air
@@ -378,6 +401,11 @@ lp user lucida3poi permission unset villagerbank.create
 指定領域を土ブロックに入れ替える
 　　//set minecraft:grass_block
 
+指定の範囲を水で満たす
+　　//fill water [範囲] [深さ]
+
+指定の範囲の水を修正する
+　　//fixwater [範囲]
 
 
 ```
