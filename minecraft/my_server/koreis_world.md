@@ -79,7 +79,7 @@
 [目次へ戻る](#目次--table-of-contents)  
   
 
-* [-] ゴミ箱（サボテン式）
+* [x] ゴミ箱（サボテン式）
 * [x] 鉄トラップ（最優先）
 * [-] スライムトラップ
 * [x] 天空トラップ
@@ -388,23 +388,23 @@
 ## 環境情報
 
 ```text
-Minecraftバージョン　26.1.1
+Minecraftバージョン　26.2
 
 サーバ
 　Local
-　メインアプリ：PaperMC　26.1.1-29
+　メインアプリ：PaperMC　26.2-121
 
 サーバ使用プラグイン
-　Multiverse-Core　5.6.2
-　Multiverse-Portalsm　5.2.2
-　WorldEdit　7.4.3
-　WorldGuard　7.0.16
+　Multiverse-Core　5.8.1
+　Multiverse-Portalsm　5.3.0
+　WorldEdit　7.4.5
+　WorldGuard　7.0.18
 　GriefPrevention　16.18.7
 　LWC Extended　2.4.2
-　LuckPerms　5.5.50
+　LuckPerms　5.5.81
 
 クライアント使用mod
-　Fablic　1.1.1
+　Fablic　1.1.2
 　VunKan　26.1.2-0.6.6
 
 ```
