@@ -79,7 +79,7 @@
 [目次へ戻る](#目次--table-of-contents)  
   
 
-* [-] ゴミ箱（サボテン式）
+* [x] ゴミ箱（サボテン式）
 * [x] 鉄トラップ（最優先）
 * [-] スライムトラップ
 * [x] 天空トラップ
@@ -388,23 +388,23 @@
 ## 環境情報
 
 ```text
-Minecraftバージョン　26.1.1
+Minecraftバージョン　26.2
 
 サーバ
 　Local
-　メインアプリ：PaperMC　26.1.1-29
+　メインアプリ：PaperMC　26.2-121
 
 サーバ使用プラグイン
-　Multiverse-Core　5.6.2
-　Multiverse-Portalsm　5.2.2
-　WorldEdit　7.4.3
-　WorldGuard　7.0.16
+　Multiverse-Core　5.8.1
+　Multiverse-Portalsm　5.3.0
+　WorldEdit　7.4.5
+　WorldGuard　7.0.18
 　GriefPrevention　16.18.7
 　LWC Extended　2.4.2
-　LuckPerms　5.5.50
+　LuckPerms　5.5.81
 
 クライアント使用mod
-　Fablic　1.1.1
+　Fablic　1.1.2
 　VunKan　26.1.2-0.6.6
 
 ```
@@ -460,21 +460,21 @@ Minecraftバージョン　26.1.1
 ```text
 モード：survibal / creative
 難易度：hard
-SEED値：2185779383181725342
+SEED値：-2631398156401785867
 初期地点座標
-　　mv tp e:world:-791.5,63,290.5　　（ワールドリセット）
+　　mv tp e:world:0.5,86,0.5　　（ワールドリセット）
 
 
 
 その他設定
 　現在をスポーン位置に設定する
 　　mv setspawn
-　X=*,Z=*を中心にして、9500 0 の範囲に移動制限をかける
-　　mv worldborder center -984 818
-　　mv worldborder set 20000
+　X=*,Z=*を中心にして、11000 0 の範囲に移動制限をかける
+　　mv worldborder center -222.5 -499.5
+　　mv worldborder set 22000
 
 ゲーム起点：村の入り口（赤ブロック位置）
-　mv tp e:world:-984.5,63,818.5
+　mv tp e:world:222.5,74,-499.5
 
 ```
   
@@ -489,72 +489,78 @@ SEED値：2185779383181725342
 
 村：初期村（赤ブロック位置）
 minecraft:locate structure #minecraft:village
-　mv tp e:world:-984.5,63,818.5  
+　mv tp e:world:222.5,74,-499.5
 
 村
 minecraft:locate structure #minecraft:village
-　mv tp e:world:  ,  ,  
+@ 　mv tp e:world:240,~,-496
+　mv tp e:world:-1831,~,774　　サバンナ村、アルマジロあり
+　mv tp e:world:2506,63,1750　　砂漠の村
+　mv tp e:world:536,63,143　　タイガの村
 
 森の洋館
 minecraft:locate structure minecraft:mansion
-　mv tp e:world:-976,~,3008  
+@ 　mv tp e:world:-912,~,-848
 
 前線基地：アレイの有無
 minecraft:locate structure minecraft:pillager_outpost
-　mv tp e:world:-3584,~,1792  アレイなし
+　mv tp e:world:-144,~,-2016　　なし
+　mv tp e:world:-2224,~,-432　　あり
 
 古代都市
 minecraft:locate structure minecraft:ancient_city
-@ 　mv tp e:world:1334,~,-160  
+　mv tp e:world:-663,-49,-1500
 
 海底神殿
 minecraft:locate structure minecraft:monument
-@ 　mv tp e:world:-1408,~,1072  
+@ 　mv tp e:world:160,~,800
 
 要塞：エンドポータル
 minecraft:locate structure minecraft:stronghold
-@ 　mv tp e:world:-1472,~,48  
+@ 　mv tp e:world:1232,~,-800
 
 鍾乳洞：鍾乳石の有無（川の近くの洞窟）
 minecraft:locate biome minecraft:river
 minecraft:locate biome minecraft:dripstone_caves
-　mv tp e:world:-859,-33,74  あり（少数）
+　mv tp e:world:237,-10,-521
 
 トライアルチャンバー
 minecraft:locate structure trial_chambers
-@ 　mv tp e:world:-832,~,736  
+@ 　mv tp e:world:16,~,-432
 
 砂漠のピラミッド
 minecraft:locate structure minecraft:desert_pyramid
-@ 　mv tp e:world:768,~,1328  
+@ 　mv tp e:world:-2256,~,2320
 
 ジャングルの寺院
 minecraft:locate structure minecraft:jungle_pyramid
-@ 　mv tp e:world:576,~,-432  
+　mv tp e:world:-1246,69,1872
 
 イグルー：地下室の有無
 minecraft:locate structure minecraft:igloo
-　mv tp e:world:-1936,~,-512  なし
+　mv tp e:world:336,~,-3472　　なし
+　mv tp e:world:-7572,66,10466　　あり
 
 魔女の家（湿地）
 minecraft:locate structure minecraft:swamp_hut
-@ 　mv tp e:world:1760,~,-2192  
+　mv tp e:world:-5516,68,6404
 
 海底遺跡（暖かい海）
 minecraft:locate structure minecraft:ocean_ruin_warm
-@ 　mv tp e:world:-1248,~,1024  
+　mv tp e:world:-1503,51,1039
 
 海底遺跡（冷たい海）
 minecraft:locate structure minecraft:ocean_ruin_cold
-@ 　mv tp e:world:-1232,~,640  
+　mv tp e:world:28,55,168
+@ 　mv tp e:world:-1856,~,-3760
 
 廃坑
 minecraft:locate structure minecraft:mineshaft
-@ 　mv tp e:world:-1152,~,656  
+@ 　mv tp e:world:144,~,-480
 
 旅路の遺跡
 minecraft:locate structure minecraft:trail_ruins
-@ 　mv tp e:world:-1440,~,-432  
+　mv tp e:world:-1458,80,-1490
 
 ```
   
@@ -567,67 +573,77 @@ minecraft:locate structure minecraft:trail_ruins
 ```text
 マッシュルームの島
 minecraft:locate biome minecraft:mushroom_fields
-　mv tp e:world:-5081,~,-3886  
+　mv tp e:world:3230,74,-52　　水没
+　mv tp e:world:-9398,72,9154　　あり
 
 荒野（メサ）：アルマジロの有無
 minecraft:locate biome minecraft:badlands
-　mv tp e:world:999,~,786  少しあり
+　mv tp e:world:3133,74,2413　　なし
 
 沼地
 minecraft:locate biome minecraft:swamp
-　mv tp e:world:1799,~,-1934  
+　mv tp e:world:-5516,68,6404　　魔女の家
 
 マングローブの沼
 minecraft:locate biome minecraft:mangrove_swamp
-　mv tp e:world:103,~,1906  近くの竹林にパンダあり
+　mv tp e:world:2319,63,-1447　　カエルあり
 
 サクラ
 minecraft:locate biome minecraft:cherry_grove
-@ 　mv tp e:world:1127,~,-1710  
+　mv tp e:world:158,138,-563
 
 ペールガーデン
 minecraft:locate biome minecraft:pale_garden
-@ 　mv tp e:world:-2681,~,690  
+　mv tp e:world:-400,117,-854
 
 樹氷
 minecraft:locate biome minecraft:ice_spikes
-@ 　mv tp e:world:807,~,4114  
+　mv tp e:world:-1538,~,-3636
 
 竹林：パンダの有無
 minecraft:locate biome minecraft:bamboo_jungle
-　mv tp e:world:103,~,1906  パンダあり
+　mv tp e:world:2261,99,-1684　　あり
 
 花の森
 minecraft:locate biome minecraft:flower_forest
-@ 　mv tp e:world:-1529,~,594  
+　mv tp e:world:62,~,-436
 
 ヒマワリ平原
 minecraft:locate biome minecraft:sunflower_plains
-@ 　mv tp e:world:-601,~,786  
+　mv tp e:world:126,~,-532　　近くにサクラあり
 
 石の山岳
 minecraft:locate biome minecraft:stony_peaks
-@ 　mv tp e:world:-2937,~,2418  
+　mv tp e:world:-79,135,2422
 
 砂漠
 minecraft:locate biome minecraft:desert
-@ 　mv tp e:world:-2329,~,2258  
+　mv tp e:world:2506,63,1750　　砂漠の村
 
 タイガ
 minecraft:locate biome minecraft:taiga
-@ 　mv tp e:world:-1497,~,306  
+　mv tp e:world:536,63,143　　タイガの村
 
 サバンナ
 minecraft:locate biome minecraft:savanna
-@ 　mv tp e:world:-569,~,1234  
+　mv tp e:world:-1809,~,553　　アルマジロ、村あり
+
+ダークオークの森　☆
+minecraft:locate biome minecraft:dark_forest
+　mv tp e:world:-283,64,-827　　近くにシラカバあり
 
 ジャングル
 minecraft:locate biome minecraft:jungle
-@ 　mv tp e:world:-57,~,242  
+　mv tp e:world:2231,63,-1379　　近くにマングローブあり
 
 雪原
 minecraft:locate biome minecraft:snowy_plains
-@ 　mv tp e:world:-1881,~,-206  
+　mv tp e:world:318,72,-3348　　氷山あり
+
+硫黄の洞窟　☆NEW
+minecraft:locate biome minecraft:sulfur_caves
+　mv tp e:world:-550,7,232
+
 
 ```
   
@@ -640,19 +656,19 @@ minecraft:locate biome minecraft:snowy_plains
 ```text
 暖かい海：サンゴの有無
 minecraft:locate biome minecraft:warm_ocean
-@ 　mv tp e:world:-2297,~,2258  
+　mv tp e:world:2611,51,1683　　ンゴあり、近くに村あり
 
 深い海
 minecraft:locate biome minecraft:deep_ocean
-@ 　mv tp e:world:-1209,~,786  
+@ 　mv tp e:world:-674,~,-308
 
 凍った深海
 minecraft:locate biome minecraft:deep_frozen_ocean
-@ 　mv tp e:world:-2745,~,-1198  
+@ 　mv tp e:world:30,~,-2644
 
 冷たい海
 minecraft:locate biome minecraft:cold_ocean
-@ 　mv tp e:world:-2265,~,530  
+@ 　mv tp e:world:638,~,-84
 
 ```
   
