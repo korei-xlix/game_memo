@@ -79,10 +79,10 @@
 [目次へ戻る](#目次--table-of-contents)  
   
 
-* [x] ゴミ箱（サボテン式）
-* [x] 鉄トラップ（最優先）
+* [-] ゴミ箱（サボテン式）
+* [-] 鉄トラップ（最優先）
 * [-] スライムトラップ
-* [x] 天空トラップ
+* [-] 天空トラップ
 * [-] 無限溶岩工場
 * [-] 羊毛工場
 * [-] ポーション販売機
@@ -105,14 +105,14 @@
   * [-] 青い森の木（ネザー）
 
 * 自動畑（全種）
-  * [x] にんじん
-  * [x] じゃがいも
-  * [x] ビートルート
-  * [x] 小麦
-  * [x] かぼちゃ
-  * [x] すいか
-  * [x] さとうきび
-  * [x] 昆布
+  * [-] にんじん
+  * [-] じゃがいも
+  * [-] ビートルート
+  * [-] 小麦
+  * [-] かぼちゃ
+  * [-] すいか
+  * [-] さとうきび
+  * [-] 昆布
   * [-] カカオ
   * [-] 竹
   * [-] ネザーキノコ
@@ -133,18 +133,19 @@
   
 
 * 農民【コンポスター】
-  * [x] にんじん
-  * [x] じゃがいも
-  * [x] 小麦
-  * [x] ビートルート
-  * [x] かぼちゃ
-  * [x] スイカ
-  * [x] パン
+  * [-] にんじん
+  * [-] じゃがいも
+  * [-] 小麦
+  * [-] ビートルート
+  * [-] かぼちゃ
+  * [-] スイカ
+  * [-] パン
 
 * 漁師【たる】
   * [-] バケツ一杯のタラ
-  * [-] 焼いたタラ
-  * [-] 調理したシャケ
+  * [-] タラ換金
+  * [-] シャケ換金
+  * [-] フグ換金
   * [-] 釣り竿
 
 * 羊飼い【機織り機】
@@ -154,17 +155,17 @@
   * [-] 絵画
 
 * 矢師【矢台】
-  * [x] 木の棒→エメラルド
-  * [x] 矢
-  * [x] 弓
-  * [x] クロスボウ
+  * [-] 木の棒→エメラルド
+  * [-] 矢
+  * [-] 弓
+  * [-] クロスボウ
 
 * 司祭【醸造台】
-  * [x] 腐肉→エメラルド
-  * [x] レッドストーンの粉
-  * [x] ラピスラズリ
-  * [x] グロウストーン
-  * [x] エンダーパール
+  * [-] 腐肉→エメラルド
+  * [-] レッドストーンの粉
+  * [-] ラピスラズリ
+  * [-] グロウストーン
+  * [-] エンダーパール
 
 * 製図家【製図台】
   * [-] エメラルド→空の地図
@@ -222,49 +223,49 @@
     * [-] 火属性２（剣専用）
     * [-] ドロップ増加３（剣専用）
     * [-] (X)ノックバック２（剣専用）
-    * [x] 範囲ダメージ３（剣専用）
+    * [-] 範囲ダメージ３（剣専用）
     * [-] アンデッド特攻５（剣、斧、ダメージ増加・特攻と競合）
     * [-] (X)虫特攻５（剣、斧、ダメージ増加・特攻と競合）
 
   * **ツール用**  
     * [-] 効率強化５
-    * [x] シルクタッチ（幸運と競合）
-    * [-] 幸運３（シルクタッチと競合）　（幸運２）
+    * [-] シルクタッチ（幸運と競合）
+    * [-] 幸運３（シルクタッチと競合）
 
   * **弓用**  
-    * [x] 射撃ダメージ増加５
-    * [x] 無限（修繕と競合）
+    * [-] 射撃ダメージ増加５
+    * [-] 無限（修繕と競合）
     * [-] フレイム
     * [-] (X)パンチ２
 
   * **クロスボウ用**  
-    * [x] 高速装填３
+    * [-] 高速装填３
     * [-] 貫通４（拡散と競合）
     * [-] 拡散（貫通と競合）
 
   * **トライデント用**  
-    * [x] 忠誠３
+    * [-] 忠誠３
     * [-] 水生特攻５
     * [-] 召雷（激流と競合）
     * [-] (X)激流３（召雷と競合）
 
   * **メイス用**  
-    * [x] 重撃５
+    * [-] 重撃５
     * [-] 防具貫通４
 
   * **槍用**  
-    * [x] 突進３
+    * [-] 突進３
 
   * **防具用**  
-    * [x] ダメージ軽減４（～耐性と競合）
-    * [x] 火炎耐性４（～耐性と競合）
+    * [-] ダメージ軽減４（～耐性と競合）
+    * [-] 火炎耐性４（～耐性と競合）
     * [-] 爆発耐性４（～耐性と競合）
     * [-] (X)飛び道具耐性４（～耐性と競合）
     * [-] (X)棘の鎧３
     * [-] 落下耐性４（靴専用）
     * [-] 水中歩行３（靴専用・氷渡りと競合）
-    * [x] (X)氷渡り２（靴専用・水中歩行と競合）
-    * [x] 水中採掘（メット用）
+    * [-] (X)氷渡り２（靴専用・水中歩行と競合）
+    * [-] 水中採掘（メット用）
     * [-] 水中呼吸３（メット用）
 
   * **釣り竿用**  
@@ -275,7 +276,7 @@
     * [-] 耐久３
     * [-] 修繕
     * [-] 消滅の呪い
-    * [x] 束縛の呪い
+    * [-] 束縛の呪い
 
 * 司書にはないエンチャント本  
   * [-] スニーク速度上昇３（レギンス用）  
@@ -392,7 +393,7 @@ Minecraftバージョン　26.2
 
 サーバ
 　Local
-　メインアプリ：PaperMC　26.2-121
+　メインアプリ：PaperMC　26.2-124
 
 サーバ使用プラグイン
 　Multiverse-Core　5.8.1
@@ -424,10 +425,12 @@ Minecraftバージョン　26.2
 ### ワールド情報：インデックス
 
 * [メインワールド](#ワールド情報メインワールドworld)
+
+  * [アドベンチャーワールド](#ワールド情報アドベンチャーワールドworld_adv)
+
 * [ネザーワールド](#ワールド情報ネザーワールドworld_nether)
 * [エンドワールド](#ワールド情報エンドワールドworld_the_end)
 
-* [トレードワールド](#ワールド情報トレードワールドworld_trade)
   
 
 
@@ -452,17 +455,71 @@ Minecraftバージョン　26.2
 ### ワールド情報：メインワールド：world
 
 [インデックスへ戻る](#ワールド情報インデックス)  
-[座標：建物](#ワールド情報メインワールド建物)  
-[座標：土地](#ワールド情報メインワールド建物)  
-[座標：海](#ワールド情報メインワールド海)  
+[座標：建物](#ワールド情報メイン建物)  
+  
+
+```text
+モード：creative
+難易度：easy
+SEED値：-2052511053031740732
+
+初期地点座標
+　　mv tp e:world:55.5,63,9.5
+
+その他設定
+　現在をスポーン位置に設定する
+　　mv setspawn
+　X=0,Z=0を中心にして、1500 0 の範囲に移動制限をかける
+　　mv worldborder center -637.5 297.5
+　　mv worldborder set 1500 0
+　コマンドブロック取得
+　　give @a minecraft:command_block
+
+　天気変化停止
+　　mv gamerule set minecraft:advance_weather false world
+
+　時間経過・天気変化 確認
+　　mv gamerule list world_trade --filter advance
+
+ゲーム起点：村の入り口（赤ブロック位置）
+　　mv tp e:world:-637.5,63,297.5
+
+```
+  
+
+#### ワールド情報：メイン：建物
+
+[ワールド情報へ戻る](#ワールド情報メインワールドworld)  
+  
+
+```text
+村    今回は村じゃないけど
+minecraft:locate structure #minecraft:village
+　　mv tp e:world:-637.5,63,297.5
+
+平原
+minecraft:locate biome minecraft:plains
+　　mv tp e:world:-240,~,3
+
+```
+  
+
+
+
+### ワールド情報：アドベンチャーワールド：world_adv
+
+[インデックスへ戻る](#ワールド情報インデックス)  
+[座標：建物](#ワールド情報アドベンチャーワールド建物)  
+[座標：土地](#ワールド情報アドベンチャーワールド建物)  
+[座標：海](#ワールド情報アドベンチャーワールド海)  
   
 
 ```text
 モード：survibal / creative
 難易度：hard
-SEED値：-2631398156401785867
+SEED値：　　　
 初期地点座標
-　　mv tp e:world:0.5,86,0.5　　（ワールドリセット）
+　　mv tp e:world_adv:  ,  ,  
 
 
 
@@ -474,201 +531,192 @@ SEED値：-2631398156401785867
 　　mv worldborder set 22000
 
 ゲーム起点：村の入り口（赤ブロック位置）
-　mv tp e:world:222.5,74,-499.5
+　　mv tp e:world_adv:  ,  ,  
 
 ```
   
 
-#### ワールド情報：メインワールド：建物
+#### ワールド情報：アドベンチャーワールド：建物
 
-[ワールド情報へ戻る](#ワールド情報メインワールドworld)  
+[ワールド情報へ戻る](#ワールド情報アドベンチャーワールドworld_adv)  
   
 
 ```text
-@ 　mv tp e:world:  ,  ,  
+@ 　　mv tp e:world_adv:  ,  ,  
 
 村：初期村（赤ブロック位置）
 minecraft:locate structure #minecraft:village
-　mv tp e:world:222.5,74,-499.5
+@ 　　mv tp e:world_adv:  ,  ,  
 
 村
 minecraft:locate structure #minecraft:village
-@ 　mv tp e:world:240,~,-496
-　mv tp e:world:-1831,~,774　　サバンナ村、アルマジロあり
-　mv tp e:world:2506,63,1750　　砂漠の村
-　mv tp e:world:536,63,143　　タイガの村
+@ 　　mv tp e:world_adv:  ,  ,  
 
 森の洋館
 minecraft:locate structure minecraft:mansion
-@ 　mv tp e:world:-912,~,-848
+@ 　　mv tp e:world_adv:  ,  ,  
 
 前線基地：アレイの有無
 minecraft:locate structure minecraft:pillager_outpost
-　mv tp e:world:-144,~,-2016　　なし
-　mv tp e:world:-2224,~,-432　　あり
+@ 　　mv tp e:world_adv:  ,  ,  
 
 古代都市
 minecraft:locate structure minecraft:ancient_city
-　mv tp e:world:-663,-49,-1500
+@ 　　mv tp e:world_adv:  ,  ,  
 
 海底神殿
 minecraft:locate structure minecraft:monument
-@ 　mv tp e:world:160,~,800
+@ 　　mv tp e:world_adv:  ,  ,  
 
 要塞：エンドポータル
 minecraft:locate structure minecraft:stronghold
-@ 　mv tp e:world:1232,~,-800
+@ 　　mv tp e:world_adv:  ,  ,  
 
 鍾乳洞：鍾乳石の有無（川の近くの洞窟）
-minecraft:locate biome minecraft:river
-minecraft:locate biome minecraft:dripstone_caves
-　mv tp e:world:237,-10,-521
+@ 　　mv tp e:world_adv:  ,  ,  
 
 トライアルチャンバー
 minecraft:locate structure trial_chambers
-@ 　mv tp e:world:16,~,-432
+@ 　　mv tp e:world_adv:  ,  ,  
 
 砂漠のピラミッド
 minecraft:locate structure minecraft:desert_pyramid
-@ 　mv tp e:world:-2256,~,2320
+@ 　　mv tp e:world_adv:  ,  ,  
 
 ジャングルの寺院
 minecraft:locate structure minecraft:jungle_pyramid
-　mv tp e:world:-1246,69,1872
+@ 　　mv tp e:world_adv:  ,  ,  
 
 イグルー：地下室の有無
 minecraft:locate structure minecraft:igloo
-　mv tp e:world:336,~,-3472　　なし
-　mv tp e:world:-7572,66,10466　　あり
+@ 　　mv tp e:world_adv:  ,  ,  
 
 魔女の家（湿地）
 minecraft:locate structure minecraft:swamp_hut
-　mv tp e:world:-5516,68,6404
+@ 　　mv tp e:world_adv:  ,  ,  
 
 海底遺跡（暖かい海）
 minecraft:locate structure minecraft:ocean_ruin_warm
-　mv tp e:world:-1503,51,1039
+@ 　　mv tp e:world_adv:  ,  ,  
 
 海底遺跡（冷たい海）
 minecraft:locate structure minecraft:ocean_ruin_cold
-　mv tp e:world:28,55,168
-@ 　mv tp e:world:-1856,~,-3760
+@ 　　mv tp e:world_adv:  ,  ,  
 
 廃坑
 minecraft:locate structure minecraft:mineshaft
-@ 　mv tp e:world:144,~,-480
+@ 　　mv tp e:world_adv:  ,  ,  
 
 旅路の遺跡
 minecraft:locate structure minecraft:trail_ruins
-　mv tp e:world:-1458,80,-1490
+@ 　　mv tp e:world_adv:  ,  ,  
 
 ```
   
 
-#### ワールド情報：メインワールド：土地
+#### ワールド情報：アドベンチャーワールド：土地
 
-[ワールド情報へ戻る](#ワールド情報メインワールドworld)  
+[ワールド情報へ戻る](#ワールド情報アドベンチャーワールドworld_adv)  
   
 
 ```text
 マッシュルームの島
 minecraft:locate biome minecraft:mushroom_fields
-　mv tp e:world:3230,74,-52　　水没
-　mv tp e:world:-9398,72,9154　　あり
+@ 　　mv tp e:world_adv:  ,  ,  
 
 荒野（メサ）：アルマジロの有無
 minecraft:locate biome minecraft:badlands
-　mv tp e:world:3133,74,2413　　なし
+@ 　　mv tp e:world_adv:  ,  ,  
 
 沼地
 minecraft:locate biome minecraft:swamp
-　mv tp e:world:-5516,68,6404　　魔女の家
+@ 　　mv tp e:world_adv:  ,  ,  
 
 マングローブの沼
 minecraft:locate biome minecraft:mangrove_swamp
-　mv tp e:world:2319,63,-1447　　カエルあり
+@ 　　mv tp e:world_adv:  ,  ,  
 
 サクラ
 minecraft:locate biome minecraft:cherry_grove
-　mv tp e:world:158,138,-563
+@ 　　mv tp e:world_adv:  ,  ,  
 
 ペールガーデン
 minecraft:locate biome minecraft:pale_garden
-　mv tp e:world:-400,117,-854
+@ 　　mv tp e:world_adv:  ,  ,  
 
 樹氷
 minecraft:locate biome minecraft:ice_spikes
-　mv tp e:world:-1538,~,-3636
+@ 　　mv tp e:world_adv:  ,  ,  
 
 竹林：パンダの有無
 minecraft:locate biome minecraft:bamboo_jungle
-　mv tp e:world:2261,99,-1684　　あり
+@ 　　mv tp e:world_adv:  ,  ,  
 
 花の森
 minecraft:locate biome minecraft:flower_forest
-　mv tp e:world:62,~,-436
+@ 　　mv tp e:world_adv:  ,  ,  
 
 ヒマワリ平原
 minecraft:locate biome minecraft:sunflower_plains
-　mv tp e:world:126,~,-532　　近くにサクラあり
+@ 　　mv tp e:world_adv:  ,  ,  
 
 石の山岳
 minecraft:locate biome minecraft:stony_peaks
-　mv tp e:world:-79,135,2422
+@ 　　mv tp e:world_adv:  ,  ,  
 
 砂漠
 minecraft:locate biome minecraft:desert
-　mv tp e:world:2506,63,1750　　砂漠の村
+@ 　　mv tp e:world_adv:  ,  ,  
 
 タイガ
 minecraft:locate biome minecraft:taiga
-　mv tp e:world:536,63,143　　タイガの村
+@ 　　mv tp e:world_adv:  ,  ,  
 
 サバンナ
 minecraft:locate biome minecraft:savanna
-　mv tp e:world:-1809,~,553　　アルマジロ、村あり
+@ 　　mv tp e:world_adv:  ,  ,  
 
-ダークオークの森　☆
+ダークオークの森
 minecraft:locate biome minecraft:dark_forest
-　mv tp e:world:-283,64,-827　　近くにシラカバあり
+@ 　　mv tp e:world_adv:  ,  ,  
 
 ジャングル
 minecraft:locate biome minecraft:jungle
-　mv tp e:world:2231,63,-1379　　近くにマングローブあり
+@ 　　mv tp e:world_adv:  ,  ,  
 
 雪原
 minecraft:locate biome minecraft:snowy_plains
-　mv tp e:world:318,72,-3348　　氷山あり
+@ 　　mv tp e:world_adv:  ,  ,  
 
 硫黄の洞窟　☆NEW
 minecraft:locate biome minecraft:sulfur_caves
-　mv tp e:world:-550,7,232
+@ 　　mv tp e:world_adv:  ,  ,  
 
 
 ```
   
 
-#### ワールド情報：メインワールド：海
+#### ワールド情報：アドベンチャーワールド：海
 
-[ワールド情報へ戻る](#ワールド情報メインワールドworld)  
+[ワールド情報へ戻る](#ワールド情報アドベンチャーワールドworld_adv)  
   
 
 ```text
 暖かい海：サンゴの有無
 minecraft:locate biome minecraft:warm_ocean
-　mv tp e:world:2611,51,1683　　ンゴあり、近くに村あり
+@ 　　mv tp e:world_adv:  ,  ,  
 
 深い海
 minecraft:locate biome minecraft:deep_ocean
-@ 　mv tp e:world:-674,~,-308
+@ 　　mv tp e:world_adv:  ,  ,  
 
 凍った深海
 minecraft:locate biome minecraft:deep_frozen_ocean
-@ 　mv tp e:world:30,~,-2644
+@ 　　mv tp e:world_adv:  ,  ,  
 
 冷たい海
 minecraft:locate biome minecraft:cold_ocean
-@ 　mv tp e:world:638,~,-84
+@ 　　mv tp e:world_adv:  ,  ,  
 
 ```
   
@@ -684,7 +732,7 @@ minecraft:locate biome minecraft:cold_ocean
 モード：survival
 難易度：easy
 初期地点座標
-　@　mv tp e:world_nether:0.5,43,0.5
+　@　mv tp e:world_nether:  ,  ,  
 
 ```
   
@@ -693,35 +741,32 @@ minecraft:locate biome minecraft:cold_ocean
 
 ```text
 拠点村ゲート
-　@　mv tp e:world:  .5,~,  .5
+@ 　　mv tp e:world_nether:  ,  ,  
 
 
 ネザー要塞
 minecraft:locate structure minecraft:fortress
-　@　mv tp e:world_nether:0.5,43,0.5　　初期位置近く
+@ 　　mv tp e:world_nether:  ,  ,  
 
 砦の遺跡（ネザー）
 minecraft:locate structure minecraft:bastion_remnant
-　@　mv tp e:world_nether:-333.5,33,459.5　　宝箱なし
-　@　mv tp e:world_nether:-801.5,67,413.5　　宝箱なし
-　@　mv tp e:world_nether:-756.5,33,-622.5　　宝箱あり？
+@ 　　mv tp e:world_nether:  ,  ,  
 
 真紅の森（赤い森）
 minecraft:locate biome minecraft:crimson_forest
-　@　mv tp e:world_nether:-224.5,50,224.5
+@ 　　mv tp e:world_nether:  ,  ,  
 
 歪んだ森（青森）
 minecraft:locate biome minecraft:warped_forest
-　@　mv tp e:world_nether:-660.5,93,241.5
-　@　mv tp e:world_nether:-355.5,92,-312.5　　小さい
+@ 　　mv tp e:world_nether:  ,  ,  
 
 三角地帯
 minecraft:locate biome minecraft:basalt_deltas
-　@　mv tp e:world_nether:32.5,~,0.5　　初期位置近く
+@ 　　mv tp e:world_nether:  ,  ,  
 
 ソウルサンドの谷
 minecraft:locate biome minecraft:soul_sand_valley
-　@　mv tp e:world_nether:-95.5,42,87.5
+@ 　　mv tp e:world_nether:  ,  ,  
 
 ```
   
@@ -737,7 +782,7 @@ minecraft:locate biome minecraft:soul_sand_valley
 モード：survival
 難易度：easy
 初期地点座標
-　　mv tp e:world_the_end:0.5,60,5.5
+@ 　　mv tp e:world_the_end:  ,  ,  
 
 ```
   
@@ -746,70 +791,15 @@ minecraft:locate biome minecraft:soul_sand_valley
 
 ```text
 観測位置（エンド側ゲート）
-　@　mv tp e:world_the_end:  .5,~,  .5
+@ 　　mv tp e:world_the_end:  ,  ,  
 
 エンドシティ（＊船あり）
 minecraft:locate structure minecraft:end_city
-　@　mv tp e:world_the_end:-1165.5,63,356.5
+@ 　　mv tp e:world_the_end:  ,  ,  
 
 エンドシティ（＊船なし）
 minecraft:locate structure minecraft:end_city
-　@　mv tp e:world_the_end:1037.5,63,150.5
-
-```
-  
-
-
-
-### ワールド情報：トレードワールド：world_trade
-
-[インデックスへ戻る](#ワールド情報インデックス)  
-[座標：建物](#ワールド情報トレード建物)  
-  
-
-```text
-モード：creative
-難易度：hard
-SEED値：xxx
-
-初期地点座標
-　　mv tp e:world_trade:0.5,73,0.5
-
-その他設定
-　現在をスポーン位置に設定する
-　　mv setspawn
-　X=0,Z=0を中心にして、1500 0 の範囲に移動制限をかける
-　　mv worldborder center 342 74
-　　mv worldborder set 1000 0
-　コマンドブロック取得
-　　give @a minecraft:command_block
-
-　時間経過停止　※時間停止すると、商人が補充できなくなるのでナシで
-　　mv gamerule set minecraft:advance_time false world_trade
-　天気変化停止
-　　mv gamerule set minecraft:advance_weather false world_trade
-　魔物の沸き有無設定　※TTTを使うので、ナシで
-　　mv entity-spawn-config modify world_trade monster set spawn false
-
-　時間経過・天気変化 確認
-　　mv gamerule list world_trade --filter advance
-
-ゲーム起点：村の入り口（赤ブロック位置）
-　　mv tp e:world_trade:342.3,64,74.3
-
-```
-  
-
-#### ワールド情報：トレード：建物
-
-[ワールド情報へ戻る](#ワールド情報トレードワールドworld_trade)  
-  
-
-```text
-村
-minecraft:locate structure #minecraft:village
-　mv tp e:world_trade:342.3,64,74.3　　赤ブロック位置
-　mv tp e:world_trade:266.5,79,79.5　　初期村
+@ 　　mv tp e:world_the_end:  ,  ,  
 
 ```
   

@@ -452,7 +452,33 @@ locate biome [バイオーム名]
   
 
 ```text
+say メッセージ
+
 scoreboard: スコアボード操作
+
+スロット8にエメラルド8個持ってた場合、エメラルド8個と透明化ポーション(8分)1個をスロット8に引き換える
+/execute as @a if items entity @s hotbar.8 minecraft:emerald[count=8] run clear @s minecraft:emerald 8
+
+/give @p diamond_sword 1
+
+
+
+コマンド自販機用のコマンド（付与のみ）
+
+透明化ポーション(8分)
+/give @p minecraft:potion{Potion:"minecraft:long_invisibility"} 1
+
+/give @p minecraft:potion[potion="minecraft:long_invisibility"] 1
+
+/give @a minecraft:potion[minecraft:potion_contents="minecraft:long_invisibility"] 1
+
+
+
+/execute as @a if items entity @s container.7 emerald[count=8] run item replace entity @s container.7 with potion[potion_contents={potion:"minecraft:long_invisibility"}] 1
+
+
+
+
 
 スコアボードを消す（表示）
 scoreboard objectives setdisplay sidebar
@@ -462,6 +488,9 @@ scoreboard objectives remove points
 
 衝撃：無条件：動力必要
 clear @p[nbt={Inventory:[{Slot:8b,id:"minecraft:diamond_sword"}]}] minecraft:diamond_sword 0
+
+clear @p{Inventory:[{Slot:8b,id:"minecraft:diamond_sword"}]} minecraft:diamond_sword 0
+
 
 チェーン：条件あり：動力必要
 item replace entity @p hotbar.8 with minecraft:diamond 1
