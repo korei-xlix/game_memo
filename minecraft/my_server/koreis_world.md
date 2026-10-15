@@ -389,24 +389,27 @@
 ## 環境情報
 
 ```text
-Minecraftバージョン　26.2
+Minecraftバージョン　26.3
 
 サーバ
 　Local
-　メインアプリ：PaperMC　26.2-124
+　メインアプリ：PaperMC　26.3-190
 
 サーバ使用プラグイン
 　Multiverse-Core　5.8.1
 　Multiverse-Portalsm　5.3.0
-　WorldEdit　7.4.5
-　WorldGuard　7.0.18
+　WorldEdit　7.4.6
+　WorldGuard　7.0.19
 　GriefPrevention　16.18.7
 　LWC Extended　2.4.2
-　LuckPerms　5.5.81
+　LuckPerms　5.5.87
 
 クライアント使用mod
 　Fablic　1.1.2
-　VunKan　26.1.2-0.6.6
+　sodium　sodium-fabric-0.9.2+mc26.3
+　better F3　BetterF3-20.0.0-Fabric-26.3
+　cloth-config　cloth-config-fabric-26.3.159
+　fabric-api　fabric-api-0.163.0+26.3
 
 ```
   
@@ -480,6 +483,9 @@ SEED値：-2052511053031740732
 
 　時間経過・天気変化 確認
 　　mv gamerule list world_trade --filter advance
+
+　マグマの水源化
+　　gamerule lavaSourceConversion true
 
 ゲーム起点：村の入り口（赤ブロック位置）
 　　mv tp e:world:-637.5,63,297.5
@@ -611,6 +617,31 @@ minecraft:locate structure minecraft:mineshaft
 minecraft:locate structure minecraft:trail_ruins
 @ 　　mv tp e:world_adv:  ,  ,  
 
+放棄されたキャンプ（18種類のバイオームに生成）　☆NEW
+minecraft:locate structure minecraft:abandoned_camp_<バイオーム名>
+　森林　minecraft:locate structure abandoned_camp_forest
+　白樺の森　minecraft:locate structure abandoned_camp_birch_forest
+　白樺の原生林　minecraft:locate structure abandoned_camp_old_growth_birch_forest
+　まだらな森　minecraft:locate structure abandoned_camp_dappled_forest
+　吹きさらしの森　minecraft:locate structure abandoned_camp_windswept_forest
+　ペールガーデン　minecraft:locate structure abandoned_camp_pale_garden
+　マツの原生林　minecraft:locate structure abandoned_camp_old_growth_pine_taiga
+　トウヒの原生林　minecraft:locate structure abandoned_camp_old_growth_spruce_taiga
+　タイガ　minecraft:locate structure abandoned_camp_taiga
+　雪のタイガ　minecraft:locate structure abandoned_camp_snowy_taiga
+　竹林　minecraft:locate structure abandoned_camp_bamboo_jungle
+　まばらなジャングル　minecraft:locate structure abandoned_camp_sparse_jungle
+　沼地　minecraft:locate structure abandoned_camp_swamp
+　花畑　minecraft:locate structure abandoned_camp_flower_forest
+　桜　minecraft:locate structure abandoned_camp_cherry_grove
+　草地　minecraft:locate structure abandoned_camp_meadow
+　サバンナ　minecraft:locate structure abandoned_camp_savanna
+　木が生えたメサ　minecraft:locate structure abandoned_camp_wooded_badlands
+
+@ 　　mv tp e:world_adv:  ,  ,  
+
+
+
 ```
   
 
@@ -690,6 +721,10 @@ minecraft:locate biome minecraft:snowy_plains
 
 硫黄の洞窟　☆NEW
 minecraft:locate biome minecraft:sulfur_caves
+@ 　　mv tp e:world_adv:  ,  ,  
+
+まだらな森　☆NEW
+minecraft:locate biome minecraft:dappled_forest
 @ 　　mv tp e:world_adv:  ,  ,  
 
 

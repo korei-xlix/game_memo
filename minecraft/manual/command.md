@@ -144,7 +144,6 @@ setworldspawn
 　　　nether ：ネザーワールド
 　　　the_end：エンドワールド
 
-
 スポナーを取得する
 give @s spawner
 　※取得できるのはスポナーの外装だけ。これにスポーンエッグを使うと機能する。
@@ -154,6 +153,10 @@ give @a minecraft:command_block
 　黄色のコマンドブロック：インパルス「動力が必要（レッドストーンが必要）」
 　緑色のコマンドブロック：チェーン「常時実行（常にアクティブ）」
 　青色のコマンドブロック：リピート（反復）「動力が必要（レッドストーンが必要）」
+
+マグマの水源化
+gamerule lavaSourceConversion true
+
 
 ```
   
@@ -395,11 +398,10 @@ lp user lucida3poi permission unset villagerbank.create
 　　//set [id]
 　※ブロックIDは、F3+Hで見られるようになる
 
-指定領域を空気ブロックに入れ替える
-　　//set air
-
-指定領域を土ブロックに入れ替える
-　　//set minecraft:grass_block
+指定領域を指定ブロックに入れ替える
+　空気　//set air
+　土　//set minecraft:grass_block
+　石レンガ　//set minecraft:stone_bricks
 
 指定の範囲を水で満たす
 　　//fill water [範囲] [深さ]

@@ -60,15 +60,14 @@ bedrock版や、realmsでは遊べません。
 ### Fablicとは
 
 Fablicは多くのmodを動かすためのベースとなるminecraftクライアント用のmodです。  
-また、今回はグラフィックAPIをOpenGLからVulkanに入れ替える、VulkanModも導入します。これにより、Minecraftの描画処理が向上するようですが、Optifineが使えなくなるため（OptifineはOpenGLを使用しているため）シェーダーが使えません。というより、記事を書いている時はVulkanModで動くシェーダーはなかったです。  
-しかし、Minecraft自体がOpenGLをやめる動きがあるので、早めにVulkanに乗り換えしておいたほうがいいと考えます。  
+また、今回はグラフィックAPIとしてsodiumと、sodiumでF3の情報画面が見えにくくなるのでbetter F3も導入します。なおシェーダーは、この他にmodを導入する必要がありますが、今回は導入しません。  
   
 
 
 
-### Fablic+VulkanModの導入手順
+### Fablic+sodiumの導入手順
 
-FablicとVulkanModを導入する方法は以下の通りです。  
+Fablicとsodiumを導入する方法は以下の通りです。  
   
 
 1. JDK(Java SE Development Kit)を導入する  
@@ -107,18 +106,20 @@ FablicとVulkanModを導入する方法は以下の通りです。
 
     1. 「保存」を押して、起動構成を保存します。  
 
-1. VulkanModのバージョンを確認する  
-  VulkanModのインストーラを入手します。  
-  動かすminecraftと同じバージョンのインストーラを入手します。  
-  **VulkanModインストーラは以下のサイトから入手できます。（URLは当方で確認済）**  
-  　　[[VulkanMod Installer](https://modrinth.com/mod/vulkanmod)]  
+1. sodium、better F3のバージョンを確認する  
+  sodium、better F3を入手します。  
+  この時、動かすminecraft、fabricと同じバージョンのmodを入手します。  
+  また、better F3のページで、ベースapiとなる、cloth-configとfabric-apiも一緒にダウンロードします。  
+  　　[[sodium](https://modrinth.com/mod/sodium)]  
+  　　[[better F3](https://modrinth.com/mod/betterf3)]  
 
-1. ダウンロードしたVulkanModをそのままクライアントのmodsフォルダに入れます。  
+1. ダウンロードした全てのmodをそのままクライアントのmodsフォルダに入れます。  
       　　C:\Users\[ユーザ名]\AppData\Roaming\.minecraft\fablic_1.21.11\mods 以下  
 
 1. minecraftランチャーから、作成した起動構成を指定して、ゲームを始めます。  
   タイトル左下のバージョン表示で、導入したFablicのバージョンが表示されていれば、Fablicの導入完了です。  
-  また、「設定」→「ビデオ設定」画面で、VulkanModの設定画面が表示されていれば、VulkanModの導入も完了です！  
+  また、「設定」→「ビデオ設定」画面で、sodiumの設定画面が表示されていれば、sodiumの導入も完了です。  
+　更にゲーム上で、F3+Mを押すと、better F3で表示させるF3の情報を調整することもできます。  
   
 
 
